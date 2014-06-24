@@ -1,0 +1,205 @@
+/* 2014-05-20 */
+/*
+ * Master CSS file for 12lou big day - car life (web)
+ * Copyright (c) 2014 Acathur, Carbon & 12lou
+ */
+
+
+/* 12lou Reset CSS */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 12lou Car ife CSS */
+
+body {
+	background: #fff url(../images/bg.png) repeat;
+	color: #333;
+	font: 300 100% 'Myriad Pro', Helvetica, Arial, 'Hiragino Sans GB W3', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif;
+	*font-family: 'Microsoft Jhenghei', 'Microsoft Yahei', Arial, sans-serif;
+	position: relative;
+}
+
+.b12-section {
+	width: 100%;
+	clear: both;
+	position: relative;
+}
+
+.b12-section:after {
+	content: '';
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+}
+
+.b12-section.hero {
+	background: #000 top center no-repeat;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+
+.b12-section .b12-section-inner {
+	width: 1180px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.b12-section .b12-section-inner > img {
+	display: block;
+}
+
+.b12-section.s1.hero {
+	background-image: url(../images/s1.jpg);
+	background-attachment: fixed;
+	height: 897px;
+}
+
+.b12-section.s2 {
+	height: 803px;
+}
+
+.b12-section.s3.hero {
+	background-image: url(../images/s3.jpg);
+	height: 841px;
+}
+
+.b12-section.s4 {
+	height: 835px;
+}
+
+.b12-section.s5.hero {
+	background-image: url(../images/s5.jpg);
+	height: 759px;
+}
+
+.b12-section.s5.hero img.b12-mobile-qrcode {
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	top: 82px;
+	left: 50%;
+	margin: 0 0 0 -160px;
+}
+
+.b12-section.s6 {
+	height: 765px;
+}
+
+.b12-nav {
+	background: rgba(0,0,0,0.25);
+	width: 100%;
+	height: 65px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	z-index: 9;
+}
+
+.b12-nav .b12-gohome {
+	background: url(../images/logo.png) no-repeat;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	top: 14px;
+	left: 9px;
+}
+
+.b12-nav .b12-wechat {
+	background: url(../images/wechat.png) no-repeat;
+	width: 34px;
+	height: 28px;
+	position: absolute;
+	top: 20px;
+	right: 11px;
+}
+
+.b12-mask {
+	background: #000;
+	opacity: 0.7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+}
+
+.b12-qrcode {
+	background: #fcfdfd;
+	width: 201px;
+	height: 281px;
+	padding: 72px 64px;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.37);
+	-moz-box-shadow: 0 0 50px rgba(0,0,0,0.37);
+	box-shadow: 0 0 50px rgba(0,0,0,0.37);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -212px 0 0 -164px;
+	z-index: 100;
+}
+
+.b12-qrcode img {
+	display: block;
+}
+
+.b12-qrcode-close {
+	background: url(../images/icon_close.png) no-repeat;
+	width: 27px;
+	height: 27px;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+
+.b12-mask,
+.b12-qrcode {
+ 	display: none;
+ }
+
+
+ /* IE Hack */
+
+img.b12-iebgfix {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0 -960px;
+	z-index: 0;
+}

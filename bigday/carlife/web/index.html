@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>BIG DAY / 车联生活创新 - B座12楼</title>
+
+	<link rel="stylesheet" href="css/b12.carlife.css" type="text/css" />
+
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+	<section class="b12-section s1 hero">
+		<nav class="b12-nav">
+			<div class="b12-section-inner">
+				<a href="./" class="b12-gohome"></a>
+				<a href="##" class="b12-wechat" id="QR"></a>
+			</div>
+		</nav>
+	</section>
+
+	<section class="b12-section s2">
+		<div class="b12-section-inner">
+			<img src="images/s2_c.png">
+		</div>
+	</section>
+
+	<section class="b12-section s3 hero"></section>
+
+	<section class="b12-section s4">
+		<div class="b12-section-inner">
+			<img src="images/s4_c.png">
+		</div>
+	</section>
+
+	<section class="b12-section s5 hero">
+		<img src="images/s5_qrcode.png" class="b12-mobile-qrcode">
+	</section>
+
+	<section class="b12-section s6">
+		<div class="b12-section-inner">
+			<img src="images/s6_c.png">
+		</div>
+	</section>
+
+	<div id="b12-mask" class="b12-mask"></div>
+	<div id="b12-qrcode" class="b12-qrcode">
+		<img src="images/qrcode.png" alt="B12 QRcode">
+		<a href="##" class="b12-qrcode-close" id="b12-close"></a>
+	</div>
+
+
+	<script>
+		document.write('<script src="js\/jquery-' + ('\v'=='v' ? '1.11.0' : '2.1.0') + '.min.js"><\/script>'); // lte IE 8
+	</script>
+	<script>
+		var isIE8 = '\v'=='v';
+
+		$(function() {
+			$('#QR').click(function(event) {
+				$('#b12-mask, #b12-qrcode').show(400);
+				event.stopPropagation();
+			});
+			$('#b12-mask, #b12-close').on('click', function(event) {
+				$('#b12-mask, #b12-qrcode').hide(300);
+				event.stopPropagation();
+			});
+
+			if (isIE8) {
+				$('.b12-section.hero').each(function(index, el) {
+					var src = $(this).css('background-image'),
+						src = src.replace('url(','').replace(')','');
+					$(this).append('<img src="'+ src +'" class="b12-iebgfix">');
+				});
+			};
+		});
+	</script>
+
+</body>
+</html>
