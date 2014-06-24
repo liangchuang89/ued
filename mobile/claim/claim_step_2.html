@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>项目认领 - B座12楼</title>
+
+	<link rel="stylesheet" href="../css/b12.ui.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+	<div id="b12-container" class="b12-container">
+		<nav id="b12-slide-menu" class="b12-slide-menu b12-nobounce">
+			<ul>
+				<li><a href="#"><span class="b12-icon articles"></span>最新文章</a></li>
+				<li><a href="#"><span class="b12-icon events"></span>最新活动</a></li>
+				<li><a href="#"><span class="b12-icon projects"></span>创业项目</a></li>
+				<li><a href="#"><span class="b12-icon profile"></span>个人中心</a></li>
+			</ul>
+		</nav>
+
+		<div class="b12-pusher">
+			<div class="b12-pusher-inner">
+
+				<div id="b12-header" class="b12-header b12-nobounce">
+					<div class="b12-title">项目认领</div>
+					<a class="b12-button b12-pure">提交</a>
+					<button id="b12-menu-toggle" class="b12-pure b12-menu-toggle"></button>
+				</div>
+
+				<div id="b12-content" class="b12-content">
+
+					<div class="b12-aut-cont step2">
+
+						<div class="b12-my-edit-list mgt">
+							<ol>
+								<li>
+									<span>项目</span>
+									<input type="text" class="b12-pure" value="B座12楼">
+								</li>
+								<li>
+									<span>姓名</span>
+									<input type="text" class="b12-pure" value="YUA">
+								</li>
+								<li class="b12-authed">
+									<span>手机</span>
+									<input type="text" class="b12-pure" value="18668050007" readonly>
+									<em>已认证</em>
+								</li>
+								<li>
+									<span>我是</span>
+									<input type="text" class="b12-pure" value="投资人">
+								</li>
+								<li id="b12-card-uploader" class="b12-card-uploader">
+									<span>名片</span>
+									<div class="b12-icon bizcard"></div>
+									<input type="file" accept="image/*" class="b12-pure">
+									<!-- <img src="../pictures/7602_VG.gif" alt="Business Card"> 上传名片后 append img -->
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/zepto.min.js"></script>
+	<script type="application/javascript" src="../js/fastclick.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script src="../js/b12.mobile.js"></script>
+	<script>
+	setTimeout(function() {
+		// 上传名片后调用
+		$('#b12-card-uploader').append('<img src="../pictures/7602_VG.gif" alt="Business Card">');
+	}, 2500);
+	</script>
+
+</body>
+</html>

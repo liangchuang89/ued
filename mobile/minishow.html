@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>MiniShow报名 - B座12楼</title>
+
+	<link rel="stylesheet" href="css/b12.ui.css" type="text/css" />
+
+</head>
+
+
+<body>
+	
+	<div id="b12-header" class="b12-header b12-nobounce">
+		<a href="javascript:history.back()" class="b12-back"></a>
+		<div class="b12-title">MiniShow报名</div>
+	</div>
+
+	<div id="b12-content" class="b12-content">
+		<div class="b12-default-cont">
+			<div class="b12-qrcode-wrapper">
+				<div class="b12-qrcode">
+					<img src="pictures/minishow_qr.png" alt="myQRcode">
+				</div>
+				<div class="b12-save-tips">（长按保存到手机）</div>
+			</div>
+
+			<div class="b12-welcome-tips">
+				<p>如何从自己手机扫二维码？</p>
+				<p>①保存二维码图片到手机</p>
+				<p>②打开微信扫一扫功能</p>
+				<p>③点击右上角“相册”，从手机相册中选择刚保存到手机的二维码图片即可</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/zepto.min.js"></script>
+	<script type="application/javascript" src="js/fastclick.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script src="js/b12.mobile.js"></script>
+
+</body>
+</html>

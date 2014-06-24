@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>详情介绍 - B座12楼</title>
+
+	<link rel="stylesheet" href="../css/b12.ui.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+	<div id="b12-header" class="b12-header b12-nobounce">
+		<div class="b12-title">详情介绍</div>
+		<a class="b12-button b12-pure">保存</a>
+	</div>
+
+	<div id="b12-content" class="b12-content">
+		<textarea class="b12-pure b12-bigarea" placeholder="介绍下您的项目吧…" maxlength="120"></textarea>
+		<div class="b12-limit-tips">您还可以输入<strong>120</strong>字</div>
+		<div class="b12-pictures-uploader">
+			<div class="b12-square-list-4">
+				<ol class="b12-clearfix">
+					<li>
+						<div class="b12-square-box">
+							<img src="../pictures/pika.jpg" alt="name here">
+						</div>
+					</li>
+
+					<!-- loop  -->
+					<li>
+						<div class="b12-square-box">
+							<img src="../pictures/pika.jpg" alt="name here">
+						</div>
+					</li>
+					<li>
+						<div class="b12-square-box">
+							<img src="../pictures/pika.jpg" alt="name here">
+						</div>
+					</li>
+					<!-- loop  -->
+
+					<li class="b12-add">
+						<div class="b12-square-box">
+							<a href="">
+								<img src="../img/add_plus.png" alt="name here">
+							</a>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="../js/zepto.min.js"></script>
+	<script type="application/javascript" src="../js/fastclick.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script src="../js/b12.mobile.js"></script>
+	<script>
+	$(function() {
+		$('textarea').bind('keydown keyup focus', function(event) {
+			var limit = parseInt($(this).attr('maxlength')),
+				len = $(this).val().length;
+			if (limit >= len) {
+				$(this).next('.b12-limit-tips').children('strong').text(limit-len);
+			}
+		});
+	});
+	</script>
+
+</body>
+</html>

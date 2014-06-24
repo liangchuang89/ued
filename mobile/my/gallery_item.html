@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>浏览图片 - B座12楼</title>
+
+	<link rel="stylesheet" href="../css/b12.ui.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+	<div id="b12-header" class="b12-header b12-nobounce">
+		<a href="javascript:history.back()" class="b12-back"></a>
+		<div class="b12-title">浏览图片</div>
+	</div>
+
+	<div id="b12-content" class="b12-content b12-fullview">
+		<div id="b12-swiper-container" class="b12-swiper-container b12-gallery">
+			<div class="b12-swiper-wrapper">
+				<div class="b12-swiper-slide">
+					<a href="gallery_item.html">
+						<img src="../pictures/Doogle_weibo_1600x1000.png">
+					</a>
+				</div>
+				<!-- loop -->
+				<div class="b12-swiper-slide">
+					<a href="gallery_item.html">
+						<img src="http://cdn.duitang.com/uploads/item/201309/09/20130909153612_UxXxs.thumb.600_0.jpeg">
+					</a>
+				</div>
+				<div class="b12-swiper-slide">
+					<a href="gallery_item.html">
+						<img src="http://img2.duitang.com/uploads/item/201206/11/20120611140115_5xTRu.jpeg">
+					</a>
+				</div>
+				<!-- loop -->
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/zepto.min.js"></script>
+	<script type="application/javascript" src="../js/fastclick.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script src="../js/b12.mobile.js"></script>
+	<script src="../js/b12.swipe.js"></script>
+	<script>
+	$(function() {
+		var SwipeCont = $('#b12-swiper-container');
+		window.b12Swiper = new Swipe(SwipeCont[0], {
+			speed: 400,
+			auto: 7000,
+			callback: function(index, elem) {
+				SwipeCont.css('max-height', $(elem).height());
+			}
+		});
+		SwipeCont.css('max-height', $('.b12-swiper-slide:first-child', SwipeCont).height());
+	});
+	</script>
+
+</body>
+</html>
