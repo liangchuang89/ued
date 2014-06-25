@@ -181,6 +181,13 @@ select.b12-pure {
 	border: 1px solid #d0d0d0;
 }
 
+.b12-input-cute.b12-mid {	
+	width: 72%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .b12-default-link {
 	color: #00b4bf;
 	text-decoration: none;
@@ -637,7 +644,7 @@ select.b12-pure {
 .b12-float-win {
 	background: #f0f0f0;
 	width: 84%;
-	padding: 36px 18px 30px;
+	padding: 32px 18px 30px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -646,6 +653,22 @@ select.b12-pure {
 	left: 8%;
 	z-index: 1001;
 	margin: -188px 0 0;
+	display: none;
+}
+
+.b12-float-win.b12-low {
+	padding: 24px 20px;
+}
+
+.b12-float-close {
+	background: url(../img/icon_close.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	position: absolute;
+	top: 8px;
+	right: 8px;
 }
 
 .b12-float-title {
@@ -653,6 +676,26 @@ select.b12-pure {
 	line-height: 32px;
 	margin: 0 0 20px;
 	text-align: center;
+}
+
+.b12-float-form p {
+	color: #aaa;
+	line-height: 24px;
+	text-align: center;
+	margin: -10px 0 20px;
+}
+
+.b12-float-form p b {
+	color: #333;
+	font-weight: normal;
+}
+
+.b12-float-form input {
+	margin: 0 0 11px;
+}
+
+.b12-float-form input ~ .b12-confirm-tips {
+	margin-top: 8px;
 }
 
 .b12-float-choose li {
@@ -679,6 +722,10 @@ select.b12-pure {
 .b12-pause .b12-alert {
 	opacity: 1;
 	height: auto;
+}
+
+.b12-pause .b12-float-win {
+	display: block;
 }
 
 .b12-pause .b12-overlay {
@@ -4045,11 +4092,11 @@ body > .b12-container {
 
 @media only screen and (max-height: 30em) {
 	.b12-float-win {
-		-webkit-transform: scale(0.84, 0.84);
-		-moz-transform: scale(0.84, 0.84);
-		-ms-transform: scale(0.84, 0.84);
-		-o-transform: scale(0.84, 0.84);
-		transform: scale(0.84, 0.84);
+		-webkit-transform: scale(0.9, 0.9);
+		-moz-transform: scale(0.9, 0.9);
+		-ms-transform: scale(0.9, 0.9);
+		-o-transform: scale(0.9, 0.9);
+		transform: scale(0.9, 0.9);
 	}
 	.b12-my-projects-box {
 		top: 50%;
