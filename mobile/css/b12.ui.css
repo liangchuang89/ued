@@ -2391,7 +2391,7 @@ body > .b12-container {
 
 .b12-my-nav > a {
 	font-size: 12px;
-	width: 25%;
+	width: 33.3%;
 	height: 100%;
 	text-align: center;
 	display: block;
@@ -2506,8 +2506,11 @@ body > .b12-container {
 .b12-my-entrance li:nth-child(3):before {
 	background-position: 0 -70px;
 }
-.b12-my-entrance li:nth-child(4):before {
+.b12-my-entrance li.b12-auth:before {
 	background-position: 0 -105px;
+}
+.b12-my-entrance li.b12-about:before {
+	background-position: 0 -140px;
 }
 
 .b12-my-entrance li:after {
