@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<meta name="description"   content="" />
+	<meta name="keywords"      content="" />
+	<meta name="author"        content="Acathur, Carbon" />
+	<meta name="copyright"     content="2014 Carbon & 12lou" />
+
+	<title>投资人认证 - B座12楼</title>
+
+	<link rel="stylesheet" href="../css/b12.ui.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+	<div id="b12-container" class="b12-container">
+		<nav id="b12-slide-menu" class="b12-slide-menu b12-nobounce">
+			<ul>
+				<li><a href="#"><span class="b12-icon articles"></span>最新文章</a></li>
+				<li><a href="#"><span class="b12-icon events"></span>最新活动</a></li>
+				<li><a href="#"><span class="b12-icon projects"></span>创业项目</a></li>
+				<li><a href="#"><span class="b12-icon profile"></span>个人中心</a></li>
+			</ul>
+		</nav>
+
+		<div class="b12-pusher">
+			<div class="b12-pusher-inner">
+
+				<div id="b12-header" class="b12-header b12-nobounce">
+					<div class="b12-title">投资人认证</div>
+					<a class="b12-button b12-pure">下一步</a>
+					<button id="b12-menu-toggle" class="b12-pure b12-menu-toggle"></button>
+				</div>
+
+				<div id="b12-content" class="b12-content">
+					<div class="b12-aut-step-bar step1"></div> <!-- step + 1/2/3 -->
+
+					<div class="b12-aut-cont step1">
+						<input type="text" class="b12-pure b12-input-cute" placeholder="请输入您的手机号码">
+						<div class="b12-flex">
+							<input type="text" class="b12-pure b12-input-cute" placeholder="请输入校验码">
+							<input type="button" id="b12-get-checksum" class="b12-pure b12-button-full" value="获取校验码">
+						</div>
+
+						<p class="b12-confirm-tips">如果60秒之后还未收到校验码，点击重新发送</p>
+						
+						<div class="b12-welcome-tips">
+							<p>认证为投资人，您可以：</p>
+							<p>1. 了解项目最新融资情况</p>
+							<p>2. 12楼定期推荐最具价值项目</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- float win -->
+				<div id="b12-overlay" class="b12-overlay"></div>
+				<div id="b12-float-win" class="b12-float-win b12-low">
+					<div class="b12-float-title">登录B座12楼</div>
+					<div class="b12-float-form">
+						<p>请输入<b>18657155930</b>的登陆密码</p>
+						<input type="password" class="b12-pure b12-input-cute" placeholder="请输入登录密码">
+						<button class="b12-pure b12-button-full">提交</button>
+					</div>
+					<button id="b12-float-close" class="b12-float-close"></button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/zepto.min.js"></script>
+	<script type="application/javascript" src="../js/fastclick.min.js"></script>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script src="../js/b12.mobile.js"></script>
+	<script>
+	$('body').addClass('b12-pause');
+	</script>
+
+</body>
+</html>

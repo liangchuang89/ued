@@ -153,6 +153,10 @@ $(function() {
 		e.preventDefault();
 		window.location.href = $(this).attr("data-href");
 	});
+	$('#b12-float-close').bind('click', function(event) {
+		event.preventDefault();
+		b12closeAlert();
+	});
 });
 
 
@@ -242,6 +246,19 @@ function b12Timer(obj) {
 		wait--;
 		setTimeout(function() {
 			b12Timer(obj);
+		}, 1000);
+	}
+}
+
+function b12sendTimer(obj, url) {
+	if (wait == 0) {
+		$(obj).html('<a href="'+ url +'"><em class="b12-blue">重新发送校验码>></em></a>');
+		wait = 60;
+	} else {
+		$(obj).children('em').text(wait);
+		wait--;
+		setTimeout(function() {
+			b12sendTimer(obj, url);
 		}, 1000);
 	}
 }

@@ -181,6 +181,13 @@ select.b12-pure {
 	border: 1px solid #d0d0d0;
 }
 
+.b12-input-cute.b12-mid {	
+	width: 72%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .b12-default-link {
 	color: #00b4bf;
 	text-decoration: none;
@@ -637,7 +644,7 @@ select.b12-pure {
 .b12-float-win {
 	background: #f0f0f0;
 	width: 84%;
-	padding: 36px 18px 30px;
+	padding: 32px 18px 30px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -646,6 +653,22 @@ select.b12-pure {
 	left: 8%;
 	z-index: 1001;
 	margin: -188px 0 0;
+	display: none;
+}
+
+.b12-float-win.b12-low {
+	padding: 24px 20px;
+}
+
+.b12-float-close {
+	background: url(../img/icon_close.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	position: absolute;
+	top: 8px;
+	right: 8px;
 }
 
 .b12-float-title {
@@ -653,6 +676,26 @@ select.b12-pure {
 	line-height: 32px;
 	margin: 0 0 20px;
 	text-align: center;
+}
+
+.b12-float-form p {
+	color: #aaa;
+	line-height: 24px;
+	text-align: center;
+	margin: -10px 0 20px;
+}
+
+.b12-float-form p b {
+	color: #333;
+	font-weight: normal;
+}
+
+.b12-float-form input {
+	margin: 0 0 11px;
+}
+
+.b12-float-form input ~ .b12-confirm-tips {
+	margin-top: 8px;
 }
 
 .b12-float-choose li {
@@ -679,6 +722,10 @@ select.b12-pure {
 .b12-pause .b12-alert {
 	opacity: 1;
 	height: auto;
+}
+
+.b12-pause .b12-float-win {
+	display: block;
 }
 
 .b12-pause .b12-overlay {
@@ -1450,16 +1497,14 @@ body > .b12-container {
 
 .b12-project-summary {
 	width: 100%;
-	min-height: 136px;
-	padding: 20px 18px;
 	position: relative;
 }
 
 .b12-project-summary .b12-project-logo {
-	width: 72px;
-	height: 72px;
+	width: 100px;
+	height: 100px;
 	border: 1px solid rgba(207,207,207,0.5);
-	float: left;
+	margin: 20px auto 0;
 }
 
 .b12-project-summary .b12-project-logo img {
@@ -1470,14 +1515,17 @@ body > .b12-container {
 
 .b12-project-summary .b12-project-info {
 	color: #000;
-	margin: 0 0 0 88px;
 	min-height: 72px;
+	margin: 18px 0 22px;
+	padding: 0 0 25px;
+	text-align: center;
+	border-bottom: 1px solid #d5d5d5;
 }
 
 .b12-project-summary .b12-project-info .b12-title {
 	font-size: 22px;
 	line-height: 1.5;
-	margin: 0 0 10px;
+	margin: 0 0 7px;
 }
 
 .b12-project-summary .b12-project-info .b12-title a.b12-edit {
@@ -1489,6 +1537,9 @@ body > .b12-container {
 	height: 36px;
 	vertical-align: top;
 	margin: -2px 0 0 2px;
+	position: relative;
+	margin-left: -18px;
+	left: 18px;
 }
 
 .b12-project-summary .b12-project-info .b12-sort {
@@ -1500,7 +1551,7 @@ body > .b12-container {
 	color: #7d7d7d;
 	font-size: 14px;
 	line-height: 1.4;
-	margin: 12px 0 0;
+	padding: 0 20px 18px;
 }
 
 .b12-project-summary .b12-project-about span {
@@ -1693,6 +1744,10 @@ body > .b12-container {
 	vertical-align: bottom;
 }
 
+.b12-project .b12-fcinfo ~ .b12-button-wrapper {
+	margin-top: 50px;
+}
+
 .b12-member li {
 	font-size: 12px;
 	width: 25%;
@@ -1801,6 +1856,14 @@ body > .b12-container {
 	position: relative;
 	top: 4px;
 	left: 7px;
+}
+
+.b12-fr-gray {
+	color: #aaa;
+	font-size: 12px;
+	text-align: right;
+	line-height: 1.5;
+	display: block;
 }
 
 .b12-timeline-ver ul,
@@ -2344,7 +2407,7 @@ body > .b12-container {
 
 .b12-my-nav > a {
 	font-size: 12px;
-	width: 25%;
+	width: 33.3%;
 	height: 100%;
 	text-align: center;
 	display: block;
@@ -2459,8 +2522,11 @@ body > .b12-container {
 .b12-my-entrance li:nth-child(3):before {
 	background-position: 0 -70px;
 }
-.b12-my-entrance li:nth-child(4):before {
+.b12-my-entrance li.b12-auth:before {
 	background-position: 0 -105px;
+}
+.b12-my-entrance li.b12-about:before {
+	background-position: 0 -140px;
 }
 
 .b12-my-entrance li:after {
@@ -3937,46 +4003,9 @@ body > .b12-container {
 	.b12-post-meta .b12-pm-sort:after {
 		width: 23px;
 	}
-	.b12-project-summary {
-		min-height: 116px;
-		padding: 18px 15px;
-	}
 	.b12-project-summary .b12-project-logo {
-		width: 80px;
-		height: 80px;
-	}
-	.b12-project-summary .b12-project-info {
-		margin: 0 0 0 91px;
-		padding: 0 48px 0 0;
-	}
-	.b12-project-summary .b12-project-info .b12-title {
-		font-size: 19px;
-		margin-bottom: 4px;
-	}
-	.b12-project-summary .b12-project-info .b12-about {
-		margin: 0 0 1px;
-	}
-	.b12-project-summary .b12-function {
-		-webkit-transform-origin: top right;
-		-moz-transform-origin: top right;
-		-ms-transform-origin: top right;
-		-o-transform-origin: top right;
-		transform-origin: top right;
-	}
-	.b12-project-summary .b12-project-info .b12-sort {
-		-webkit-transform-origin: top left;
-		-moz-transform-origin: top left;
-		-ms-transform-origin: top left;
-		-o-transform-origin: top left;
-		transform-origin: top left;	
-	}
-	.b12-project-summary .b12-function {
-		-webkit-transform: scale(0.84, 0.84);
-		-moz-transform: scale(0.84, 0.84);
-		-ms-transform: scale(0.84, 0.84);
-		-o-transform: scale(0.84, 0.84);
-		transform: scale(0.84, 0.84);
-		right: 15px;
+		width: 94px;
+		height: 94px;
 	}
 	.b12-project-summary .b12-project-info .b12-sort,
 	.b12-my-summary .b12-my-info,
@@ -4045,11 +4074,11 @@ body > .b12-container {
 
 @media only screen and (max-height: 30em) {
 	.b12-float-win {
-		-webkit-transform: scale(0.84, 0.84);
-		-moz-transform: scale(0.84, 0.84);
-		-ms-transform: scale(0.84, 0.84);
-		-o-transform: scale(0.84, 0.84);
-		transform: scale(0.84, 0.84);
+		-webkit-transform: scale(0.9, 0.9);
+		-moz-transform: scale(0.9, 0.9);
+		-ms-transform: scale(0.9, 0.9);
+		-o-transform: scale(0.9, 0.9);
+		transform: scale(0.9, 0.9);
 	}
 	.b12-my-projects-box {
 		top: 50%;
