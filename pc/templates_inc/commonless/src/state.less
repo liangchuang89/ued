@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+// @import "./grid.less";
+
+/*
+ * 声明：
+ * 通用颜色、通用样式函数、通用icon等
+ */
+
+/* Color */
+
+/*
+ * Block系列
+ * 用于topbar、按钮、搜索框、标签、icon
+ */
+
+@blockMainColor: #377bee;
+@blockAccentColorLight: #498cff;
+@blockAcentColorDark: #2c62be;
+
+/*
+ * Text系列
+ */
+
+@textLinkColor: #f60;
+@textPriceColor: #f44;
+@textFirstLevel: #fc8e00;
+@textSecondLevel: #ffb644;
+
+
+/*
+ * Bgc系列
+ * 用于topbar、按钮、标签、icon
+ */
+
+@bgcGray: #f1f1f1;
+@bgcBlank: #fff;
+
+/*
+ * Border系列
+ */
+
+@bdcGray: #ccc;
+
+/*
+ * function
+ */
+
+.boxSizing(@mod) {
+	-webkit-box-sizing: @mod;
+       -moz-box-sizing: @mod;
+         -o-box-sizing: @mod;
+        -ms-box-sizing: @mod;
+            box-sizing: @mod;
+}
+
+.setBtnSkin(@bdc, @bgc, @acbg, @color) {
+    border: 1px solid @bdc;
+    background-color: @bgc;
+    color: @color;
+    &:active {
+    	background-color: @acbg;
+    }
+}

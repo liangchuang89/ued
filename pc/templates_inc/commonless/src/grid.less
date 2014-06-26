@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/*
+ * 清除浮动
+ */
+
+@screenWidth: 640px;
+@colWidth: 8px;
+@spaceWidth: 8px;
+@cols: @screenWidth / (@colWidth + @spaceWidth);
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix {
+    .clearfix();
+}
+
+.columns(@index) when (@index = 1) {
+    @item: ~".cols-@{index}";
+    .columns(@index + 1, @item);
+}
+.columns(@index, @list) when (@index < @cols) {
+    @item: ~".cols-@{index}";
+    .columns(@index + 1, ~"@{list}, @{item}");
+}
+.columns(@index, @list) when (@index = @cols) {
+    @{list} {
+        float: left;
+    }
+    @item: ~".cols-@{index}";
+    .columns(@index + 1, ~"@{list}, @{item}");
+}
+.columns(@index, @list) when (@index > @cols) {
+    @{list} {
+        min-height: 1px;
+        margin-left: percentage(@spaceWidth / @screenWidth);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.makeGrid(@index) when (@index <= (@screenWidth / @colWidth)) {
+    .cols-@{index} {
+        width: percentage(@index * @colWidth / @screenWidth);
+    }
+    .makeGrid(@index + 1);
+}
+
+.makeMaginLeft(@index) when (@index < (@screenWidth / @colWidth)) {
+    .ml-@{index} {
+        margin-left: percentage(@spaceWidth * @index / @screenWidth);
+    }
+    .makeMaginLeft(@index + 1);
+}
+
+/*
+ * 设置grid默认浮动、左边距、盒子模型
+ */
+
+.columns(1);
+
+/*
+ * 设置各尺寸列宽
+ */
+
+.makeGrid(1);
+
+/*
+ * 设置左边距规格
+ */
+
+.makeMaginLeft(1);

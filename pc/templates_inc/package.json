@@ -1,0 +1,21 @@
+{
+    "name": "grunt-dayan",
+    "description": "Better code organize",
+    "version": "0.1.0",
+    "homepage": "http://groups.demo.taobao.net/ux/templates_inc/",
+    "author": {
+        "name": "ykan",
+        "email": "yushan.yk@taobao.com",
+        "url": "ykan.github.io"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.alibaba-inc.com:ux/templates_inc.git"
+    },
+    "bugs": {
+        "url": "http://gitlab.alibaba-inc.com/ux/templates_inc/issues"
+    },
+    "keywords": [
+        "gruntplugin"
+    ]
+}

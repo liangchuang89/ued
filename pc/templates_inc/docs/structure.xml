@@ -1,0 +1,3152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="autoload.php" hash="ba6d8b0ffbb9bbcba997fd6f21e77d40" package="Default">
+    <include line="49" type="Include Once" package="Default">
+      <name/>
+    </include>
+    <include line="72" type="Include Once" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="18" package="Default">
+      <extends/>
+      <name>TI_Autoloader</name>
+      <full_name>\TI_Autoloader</full_name>
+      <docblock line="2">
+        <description>自动加载类
+例子：
+&lt;pre&gt;
+//无参数，则默认根路径为autoload.php文件所在目录的绝对路径
+$ti_autoloader = new TI_Autoloader();
+//也可以手动设置一个根路径
+//$ti_autoloader = new TI_Autoloader('/user/dd');
+$ti_autoloader-&gt;add(array(
+ "default"=&gt;array("core","event","common"),//默认的包，会加载这些包下的所有文件
+ "auto"=&gt;array("base")//autoload机制要遍历的包，这个包下的类实例化的时候会自动加载
+));
+&lt;/pre&gt;
+创建于13-1-8，下午1:42</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="20" namespace="global" package="Default">
+        <name>$basePath</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="21" namespace="global" package="Default">
+        <name>$autoLoadPath</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="23">
+          <description/>
+          <long-description/>
+          <tag line="23" name="param" description="默认为当前autoload.php所在目录的绝对路径" type="null" variable="$basePath">
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+        <argument line="26">
+          <name>$basePath</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>add</name>
+        <full_name>add</full_name>
+        <docblock line="32">
+          <description>添加包</description>
+          <long-description/>
+          <tag line="32" name="param" description="" type="\" variable="$package"/>
+        </docblock>
+        <argument line="36">
+          <name>$package</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="42" package="Default">
+        <name>loadDefaultClasses</name>
+        <full_name>loadDefaultClasses</full_name>
+        <argument line="42">
+          <name>$packages</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="54" package="Default">
+        <name>isPHPFile</name>
+        <full_name>isPHPFile</full_name>
+        <argument line="54">
+          <name>$file</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="59" package="Default">
+        <name>initAutoLoadClasses</name>
+        <full_name>initAutoLoadClasses</full_name>
+        <argument line="59">
+          <name>$packages</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="68" package="Default">
+        <name>autoload</name>
+        <full_name>autoload</full_name>
+        <argument line="68">
+          <name>$className</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file autoload.php</error>
+      <error line="20" code="50018">No DocBlock was found for property $basePath</error>
+      <error line="21" code="50018">No DocBlock was found for property $autoLoadPath</error>
+      <error line="23" code="50012">No short description for method __construct()</error>
+      <error line="42" code="50010">No DocBlock was found for method loadDefaultClasses()</error>
+      <error line="54" code="50010">No DocBlock was found for method isPHPFile()</error>
+      <error line="59" code="50010">No DocBlock was found for method initAutoLoadClasses()</error>
+      <error line="68" code="50010">No DocBlock was found for method autoload()</error>
+    </parse_markers>
+  </file>
+  <file path="base/DefaultData.php" hash="3cf957cb2b66628cfc0f9b6e1a686d1b" package="Default">
+    <class final="false" abstract="false" namespace="global" line="7" package="base">
+      <extends/>
+      <implements>\IData</implements>
+      <name>DefaultData</name>
+      <full_name>\DefaultData</full_name>
+      <docblock line="2">
+        <description>获取组件的默认数据</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="13" package="base">
+        <name>getData</name>
+        <full_name>getData</full_name>
+        <docblock line="10">
+          <description/>
+          <long-description/>
+          <tag line="10" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="13">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="13">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/DefaultData.php</error>
+      <error line="10" code="50012">No short description for method getData()</error>
+      <error line="10" code="50015">Argument $key is missing from the Docblock of getData()</error>
+      <error line="10" code="50015">Argument $path is missing from the Docblock of getData()</error>
+    </parse_markers>
+  </file>
+  <file path="base/DefaultTpl.php" hash="590960c84bf8978c0be064a2d6fc5eda" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="base">
+      <extends/>
+      <implements>\ITpl</implements>
+      <name>DefaultTpl</name>
+      <full_name>\DefaultTpl</full_name>
+      <docblock line="2">
+        <description>获取组件默认的模板
+&lt;br&gt;创建于13-1-17，下午9:16</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="base">
+        <name>getTpl</name>
+        <full_name>getTpl</full_name>
+        <docblock line="11">
+          <description/>
+          <long-description/>
+          <tag line="11" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="14">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="14">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/DefaultTpl.php</error>
+      <error line="11" code="50012">No short description for method getTpl()</error>
+      <error line="11" code="50015">Argument $key is missing from the Docblock of getTpl()</error>
+      <error line="11" code="50015">Argument $path is missing from the Docblock of getTpl()</error>
+    </parse_markers>
+  </file>
+  <file path="base/FilePack.php" hash="a8cf72b5a6e6ecf6ae2735598200a521" package="Default">
+    <class final="false" abstract="false" namespace="global" line="7" package="base">
+      <extends/>
+      <implements>\IFliePack</implements>
+      <name>FilePack</name>
+      <full_name>\FilePack</full_name>
+      <docblock line="2">
+        <description>模拟打包的过程</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <constant namespace="global" line="90" package="base">
+        <name>DEV</name>
+        <full_name>DEV</full_name>
+        <value>0</value>
+      </constant>
+      <constant namespace="global" line="91" package="base">
+        <name>ASSETS</name>
+        <full_name>ASSETS</full_name>
+        <value>1</value>
+      </constant>
+      <property final="false" static="false" visibility="private" line="9" namespace="global" package="Default">
+        <name>$root</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="10" namespace="global" package="Default">
+        <name>$assets</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="11" namespace="global" package="Default">
+        <name>$repoName</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="private" line="81" namespace="global" package="Default">
+        <name>$rules</name>
+        <default>array("/^src\/[^_\/]+/" =&gt; array("getSrcFiles", "trans2SrcAssets"), "/^src\/_[^\/]+_/" =&gt; array("formatSrcIgnoreFile", "trans2SrcAssets"), "/^components$/" =&gt; array("getComponentsFiles", "trans2ComponentsAssets"), "/^components\/[^\/]+/" =&gt; array("formatComponentsFile", "trans2ComponentsFileAssets"), "/^imports$/" =&gt; array("getImportsFiles", "trans2ComponentsAssets"), "/^imports\/[^\/]+\/[^\/]+/" =&gt; array("formatComponentsFile", "trans2ComponentsFileAssets"))</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="base">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="12">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="base">
+        <name>trans2dev</name>
+        <full_name>trans2dev</full_name>
+        <docblock line="20">
+          <description/>
+          <long-description/>
+          <tag line="20" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="23">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="23">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="base">
+        <name>trans2assets</name>
+        <full_name>trans2assets</full_name>
+        <docblock line="38">
+          <description/>
+          <long-description/>
+          <tag line="38" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="41">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$version</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="61" package="base">
+        <name>match</name>
+        <full_name>match</full_name>
+        <argument line="61">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="69" package="base">
+        <name>transform</name>
+        <full_name>transform</full_name>
+        <argument line="69">
+          <name>$func</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="69">
+          <name>$args</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="74" package="base">
+        <name>prepare</name>
+        <full_name>prepare</full_name>
+        <argument line="74">
+          <name>$str</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="94" package="base">
+        <name>getImportsFiles</name>
+        <full_name>getImportsFiles</full_name>
+        <argument line="94">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="94">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="103" package="base">
+        <name>getComponentsFiles</name>
+        <full_name>getComponentsFiles</full_name>
+        <argument line="103">
+          <name>$compdir</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="103">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="117" package="base">
+        <name>isIgnore</name>
+        <full_name>isIgnore</full_name>
+        <argument line="117">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="124" package="base">
+        <name>getSrcFiles</name>
+        <full_name>getSrcFiles</full_name>
+        <argument line="124">
+          <name>$dir</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="124">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="139" package="base">
+        <name>formatSrcIgnoreFile</name>
+        <full_name>formatSrcIgnoreFile</full_name>
+        <argument line="139">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="139">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="144" package="base">
+        <name>formatComponentsFile</name>
+        <full_name>formatComponentsFile</full_name>
+        <argument line="144">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="144">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="149" package="base">
+        <name>trans2ComponentsAssets</name>
+        <full_name>trans2ComponentsAssets</full_name>
+        <argument line="149">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="149">
+          <name>$version</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="149">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="153" package="base">
+        <name>trans2SrcAssets</name>
+        <full_name>trans2SrcAssets</full_name>
+        <argument line="153">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$version</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="153">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="160" package="base">
+        <name>trans2ComponentsFileAssets</name>
+        <full_name>trans2ComponentsFileAssets</full_name>
+        <argument line="160">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="160">
+          <name>$version</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="160">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="166" package="base">
+        <name>getFullAssetsPath</name>
+        <full_name>getFullAssetsPath</full_name>
+        <argument line="166">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/FilePack.php</error>
+      <error line="9" code="50018">No DocBlock was found for property $root</error>
+      <error line="10" code="50018">No DocBlock was found for property $assets</error>
+      <error line="11" code="50018">No DocBlock was found for property $repoName</error>
+      <error line="81" code="50018">No DocBlock was found for property $rules</error>
+      <error line="12" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="20" code="50012">No short description for method trans2dev()</error>
+      <error line="20" code="50015">Argument $path is missing from the Docblock of trans2dev()</error>
+      <error line="20" code="50015">Argument $filetype is missing from the Docblock of trans2dev()</error>
+      <error line="38" code="50012">No short description for method trans2assets()</error>
+      <error line="38" code="50015">Argument $path is missing from the Docblock of trans2assets()</error>
+      <error line="38" code="50015">Argument $version is missing from the Docblock of trans2assets()</error>
+      <error line="38" code="50015">Argument $filetype is missing from the Docblock of trans2assets()</error>
+      <error line="61" code="50010">No DocBlock was found for method match()</error>
+      <error line="69" code="50010">No DocBlock was found for method transform()</error>
+      <error line="74" code="50010">No DocBlock was found for method prepare()</error>
+      <error line="94" code="50010">No DocBlock was found for method getImportsFiles()</error>
+      <error line="103" code="50010">No DocBlock was found for method getComponentsFiles()</error>
+      <error line="117" code="50010">No DocBlock was found for method isIgnore()</error>
+      <error line="124" code="50010">No DocBlock was found for method getSrcFiles()</error>
+      <error line="139" code="50010">No DocBlock was found for method formatSrcIgnoreFile()</error>
+      <error line="144" code="50010">No DocBlock was found for method formatComponentsFile()</error>
+      <error line="149" code="50010">No DocBlock was found for method trans2ComponentsAssets()</error>
+      <error line="153" code="50010">No DocBlock was found for method trans2SrcAssets()</error>
+      <error line="160" code="50010">No DocBlock was found for method trans2ComponentsFileAssets()</error>
+      <error line="166" code="50010">No DocBlock was found for method getFullAssetsPath()</error>
+    </parse_markers>
+  </file>
+  <file path="base/HTMLTag.php" hash="5ef644ede8cd76620fd8a90e1ba5ec2a" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="base">
+      <extends/>
+      <name>HTMLTag</name>
+      <full_name>\HTMLTag</full_name>
+      <docblock line="3">
+        <description>创建HTML标签</description>
+        <long-description/>
+        <tag line="3" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="3" name="package" description="base"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="16" package="base">
+        <name>jsScriptTag</name>
+        <full_name>jsScriptTag</full_name>
+        <docblock line="11">
+          <description>创建js标签</description>
+          <long-description/>
+          <tag line="11" name="param" description="" type="\" variable="$src"/>
+          <tag line="11" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="16">
+          <name>$src</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="25" package="base">
+        <name>cssLinkTag</name>
+        <full_name>cssLinkTag</full_name>
+        <docblock line="20">
+          <description>创建css的link标签</description>
+          <long-description/>
+          <tag line="20" name="param" description="" type="\" variable="$href"/>
+          <tag line="20" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$href</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="34" package="base">
+        <name>cssStyleTag</name>
+        <full_name>cssStyleTag</full_name>
+        <docblock line="29">
+          <description>创建css的style标签</description>
+          <long-description/>
+          <tag line="29" name="param" description="" type="\" variable="$hrefArr"/>
+          <tag line="29" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$hrefArr</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="53" package="base">
+        <name>commentTag</name>
+        <full_name>commentTag</full_name>
+        <docblock line="48">
+          <description>创建注释的标签</description>
+          <long-description/>
+          <tag line="48" name="param" description="注释内容" type="\" variable="$comment"/>
+          <tag line="48" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="53">
+          <name>$comment</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="base">
+        <name>scriptTag</name>
+        <full_name>scriptTag</full_name>
+        <docblock line="57">
+          <description>创建script的标签</description>
+          <long-description/>
+          <tag line="57" name="param" description="脚本内容" type="\" variable="$script"/>
+          <tag line="57" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$script</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/HTMLTag.php</error>
+    </parse_markers>
+  </file>
+  <file path="base/JSRender.php" hash="5ca64d39ee6eebd985da4d87cc90a6cc" package="Default">
+    <class final="false" abstract="false" namespace="global" line="7" package="base">
+      <extends/>
+      <implements>\IRender</implements>
+      <name>JSRender</name>
+      <full_name>\JSRender</full_name>
+      <docblock line="2">
+        <description>JS的渲染器</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="9" namespace="global" package="Default">
+        <name>$compRendered</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="base">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="11">
+          <description/>
+          <long-description/>
+          <tag line="11" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="14">
+          <name>$tpl</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="14">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="14">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/JSRender.php</error>
+      <error line="9" code="50018">No DocBlock was found for property $compRendered</error>
+      <error line="11" code="50012">No short description for method render()</error>
+      <error line="11" code="50015">Argument $tpl is missing from the Docblock of render()</error>
+      <error line="11" code="50015">Argument $data is missing from the Docblock of render()</error>
+      <error line="11" code="50015">Argument $key is missing from the Docblock of render()</error>
+    </parse_markers>
+  </file>
+  <file path="base/PHPRender.php" hash="9cea50f2b69a2037674c135d63006260" package="Default">
+    <class final="false" abstract="false" namespace="global" line="7" package="base">
+      <extends/>
+      <implements>\IRender</implements>
+      <name>PHPRender</name>
+      <full_name>\PHPRender</full_name>
+      <docblock line="2">
+        <description>PHP的渲染器</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="9" namespace="global" package="Default">
+        <name>$me</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="10" package="base">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="10">
+          <name>$me</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="base">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="14">
+          <description/>
+          <long-description/>
+          <tag line="14" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="17">
+          <name>$tpl</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="17">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="17">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/PHPRender.php</error>
+      <error line="9" code="50018">No DocBlock was found for property $me</error>
+      <error line="10" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="14" code="50012">No short description for method render()</error>
+      <error line="14" code="50015">Argument $tpl is missing from the Docblock of render()</error>
+      <error line="14" code="50015">Argument $data is missing from the Docblock of render()</error>
+      <error line="14" code="50015">Argument $key is missing from the Docblock of render()</error>
+    </parse_markers>
+  </file>
+  <file path="base/PluginManager.php" hash="9078791c17e24ac09c68c2c879d5044f" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="base">
+      <extends/>
+      <implements>\IPluginManager</implements>
+      <name>PluginManager</name>
+      <full_name>\PluginManager</full_name>
+      <docblock line="2">
+        <description>插件管理
+&lt;br&gt;创建于13-1-30，下午7:58</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="base"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="10" namespace="global" package="Default">
+        <name>$pluginPool</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="base">
+        <name>addPlugin</name>
+        <full_name>addPlugin</full_name>
+        <docblock line="11">
+          <description/>
+          <long-description/>
+          <tag line="11" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="14">
+          <name>$plugin</name>
+          <default/>
+          <type>\IPlugin</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="base">
+        <name>removePlugin</name>
+        <full_name>removePlugin</full_name>
+        <docblock line="20">
+          <description/>
+          <long-description/>
+          <tag line="20" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="23">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="34" package="base">
+        <name>hasPlugin</name>
+        <full_name>hasPlugin</full_name>
+        <docblock line="31">
+          <description/>
+          <long-description/>
+          <tag line="31" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="34">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="base">
+        <name>initPlugins</name>
+        <full_name>initPlugins</full_name>
+        <docblock line="39">
+          <description/>
+          <long-description/>
+          <tag line="39" name="inheritdoc" description=""/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/PluginManager.php</error>
+      <error line="10" code="50018">No DocBlock was found for property $pluginPool</error>
+      <error line="11" code="50012">No short description for method addPlugin()</error>
+      <error line="11" code="50015">Argument $plugin is missing from the Docblock of addPlugin()</error>
+      <error line="20" code="50012">No short description for method removePlugin()</error>
+      <error line="20" code="50015">Argument $name is missing from the Docblock of removePlugin()</error>
+      <error line="31" code="50012">No short description for method hasPlugin()</error>
+      <error line="31" code="50015">Argument $name is missing from the Docblock of hasPlugin()</error>
+      <error line="39" code="50012">No short description for method initPlugins()</error>
+    </parse_markers>
+  </file>
+  <file path="base/ThirdParty.php" hash="c0aa5b9b2e9cbe73d2d793aa8df3ffc9" package="Default">
+    <include line="17" type="Include Once" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="7" package="Default">
+      <extends/>
+      <name>ThirdParty</name>
+      <full_name>\ThirdParty</full_name>
+      <docblock line="2">
+        <description>获取第三方的工具
+&lt;br&gt;创建于13-3-28，下午4:39</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="9" namespace="global" package="Default">
+        <name>$mrender</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="Default">
+        <name>getMustacheRender</name>
+        <full_name>getMustacheRender</full_name>
+        <docblock line="11">
+          <description>获取mustache的渲染引擎</description>
+          <long-description/>
+          <tag line="11" name="return" description="" type="\Mustache_Engine">
+            <type by_reference="false">\Mustache_Engine</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file base/ThirdParty.php</error>
+      <error line="9" code="50018">No DocBlock was found for property $mrender</error>
+    </parse_markers>
+  </file>
+  <file path="commands/MainCommand.php" hash="b5e0dc4c3025eb8f72a833497503ada3" package="Default">
+    <include line="68" type="Include" package="Default">
+      <name/>
+    </include>
+    <include line="94" type="Include Once" package="Default">
+      <name/>
+    </include>
+    <include line="115" type="Include" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="29" package="commands">
+      <extends/>
+      <implements>\ICommand</implements>
+      <name>MainCommand</name>
+      <full_name>\MainCommand</full_name>
+      <docblock line="2">
+        <description>主线命令，控制总的PHP运行流程
+&lt;h3&gt;构造函数配置的作用&lt;/h3&gt;
+&lt;pre&gt;
+array(
+	'get' =&gt; array('log'=&gt;1),
+	//配置插件,插件只能有一个触发的参数，而且不要调用一样的参数
+	'plugins' =&gt; array(
+		'codeviewer' =&gt; array(
+         'trigger' =&gt; 'viewsource',
+         'use' =&gt; array('page','component'),
+         'description' =&gt; '查看源码插件启动所需触发的$_GET参数'
+     )
+	 )
+)
+&lt;/pre&gt;
+&lt;code&gt;get&lt;/code&gt;会在P::initGetPatm时使用，用来替换$_GET参数。&lt;br&gt;
+&lt;code&gt;plugins&lt;/code&gt;配置插件启动项：&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;trigger:插件触发的参数&lt;/li&gt;
+&lt;li&gt;use:插件都使用了那些参数&lt;/li&gt;
+&lt;li&gt;description:插件作用描述&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;创建于13-1-10，下午7:46</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="commands"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="31" namespace="global" package="Default">
+        <name>$config</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="commands">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="33">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="commands">
+        <name>excute</name>
+        <full_name>excute</full_name>
+        <docblock line="37">
+          <description/>
+          <long-description/>
+          <tag line="37" name="inheritdoc" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="62" package="commands">
+        <name>bootPlugins</name>
+        <full_name>bootPlugins</full_name>
+        <argument line="62">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="74" package="commands">
+        <name>renderPage</name>
+        <full_name>renderPage</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file commands/MainCommand.php</error>
+      <error line="31" code="50018">No DocBlock was found for property $config</error>
+      <error line="33" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="37" code="50012">No short description for method excute()</error>
+      <error line="62" code="50010">No DocBlock was found for method bootPlugins()</error>
+      <error line="74" code="50010">No DocBlock was found for method renderPage()</error>
+    </parse_markers>
+  </file>
+  <file path="common/CommonFacade.php" hash="c1c3717d1586b7e472f00d018280df73" package="Default">
+    <include line="111" type="Include" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="8" package="common">
+      <extends/>
+      <name>CommonFacade</name>
+      <full_name>\CommonFacade</full_name>
+      <docblock line="2">
+        <description>通用方法外观
+&lt;br&gt;创建于13-1-23，下午4:41</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="common"/>
+      </docblock>
+      <constant namespace="global" line="35" package="common">
+        <name>MODE_ECHO_GBK</name>
+        <full_name>MODE_ECHO_GBK</full_name>
+        <value>0</value>
+        <docblock line="32">
+          <description>输出GBK字符串模式</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="36" package="common">
+        <name>ECHO_GBK_FAIL</name>
+        <full_name>ECHO_GBK_FAIL</full_name>
+        <value>"echo_gbk_fail"</value>
+      </constant>
+      <constant namespace="global" line="37" package="common">
+        <name>ECHO_GBK_SUCCESS</name>
+        <full_name>ECHO_GBK_SUCCESS</full_name>
+        <value>"echo_gbk_success"</value>
+      </constant>
+      <constant namespace="global" line="41" package="common">
+        <name>MODE_ECHO</name>
+        <full_name>MODE_ECHO</full_name>
+        <value>1</value>
+        <docblock line="38">
+          <description>输出模式</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="42" package="common">
+        <name>ECHO_FAIL</name>
+        <full_name>ECHO_FAIL</full_name>
+        <value>"echo_fail"</value>
+      </constant>
+      <constant namespace="global" line="43" package="common">
+        <name>ECHO_SUCCESS</name>
+        <full_name>ECHO_SUCCESS</full_name>
+        <value>"echo_success"</value>
+      </constant>
+      <constant namespace="global" line="47" package="common">
+        <name>MODE_ECHO_FILE</name>
+        <full_name>MODE_ECHO_FILE</full_name>
+        <value>2</value>
+        <docblock line="44">
+          <description>输出文件内容</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="48" package="common">
+        <name>ECHO_FILE_FAIL</name>
+        <full_name>ECHO_FILE_FAIL</full_name>
+        <value>"echo_file_fail"</value>
+      </constant>
+      <constant namespace="global" line="49" package="common">
+        <name>ECHO_FILE_SUCCESS</name>
+        <full_name>ECHO_FILE_SUCCESS</full_name>
+        <value>"echo_file_success"</value>
+      </constant>
+      <constant namespace="global" line="53" package="common">
+        <name>MODE_ECHO_GBKFILE</name>
+        <full_name>MODE_ECHO_GBKFILE</full_name>
+        <value>3</value>
+        <docblock line="50">
+          <description>输出GBK文件内容</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="54" package="common">
+        <name>ECHO_GBKFILE_FAIL</name>
+        <full_name>ECHO_GBKFILE_FAIL</full_name>
+        <value>"echo_gbkfile_fail"</value>
+      </constant>
+      <constant namespace="global" line="55" package="common">
+        <name>ECHO_GBKFILE_SUCCESS</name>
+        <full_name>ECHO_GBKFILE_SUCCESS</full_name>
+        <value>"echo_gbkfile_success"</value>
+      </constant>
+      <constant namespace="global" line="59" package="common">
+        <name>MODE_INCLUDE</name>
+        <full_name>MODE_INCLUDE</full_name>
+        <value>4</value>
+        <docblock line="56">
+          <description>include</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="60" package="common">
+        <name>INCLUDE_FAIL</name>
+        <full_name>INCLUDE_FAIL</full_name>
+        <value>"include_fail"</value>
+      </constant>
+      <constant namespace="global" line="61" package="common">
+        <name>INCLUDE_SUCCESS</name>
+        <full_name>INCLUDE_SUCCESS</full_name>
+        <value>"include_success"</value>
+      </constant>
+      <constant namespace="global" line="65" package="common">
+        <name>MODE_RETURN_GBK</name>
+        <full_name>MODE_RETURN_GBK</full_name>
+        <value>5</value>
+        <docblock line="62">
+          <description>返回gbk字符串</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="66" package="common">
+        <name>RETURN_GBK_FAIL</name>
+        <full_name>RETURN_GBK_FAIL</full_name>
+        <value>"echo_gbk_fail"</value>
+      </constant>
+      <constant namespace="global" line="71" package="common">
+        <name>MODE_DO_NOTHING</name>
+        <full_name>MODE_DO_NOTHING</full_name>
+        <value>6</value>
+        <docblock line="68">
+          <description>do nothing</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="72" package="common">
+        <name>DO_NOTHING</name>
+        <full_name>DO_NOTHING</full_name>
+        <value>"do_nothing"</value>
+      </constant>
+      <property final="false" static="true" visibility="private" line="11" namespace="global" package="Default">
+        <name>$commonfunc</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="16" package="common">
+        <name>injectCommonFunc</name>
+        <full_name>injectCommonFunc</full_name>
+        <docblock line="12">
+          <description>动态调用通用方法</description>
+          <long-description/>
+          <tag line="12" name="param" description="" type="\ICommonFunc" variable="$commonfunc">
+            <type by_reference="false">\ICommonFunc</type>
+          </tag>
+        </docblock>
+        <argument line="16">
+          <name>$commonfunc</name>
+          <default/>
+          <type>\ICommonFunc</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="27" package="common">
+        <name>preReturn</name>
+        <full_name>preReturn</full_name>
+        <docblock line="21">
+          <description>预处理返回值</description>
+          <long-description/>
+          <tag line="21" name="param" description="" type="\" variable="$return"/>
+          <tag line="21" name="param" description="" type="int" variable="$mode">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="21" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="27">
+          <name>$return</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="27">
+          <name>$mode</name>
+          <default>self::MODE_ECHO</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="81" package="common">
+        <name>processReturn</name>
+        <full_name>processReturn</full_name>
+        <docblock line="74">
+          <description>对返回值的一些处理</description>
+          <long-description/>
+          <tag line="74" name="TODO" description="各种处理的容错"/>
+          <tag line="74" name="param" description="" type="\" variable="$return"/>
+          <tag line="74" name="param" description="" type="int" variable="$mode">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="74" name="return" description="" type="int|mixed|string">
+            <type by_reference="false">int</type>
+            <type by_reference="false">mixed</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="81">
+          <name>$return</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="81">
+          <name>$mode</name>
+          <default>self::MODE_ECHO</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="129" package="common">
+        <name>__callStatic</name>
+        <full_name>__callStatic</full_name>
+        <docblock line="123">
+          <description>动态调用通用方法</description>
+          <long-description/>
+          <tag line="123" name="param" description="" type="\" variable="$method"/>
+          <tag line="123" name="param" description="" type="\" variable="$args"/>
+          <tag line="123" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="129">
+          <name>$method</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="129">
+          <name>$args</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="142" package="common">
+        <name>dispose</name>
+        <full_name>dispose</full_name>
+        <docblock line="139">
+          <description>静态资源释放</description>
+          <long-description/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file common/CommonFacade.php</error>
+      <error line="11" code="50018">No DocBlock was found for property $commonfunc</error>
+    </parse_markers>
+  </file>
+  <file path="common/CommonFunc.php" hash="3b5fc8c380b9b000c85e6d1c16d39b5f" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="common">
+      <extends/>
+      <implements>\ICommonFunc</implements>
+      <name>CommonFunc</name>
+      <full_name>\CommonFunc</full_name>
+      <docblock line="2">
+        <description>通用方法
+&lt;br&gt;创建于13-1-23，下午4:41</description>
+        <long-description></long-description>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="common"/>
+      </docblock>
+      <constant namespace="global" line="229" package="common">
+        <name>ECOMMON_TEMPLATES</name>
+        <full_name>ECOMMON_TEMPLATES</full_name>
+        <value>"http://demo.etao.net/ecommon/templates/"</value>
+      </constant>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="common">
+        <name>components</name>
+        <full_name>components</full_name>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag line="11" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="14">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="27" package="common">
+        <name>imports</name>
+        <full_name>imports</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag line="24" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="27">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="common">
+        <name>breakPath</name>
+        <full_name>breakPath</full_name>
+        <docblock line="38">
+          <description>分解路径</description>
+          <long-description></long-description>
+          <tag line="38" name="param" description="" type="\" variable="$path"/>
+          <tag line="38" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="43">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="common">
+        <name>component</name>
+        <full_name>component</full_name>
+        <docblock line="55">
+          <description>组件方法</description>
+          <long-description></long-description>
+          <tag line="55" name="param" description="" type="\" variable="$key"/>
+          <tag line="55" name="param" description="" type="\" variable="$path"/>
+          <tag line="55" name="param" description="" type="\" variable="$suffix"/>
+          <tag line="55" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$suffix</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="86" package="common">
+        <name>add</name>
+        <full_name>add</full_name>
+        <docblock line="83">
+          <description></description>
+          <long-description></long-description>
+          <tag line="83" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="86">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="106" package="common">
+        <name>css</name>
+        <full_name>css</full_name>
+        <docblock line="103">
+          <description></description>
+          <long-description></long-description>
+          <tag line="103" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="106">
+          <name>$module</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="106">
+          <name>$version</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="130" package="common">
+        <name>js</name>
+        <full_name>js</full_name>
+        <docblock line="127">
+          <description></description>
+          <long-description></long-description>
+          <tag line="127" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="130">
+          <name>$module</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="130">
+          <name>$version</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="157" package="common">
+        <name>kissy_config</name>
+        <full_name>kissy_config</full_name>
+        <docblock line="154">
+          <description></description>
+          <long-description></long-description>
+          <tag line="154" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="157">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="173" package="common">
+        <name>bootpage</name>
+        <full_name>bootpage</full_name>
+        <docblock line="170">
+          <description></description>
+          <long-description></long-description>
+          <tag line="170" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="173">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="173">
+          <name>$config</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="191" package="common">
+        <name>buildInitFiles</name>
+        <full_name>buildInitFiles</full_name>
+        <docblock line="186">
+          <description>构建与assets上的init.js对应的辅助文件</description>
+          <long-description></long-description>
+          <tag line="186" name="param" description="" type="\" variable="$version"/>
+          <tag line="186" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="191">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="216" package="common">
+        <name>importStyle</name>
+        <full_name>importStyle</full_name>
+        <docblock line="209">
+          <description>模拟KISSY的importStyle方法</description>
+          <long-description></long-description>
+          <tag line="209" name="TODO" description="这个方法目前还不在使用"/>
+          <tag line="209" name="param" description="" type="\" variable="$style"/>
+          <tag line="209" name="param" description="" type="\" variable="$version"/>
+          <tag line="209" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="216">
+          <name>$style</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="216">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="233" package="common">
+        <name>eassets</name>
+        <full_name>eassets</full_name>
+        <docblock line="230">
+          <description></description>
+          <long-description></long-description>
+          <tag line="230" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="233">
+          <name>$kissyversion</name>
+          <default>"1.2.0"</default>
+          <type/>
+        </argument>
+        <argument line="233">
+          <name>$brixversion</name>
+          <default>"1.0"</default>
+          <type/>
+        </argument>
+        <argument line="233">
+          <name>$product</name>
+          <default>'index'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="249" package="common">
+        <name>eheader</name>
+        <full_name>eheader</full_name>
+        <docblock line="246">
+          <description></description>
+          <long-description></long-description>
+          <tag line="246" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="249">
+          <name>$product</name>
+          <default>'default'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="265" package="common">
+        <name>efooter</name>
+        <full_name>efooter</full_name>
+        <docblock line="262">
+          <description></description>
+          <long-description></long-description>
+          <tag line="262" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="265">
+          <name>$product</name>
+          <default>'index'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="281" package="common">
+        <name>tms</name>
+        <full_name>tms</full_name>
+        <docblock line="278">
+          <description></description>
+          <long-description></long-description>
+          <tag line="278" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="281">
+          <name>$prepareUrl</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="281">
+          <name>$publishUrl</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="281">
+          <name>$isgbk</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file common/CommonFunc.php</error>
+      <error line="11" code="50012">No short description for method components()</error>
+      <error line="11" code="50015">Argument $file is missing from the Docblock of components()</error>
+      <error line="24" code="50012">No short description for method imports()</error>
+      <error line="24" code="50015">Argument $file is missing from the Docblock of imports()</error>
+      <error line="83" code="50012">No short description for method add()</error>
+      <error line="83" code="50015">Argument $file is missing from the Docblock of add()</error>
+      <error line="103" code="50012">No short description for method css()</error>
+      <error line="103" code="50015">Argument $module is missing from the Docblock of css()</error>
+      <error line="103" code="50015">Argument $version is missing from the Docblock of css()</error>
+      <error line="127" code="50012">No short description for method js()</error>
+      <error line="127" code="50015">Argument $module is missing from the Docblock of js()</error>
+      <error line="127" code="50015">Argument $version is missing from the Docblock of js()</error>
+      <error line="154" code="50012">No short description for method kissy_config()</error>
+      <error line="154" code="50015">Argument $version is missing from the Docblock of kissy_config()</error>
+      <error line="170" code="50012">No short description for method bootpage()</error>
+      <error line="170" code="50015">Argument $version is missing from the Docblock of bootpage()</error>
+      <error line="170" code="50015">Argument $config is missing from the Docblock of bootpage()</error>
+      <error line="230" code="50012">No short description for method eassets()</error>
+      <error line="230" code="50015">Argument $kissyversion is missing from the Docblock of eassets()</error>
+      <error line="230" code="50015">Argument $brixversion is missing from the Docblock of eassets()</error>
+      <error line="230" code="50015">Argument $product is missing from the Docblock of eassets()</error>
+      <error line="246" code="50012">No short description for method eheader()</error>
+      <error line="246" code="50015">Argument $product is missing from the Docblock of eheader()</error>
+      <error line="262" code="50012">No short description for method efooter()</error>
+      <error line="262" code="50015">Argument $product is missing from the Docblock of efooter()</error>
+      <error line="278" code="50012">No short description for method tms()</error>
+      <error line="278" code="50015">Argument $prepareUrl is missing from the Docblock of tms()</error>
+      <error line="278" code="50015">Argument $publishUrl is missing from the Docblock of tms()</error>
+      <error line="278" code="50015">Argument $isgbk is missing from the Docblock of tms()</error>
+    </parse_markers>
+  </file>
+  <file path="common/GlobalDeclaration.php" hash="773edcb98f9b12ad857f70ca20eb7adb" package="Default">
+    <function namespace="global" line="9" package="Default">
+      <name>components</name>
+      <full_name>\components</full_name>
+      <argument line="9">
+        <name>$file</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="12" package="Default">
+      <name>imports</name>
+      <full_name>\imports</full_name>
+      <argument line="12">
+        <name>$file</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="15" package="Default">
+      <name>add</name>
+      <full_name>\add</full_name>
+      <argument line="15">
+        <name>$file</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="20" package="Default">
+      <name>css</name>
+      <full_name>\css</full_name>
+      <argument line="20">
+        <name>$module</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="20">
+        <name>$version</name>
+        <default>''</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="23" package="Default">
+      <name>js</name>
+      <full_name>\js</full_name>
+      <argument line="23">
+        <name>$module</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="23">
+        <name>$version</name>
+        <default>''</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="28" package="Default">
+      <name>eassets</name>
+      <full_name>\eassets</full_name>
+      <argument line="28">
+        <name>$kissyversion</name>
+        <default>"1.2.0"</default>
+        <type/>
+      </argument>
+      <argument line="28">
+        <name>$brixversion</name>
+        <default>"1.0"</default>
+        <type/>
+      </argument>
+      <argument line="28">
+        <name>$product</name>
+        <default>'index'</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="31" package="Default">
+      <name>eheader</name>
+      <full_name>\eheader</full_name>
+      <argument line="31">
+        <name>$product</name>
+        <default>'default'</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="34" package="Default">
+      <name>efooter</name>
+      <full_name>\efooter</full_name>
+      <argument line="34">
+        <name>$product</name>
+        <default>'index'</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="37" package="Default">
+      <name>tms</name>
+      <full_name>\tms</full_name>
+      <argument line="37">
+        <name>$prepareUrl</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="37">
+        <name>$publishUrl</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="37">
+        <name>$isgbk</name>
+        <default>true</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="41" package="Default">
+      <name>kissy_config</name>
+      <full_name>\kissy_config</full_name>
+      <argument line="41">
+        <name>$version</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="44" package="Default">
+      <name>bootpage</name>
+      <full_name>\bootpage</full_name>
+      <argument line="44">
+        <name>$version</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="44">
+        <name>$config</name>
+        <default>null</default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file common/GlobalDeclaration.php</error>
+      <error line="9" code="50009">No DocBlock was found for function \components()</error>
+      <error line="12" code="50009">No DocBlock was found for function \imports()</error>
+      <error line="15" code="50009">No DocBlock was found for function \add()</error>
+      <error line="20" code="50009">No DocBlock was found for function \css()</error>
+      <error line="23" code="50009">No DocBlock was found for function \js()</error>
+      <error line="28" code="50009">No DocBlock was found for function \eassets()</error>
+      <error line="31" code="50009">No DocBlock was found for function \eheader()</error>
+      <error line="34" code="50009">No DocBlock was found for function \efooter()</error>
+      <error line="37" code="50009">No DocBlock was found for function \tms()</error>
+      <error line="41" code="50009">No DocBlock was found for function \kissy_config()</error>
+      <error line="44" code="50009">No DocBlock was found for function \bootpage()</error>
+    </parse_markers>
+  </file>
+  <file path="core/C.php" hash="58443a5ea00598eda75cde8a26f027f3" package="Default">
+    <class final="false" abstract="false" namespace="global" line="16" package="core">
+      <extends/>
+      <name>C</name>
+      <full_name>\C</full_name>
+      <docblock line="2">
+        <description>Context的简称，程序环境
+实现一个动态的外观机制
+Example:
+&lt;pre&gt;
+//添加一个事件的外观
+C::addFacade(new EventDispatcher());
+//然后就可以通用C的__callStatic方法来访问EventDispatcher的方法了
+C::dispatch(new TIEvent("custom"));
+C::addEventListener("custom",array($obj,"interface"));
+&lt;/pre&gt;</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="core"/>
+      </docblock>
+      <property final="false" static="true" visibility="private" line="19" namespace="global" package="Default">
+        <name>$facade</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="26" package="core">
+        <name>addFacade</name>
+        <full_name>addFacade</full_name>
+        <docblock line="20">
+          <description>添加一个外观接口
+注意：每个类的实例只能添加一次，即使不同类之间方法名也不能重复
+TODO 不同类之间方法名重复的问题</description>
+          <long-description/>
+          <tag line="20" name="param" description="" type="\" variable="$obj"/>
+        </docblock>
+        <argument line="26">
+          <name>$obj</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="41" package="core">
+        <name>removeFacade</name>
+        <full_name>removeFacade</full_name>
+        <docblock line="37">
+          <description>从动态外观中删除某一个接口</description>
+          <long-description/>
+          <tag line="37" name="param" description="" type="\" variable="$className"/>
+        </docblock>
+        <argument line="41">
+          <name>$className</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="54" package="core">
+        <name>hasFacade</name>
+        <full_name>hasFacade</full_name>
+        <docblock line="49">
+          <description>外观中是否包含某一个接口</description>
+          <long-description/>
+          <tag line="49" name="param" description="" type="\" variable="$className"/>
+          <tag line="49" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$className</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="67" package="core">
+        <name>__callStatic</name>
+        <full_name>__callStatic</full_name>
+        <docblock line="61">
+          <description>动态调用静态方法，实现动态外观</description>
+          <long-description/>
+          <tag line="61" name="param" description="" type="\" variable="$method"/>
+          <tag line="61" name="param" description="" type="\" variable="$args"/>
+          <tag line="61" name="return" description="" type="int|mixed">
+            <type by_reference="false">int</type>
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="67">
+          <name>$method</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="67">
+          <name>$args</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="82" package="core">
+        <name>dispose</name>
+        <full_name>dispose</full_name>
+        <docblock line="79">
+          <description>静态资源释放</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="93" package="core">
+        <name>excute</name>
+        <full_name>excute</full_name>
+        <docblock line="88">
+          <description>执行某一个命令</description>
+          <long-description/>
+          <tag line="88" name="param" description="TODO 实现简单的命令模型实现，如果命令膨胀，则使用动态外观扩展" type="\ICommand" variable="$command">
+            <type by_reference="false">\ICommand</type>
+          </tag>
+        </docblock>
+        <argument line="93">
+          <name>$command</name>
+          <default/>
+          <type>\ICommand</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="101" package="core">
+        <name>init</name>
+        <full_name>init</full_name>
+        <docblock line="97">
+          <description>初始化</description>
+          <long-description/>
+          <tag line="97" name="param" description="" type="\" variable="$config"/>
+        </docblock>
+        <argument line="101">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file core/C.php</error>
+      <error line="19" code="50018">No DocBlock was found for property $facade</error>
+    </parse_markers>
+  </file>
+  <file path="core/L.php" hash="641bfb0a46bdac47e8cf1c3e236db787" package="Default">
+    <class final="false" abstract="false" namespace="global" line="6" package="core">
+      <extends/>
+      <name>L</name>
+      <full_name>\L</full_name>
+      <docblock line="2">
+        <description>框架行为记录，不要掺杂任何其他的类的代码，保证记录类的纯净。</description>
+        <long-description/>
+        <tag line="2" name="package" description="core"/>
+      </docblock>
+      <property final="false" static="true" visibility="private" line="12" namespace="global" package="Default">
+        <name>$logArr</name>
+        <default>array('debug' =&gt; array(), 'error' =&gt; array(), 'record' =&gt; array())</default>
+        <docblock line="8">
+          <description>日志数组</description>
+          <long-description/>
+          <tag line="8" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="18" package="core">
+        <name>d</name>
+        <full_name>d</full_name>
+        <docblock line="13">
+          <description>输出Debug信息</description>
+          <long-description/>
+          <tag line="13" name="static" description=""/>
+          <tag line="13" name="param" description="" type="\" variable="$msg"/>
+        </docblock>
+        <argument line="18">
+          <name>$msg</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="27" package="core">
+        <name>e</name>
+        <full_name>e</full_name>
+        <docblock line="22">
+          <description>error输出错误信息</description>
+          <long-description/>
+          <tag line="22" name="static" description=""/>
+          <tag line="22" name="param" description="" type="\" variable="$msg"/>
+        </docblock>
+        <argument line="27">
+          <name>$msg</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="38" package="core">
+        <name>r</name>
+        <full_name>r</full_name>
+        <docblock line="32">
+          <description>record记录</description>
+          <long-description/>
+          <tag line="32" name="static" description=""/>
+          <tag line="32" name="param" description="" type="\" variable="$msg"/>
+          <tag line="32" name="param" description="" type="\" variable="$key"/>
+        </docblock>
+        <argument line="38">
+          <name>$msg</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$key</name>
+          <default>'default'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="47" package="core">
+        <name>o</name>
+        <full_name>o</full_name>
+        <docblock line="43">
+          <description>返回日志的数组</description>
+          <long-description/>
+          <tag line="43" name="static" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="54" package="core">
+        <name>dispose</name>
+        <full_name>dispose</full_name>
+        <docblock line="51">
+          <description>静态资源释放</description>
+          <long-description/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file core/L.php</error>
+    </parse_markers>
+  </file>
+  <file path="core/P.php" hash="fd0fbba7e9096feb563892d33c07c6cc" package="Default">
+    <class final="false" abstract="false" namespace="global" line="29" package="core">
+      <extends/>
+      <name>P</name>
+      <full_name>\P</full_name>
+      <docblock line="2">
+        <description>&lt;h3&gt;新的使用$_GET参数的方式&lt;/h3&gt;
+原来在页面里面我们的使用GET的方法：
+&lt;pre&gt;
+&amp;lt;?php
+if(isset($_GET['get'] &amp;&amp; $_GET['key'] == 'value')
+?&amp;gt;
+&lt;/pre&gt;
+这种方式有两个缺点：
+&lt;ul&gt;
+&lt;li&gt;随着系统的增长，系统中不明所以的$_GET参数会越来越多&lt;/li&gt;
+&lt;li&gt;很烦不好打&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;template_inc里提供这样的方式：&lt;/h4&gt;
+&lt;pre&gt;
+&amp;lt;?php
+//extend为$_GET中的键值，第二个参数为注释会在log工具中展现，第三个为了兼容编码，默认$gbk为true
+P::recordGET('extend','添加Extend功能', false);//记录当前参数功能
+P::get('extend');//使用这个参数
+P::set('extend','off');//设置这个参数默认值
+?&amp;gt;
+&lt;/pre&gt;
+recordGET之后，会将注释记录到L（日志）中,详见LogRecordCommand.php；</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="core"/>
+      </docblock>
+      <property final="false" static="true" visibility="private" line="34" namespace="global" package="Default">
+        <name>$getMap</name>
+        <default>array('get' =&gt; array(), 'note' =&gt; array())</default>
+        <docblock line="31">
+          <description/>
+          <long-description/>
+          <tag line="31" name="var" description="get的映射，包括值、注释和命令" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="48" package="core">
+        <name>recordGET</name>
+        <full_name>recordGET</full_name>
+        <docblock line="40">
+          <description/>
+          <long-description/>
+          <tag line="40" name="TODO" description="去掉这个方法&#10;注册GET键"/>
+          <tag line="40" name="static" description=""/>
+          <tag line="40" name="param" description="$_GET中的键值" type="\" variable="$key"/>
+          <tag line="40" name="param" description="注释" type="\" variable="$note"/>
+          <tag line="40" name="param" description="判断文件编码,默认为true，认为字符为gbk,反之则认为字符为utf-8" type="bool" variable="$gbk">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="48">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="48">
+          <name>$note</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="48">
+          <name>$gbk</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="66" package="core">
+        <name>set</name>
+        <full_name>set</full_name>
+        <docblock line="59">
+          <description>设置参数默认值
+TODO 默认值2次设置，考虑是不是要添加</description>
+          <long-description/>
+          <tag line="59" name="static" description=""/>
+          <tag line="59" name="param" description="$_GET的键值" type="\" variable="$key"/>
+          <tag line="59" name="param" description="默认值" type="\" variable="$value"/>
+        </docblock>
+        <argument line="66">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="66">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="81" package="core">
+        <name>get</name>
+        <full_name>get</full_name>
+        <docblock line="75">
+          <description>获取传入的GET的值，如果getArr中不存在，则返回null</description>
+          <long-description/>
+          <tag line="75" name="static" description=""/>
+          <tag line="75" name="param" description="$_GET中的键值" type="\" variable="$key"/>
+          <tag line="75" name="return" description="" type="null">
+            <type by_reference="false">null</type>
+          </tag>
+        </docblock>
+        <argument line="81">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="97" package="core">
+        <name>initGETParam</name>
+        <full_name>initGETParam</full_name>
+        <docblock line="91">
+          <description>初始化$_GET参数，若$get为null，则默认获取$_GET中的值</description>
+          <long-description/>
+          <tag line="91" name="static" description=""/>
+          <tag line="91" name="param" description="传入的$_GET数组，默认为null" type="null" variable="$get">
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="91" name="return" description="最终得到的模拟的$_GET数组" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="97">
+          <name>$get</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="112" package="core">
+        <name>dispose</name>
+        <full_name>dispose</full_name>
+        <docblock line="109">
+          <description>静态资源释放</description>
+          <long-description/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file core/P.php</error>
+      <error line="40" code="50012">No short description for method recordGET()</error>
+    </parse_markers>
+  </file>
+  <file path="event/CommonEvent.php" hash="4c7e43480f5ad75c0792ac9675655749" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="event">
+      <extends>\TIEvent</extends>
+      <name>CommonEvent</name>
+      <full_name>\CommonEvent</full_name>
+      <docblock line="2">
+        <description>通用函数触发的事件
+&lt;br&gt;创建于13-1-30，下午4:46</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="event"/>
+      </docblock>
+      <constant namespace="global" line="10" package="event">
+        <name>ADD</name>
+        <full_name>ADD</full_name>
+        <value>"common_add"</value>
+      </constant>
+      <constant namespace="global" line="11" package="event">
+        <name>COMPONENTS</name>
+        <full_name>COMPONENTS</full_name>
+        <value>"common_components"</value>
+      </constant>
+      <constant namespace="global" line="12" package="event">
+        <name>IMPORTS</name>
+        <full_name>IMPORTS</full_name>
+        <value>"common_imports"</value>
+      </constant>
+      <constant namespace="global" line="13" package="event">
+        <name>CSS</name>
+        <full_name>CSS</full_name>
+        <value>"common_css"</value>
+      </constant>
+      <constant namespace="global" line="14" package="event">
+        <name>JS</name>
+        <full_name>JS</full_name>
+        <value>"common_js"</value>
+      </constant>
+      <constant namespace="global" line="15" package="event">
+        <name>EASSETS</name>
+        <full_name>EASSETS</full_name>
+        <value>"common_eassets"</value>
+      </constant>
+      <constant namespace="global" line="16" package="event">
+        <name>EHEADER</name>
+        <full_name>EHEADER</full_name>
+        <value>"common_eheader"</value>
+      </constant>
+      <constant namespace="global" line="17" package="event">
+        <name>EFOOTER</name>
+        <full_name>EFOOTER</full_name>
+        <value>"common_efooter"</value>
+      </constant>
+      <constant namespace="global" line="18" package="event">
+        <name>KISSYCONFIG</name>
+        <full_name>KISSYCONFIG</full_name>
+        <value>"common_kissy_config"</value>
+      </constant>
+      <constant namespace="global" line="19" package="event">
+        <name>BOOTPAGE</name>
+        <full_name>BOOTPAGE</full_name>
+        <value>"common_bootpage"</value>
+      </constant>
+      <constant namespace="global" line="20" package="event">
+        <name>TMS</name>
+        <full_name>TMS</full_name>
+        <value>"common_tms"</value>
+      </constant>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file event/CommonEvent.php</error>
+    </parse_markers>
+  </file>
+  <file path="event/EventDispatcher.php" hash="eeff4d5c117c2cab718eec0556f7907e" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="event">
+      <extends/>
+      <implements>\IEventDispatcher</implements>
+      <name>EventDispatcher</name>
+      <full_name>\EventDispatcher</full_name>
+      <docblock line="2">
+        <description>事件管理器
+&lt;br&gt;创建于13-1-8，下午3:32</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="event"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="10" namespace="global" package="Default">
+        <name>$listenerQueue</name>
+        <default>array()</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="event">
+        <name>dispatch</name>
+        <full_name>dispatch</full_name>
+        <docblock line="12">
+          <description/>
+          <long-description/>
+          <tag line="12" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="15">
+          <name>$event</name>
+          <default/>
+          <type>\IEvent</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="event">
+        <name>addListener</name>
+        <full_name>addListener</full_name>
+        <docblock line="27">
+          <description/>
+          <long-description/>
+          <tag line="27" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="30">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="30">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="event">
+        <name>removeListener</name>
+        <full_name>removeListener</full_name>
+        <docblock line="37">
+          <description/>
+          <long-description/>
+          <tag line="37" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="40">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="40">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="53" package="event">
+        <name>hasListener</name>
+        <full_name>hasListener</full_name>
+        <docblock line="50">
+          <description/>
+          <long-description/>
+          <tag line="50" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="53">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="53">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file event/EventDispatcher.php</error>
+      <error line="10" code="50018">No DocBlock was found for property $listenerQueue</error>
+      <error line="12" code="50012">No short description for method dispatch()</error>
+      <error line="12" code="50015">Argument $event is missing from the Docblock of dispatch()</error>
+      <error line="27" code="50012">No short description for method addListener()</error>
+      <error line="27" code="50015">Argument $eventType is missing from the Docblock of addListener()</error>
+      <error line="27" code="50015">Argument $listener is missing from the Docblock of addListener()</error>
+      <error line="37" code="50012">No short description for method removeListener()</error>
+      <error line="37" code="50015">Argument $eventType is missing from the Docblock of removeListener()</error>
+      <error line="37" code="50015">Argument $listener is missing from the Docblock of removeListener()</error>
+      <error line="50" code="50012">No short description for method hasListener()</error>
+      <error line="50" code="50015">Argument $eventType is missing from the Docblock of hasListener()</error>
+      <error line="50" code="50015">Argument $listener is missing from the Docblock of hasListener()</error>
+    </parse_markers>
+  </file>
+  <file path="event/MCEvent.php" hash="667029117c245c5f978b1ba1840dcac8" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="event">
+      <extends>\TIEvent</extends>
+      <name>MCEvent</name>
+      <full_name>\MCEvent</full_name>
+      <docblock line="2">
+        <description>MainCommand的事件
+&lt;br&gt;创建于13-1-22，下午8:11</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="event"/>
+      </docblock>
+      <constant namespace="global" line="10" package="event">
+        <name>RENDER</name>
+        <full_name>RENDER</full_name>
+        <value>"mc_render"</value>
+      </constant>
+      <constant namespace="global" line="11" package="event">
+        <name>RENDERED</name>
+        <full_name>RENDERED</full_name>
+        <value>"mc_rendered"</value>
+      </constant>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file event/MCEvent.php</error>
+    </parse_markers>
+  </file>
+  <file path="event/PluginEvent.php" hash="c4aa2c5b60bfcca5aee61cc4c833b9f0" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="event">
+      <extends>\TIEvent</extends>
+      <name>PluginEvent</name>
+      <full_name>\PluginEvent</full_name>
+      <docblock line="2">
+        <description>插件的事件
+&lt;br&gt;创建于13-1-30，下午8:05</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="event"/>
+      </docblock>
+      <constant namespace="global" line="10" package="event">
+        <name>INIT</name>
+        <full_name>INIT</full_name>
+        <value>"init"</value>
+      </constant>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file event/PluginEvent.php</error>
+    </parse_markers>
+  </file>
+  <file path="event/TIEvent.php" hash="7bb49db2f6f439a0024105b17f1d825d" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="event">
+      <extends/>
+      <implements>\IEvent</implements>
+      <name>TIEvent</name>
+      <full_name>\TIEvent</full_name>
+      <docblock line="2">
+        <description>事件基类
+&lt;br&gt;创建于13-1-8，下午3:32</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="event"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="10" namespace="global" package="Default">
+        <name>$type</name>
+        <default/>
+      </property>
+      <property final="false" static="false" visibility="protected" line="11" namespace="global" package="Default">
+        <name>$content</name>
+        <default/>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="13" package="event">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="13">
+          <name>$type</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="13">
+          <name>$content</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="event">
+        <name>type</name>
+        <full_name>type</full_name>
+        <docblock line="18">
+          <description/>
+          <long-description/>
+          <tag line="18" name="inheritdoc" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="event">
+        <name>setContent</name>
+        <full_name>setContent</full_name>
+        <docblock line="25">
+          <description/>
+          <long-description/>
+          <tag line="25" name="inheritdoc" description=""/>
+        </docblock>
+        <argument line="28">
+          <name>$content</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="event">
+        <name>getContent</name>
+        <full_name>getContent</full_name>
+        <docblock line="33">
+          <description/>
+          <long-description/>
+          <tag line="33" name="inheritdoc" description=""/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file event/TIEvent.php</error>
+      <error line="10" code="50018">No DocBlock was found for property $type</error>
+      <error line="11" code="50018">No DocBlock was found for property $content</error>
+      <error line="13" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="18" code="50012">No short description for method type()</error>
+      <error line="25" code="50012">No short description for method setContent()</error>
+      <error line="25" code="50015">Argument $content is missing from the Docblock of setContent()</error>
+      <error line="33" code="50012">No short description for method getContent()</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/ICommand.php" hash="b6528efe91196dfb46fe408dd6479291" package="Default">
+    <interface namespace="global" line="7" package="interfaces">
+      <name>ICommand</name>
+      <full_name>\ICommand</full_name>
+      <docblock line="2">
+        <description>命令模式实现</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="interfaces">
+        <name>excute</name>
+        <full_name>excute</full_name>
+        <docblock line="10">
+          <description>命令执行</description>
+          <long-description/>
+          <tag line="10" name="abstract" description=""/>
+          <tag line="10" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/ICommand.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/ICommonFunc.php" hash="12db30dc3cdb8797a591a2586bb9002c" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>ICommonFunc</name>
+      <full_name>\ICommonFunc</full_name>
+      <docblock line="2">
+        <description>通用函数的接口
+&lt;br&gt;创建于13-1-23，下午4:42</description>
+        <long-description></long-description>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="15" package="interfaces">
+        <name>components</name>
+        <full_name>components</full_name>
+        <docblock line="10">
+          <description>添加组件</description>
+          <long-description></long-description>
+          <tag line="10" name="param" description="组件的相对路径，比如breadcrumbs就是指components/breadcrumbs" type="\" variable="$file"/>
+          <tag line="10" name="return" description="若是html、json，则返回GBK字符串,若是组件渲染成功，则返回1；" type="int|string">
+            <type by_reference="false">int</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="15">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="22" package="interfaces">
+        <name>imports</name>
+        <full_name>imports</full_name>
+        <docblock line="17">
+          <description>功能与components的方法一样，只是imports搜索的imports目录下的组件</description>
+          <long-description></long-description>
+          <tag line="17" name="param" description="组件的相对路径，必须是仓库名+组件名，比如'tsrp.ux.etao/breadcrumbs'" type="\" variable="$file"/>
+          <tag line="17" name="return" description="" type="int|string">
+            <type by_reference="false">int</type>
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="22">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="interfaces">
+        <name>add</name>
+        <full_name>add</full_name>
+        <docblock line="24">
+          <description>添加PHP模块&lt;br/&gt;
+替换原来的include方法,根据$file找当前templates目录下的具体文件。</description>
+          <long-description></long-description>
+          <tag line="24" name="param" description="文件相对页面目录的路径" type="\" variable="$file"/>
+          <tag line="24" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="30">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="37" package="interfaces">
+        <name>css</name>
+        <full_name>css</full_name>
+        <docblock line="32">
+          <description>加载css文件</description>
+          <long-description></long-description>
+          <tag line="32" name="param" description="模块名称" type="\" variable="$module"/>
+          <tag line="32" name="param" description="版本号" type="string" variable="$version">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="37">
+          <name>$module</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="37">
+          <name>$version</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="44" package="interfaces">
+        <name>js</name>
+        <full_name>js</full_name>
+        <docblock line="39">
+          <description>添加js模块</description>
+          <long-description></long-description>
+          <tag line="39" name="param" description="模块名称" type="\" variable="$module"/>
+          <tag line="39" name="param" description="版本号" type="string" variable="$version">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$module</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="44">
+          <name>$version</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="51" package="interfaces">
+        <name>kissy_config</name>
+        <full_name>kissy_config</full_name>
+        <docblock line="46">
+          <description>生成KISSY的config</description>
+          <long-description></long-description>
+          <tag line="46" name="param" description="版本号" type="\version" variable="$version">
+            <type by_reference="false">\version</type>
+          </tag>
+          <tag line="46" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="51">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="61" package="interfaces">
+        <name>bootpage</name>
+        <full_name>bootpage</full_name>
+        <docblock line="54">
+          <description>启动页面必须要执行的方法</description>
+          <long-description></long-description>
+          <tag line="54" name="TODO" description="这个方法目前还不在使用"/>
+          <tag line="54" name="param" description="时间戳" type="\" variable="$version"/>
+          <tag line="54" name="param" description="action配置参数" type="\" variable="$config"/>
+          <tag line="54" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="61">
+          <name>$version</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$config</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="69" package="interfaces">
+        <name>eassets</name>
+        <full_name>eassets</full_name>
+        <docblock line="63">
+          <description>添加etao通用的assets</description>
+          <long-description></long-description>
+          <tag line="63" name="param" description="KISSY的版本号，默认为1.2.0" type="string" variable="$kissyversion">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="63" name="param" description="Brix的版本号，默认为1.0" type="string" variable="$brixversion">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="63" name="param" description="产品名，默认为index" type="string" variable="$product">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="69">
+          <name>$kissyversion</name>
+          <default>"1.2.0"</default>
+          <type/>
+        </argument>
+        <argument line="69">
+          <name>$brixversion</name>
+          <default>"1.0"</default>
+          <type/>
+        </argument>
+        <argument line="69">
+          <name>$product</name>
+          <default>'index'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="75" package="interfaces">
+        <name>eheader</name>
+        <full_name>eheader</full_name>
+        <docblock line="71">
+          <description>添加etao通用的页头</description>
+          <long-description></long-description>
+          <tag line="71" name="param" description="文件名，默认为default" type="string" variable="$product">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="75">
+          <name>$product</name>
+          <default>'default'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="81" package="interfaces">
+        <name>efooter</name>
+        <full_name>efooter</full_name>
+        <docblock line="77">
+          <description>添加etao通用页尾</description>
+          <long-description></long-description>
+          <tag line="77" name="param" description="文件名，默认为index" type="string" variable="$product">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="81">
+          <name>$product</name>
+          <default>'index'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="interfaces">
+        <name>tms</name>
+        <full_name>tms</full_name>
+        <docblock line="83">
+          <description>tms方法</description>
+          <long-description></long-description>
+          <tag line="83" name="param" description="预发地址" type="\" variable="$prepareUrl"/>
+          <tag line="83" name="param" description="发布地址" type="\" variable="$publishUrl"/>
+          <tag line="83" name="param" description="是否是GBK编码，默认为true" type="\" variable="$isgbk"/>
+          <tag line="83" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$prepareUrl</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$publishUrl</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$isgbk</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/ICommonFunc.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IData.php" hash="e0a789c716c525f04f399ea31bfcc914" package="Default">
+    <interface namespace="global" line="28" package="interfaces">
+      <name>IData</name>
+      <full_name>\IData</full_name>
+      <docblock line="2">
+        <description>提供一种数据注入的方式，以baobei-w页面为例：
+系统会在搜索templates下的baobei-w时，搜索相同目录下是否存在data.php，并判断其中是否包含一个实现了IData接口的类，类名必须为&lt;code&gt;页面名+data&lt;/code&gt;,无&lt;code&gt;-&lt;/code&gt;&lt;br/&gt;
+比如:
+&lt;pre&gt;
+&amp;lt;?php
+class baobeiwdata implements IData
+{
+  function getData($key)
+  {
+      switch($key){
+          case 'personal-custom':
+              $data = iconv('GBK','UTF-8','{"customed":"custom-btn-customed"}');
+              break;
+          default:
+              $data = null;
+      }
+      return $data;
+  }
+}
+?&amp;gt;
+&lt;/pre&gt;
+这样就会将&lt;code&gt;personal-custom&lt;/code&gt;组件的原来的&lt;code&gt;{"customed":""}&lt;/code&gt;和&lt;code&gt;{"customed":"custom-btn-customed"}&lt;/code&gt;混合，类似&lt;code&gt;KISSY.merge()&lt;/code&gt;。</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="38" package="interfaces">
+        <name>getData</name>
+        <full_name>getData</full_name>
+        <docblock line="31">
+          <description>获取数据的方式</description>
+          <long-description/>
+          <tag line="31" name="abstract" description=""/>
+          <tag line="31" name="param" description="组件映射入口" type="\" variable="$key"/>
+          <tag line="31" name="param" description="组件绝对路径" type="\" variable="$path"/>
+          <tag line="31" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IData.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IEvent.php" hash="94c36ab7371c95a9234de9bc6b661b8e" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>IEvent</name>
+      <full_name>\IEvent</full_name>
+      <docblock line="2">
+        <description>事件接口
+&lt;br&gt;创建于13-1-11，下午2:43</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="interfaces">
+        <name>type</name>
+        <full_name>type</full_name>
+        <docblock line="10">
+          <description>事件类型不可更改，为只读</description>
+          <long-description/>
+          <tag line="10" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="interfaces">
+        <name>setContent</name>
+        <full_name>setContent</full_name>
+        <docblock line="16">
+          <description>设置事件的内容</description>
+          <long-description/>
+          <tag line="16" name="param" description="" type="\" variable="$content"/>
+          <tag line="16" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="21">
+          <name>$content</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="27" package="interfaces">
+        <name>getContent</name>
+        <full_name>getContent</full_name>
+        <docblock line="23">
+          <description>获取事件的内容</description>
+          <long-description/>
+          <tag line="23" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IEvent.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IEventDispatcher.php" hash="6b5bcb3ff8ebe5e15e8412e57e2bd62b" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>IEventDispatcher</name>
+      <full_name>\IEventDispatcher</full_name>
+      <docblock line="2">
+        <description>事件派发器接口
+&lt;br&gt;创建于13-1-8，下午3:41</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="interfaces">
+        <name>dispatch</name>
+        <full_name>dispatch</full_name>
+        <docblock line="10">
+          <description>派发一个事件</description>
+          <long-description/>
+          <tag line="10" name="param" description="" type="\IEvent" variable="$event">
+            <type by_reference="false">\IEvent</type>
+          </tag>
+        </docblock>
+        <argument line="14">
+          <name>$event</name>
+          <default/>
+          <type>\IEvent</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="interfaces">
+        <name>addListener</name>
+        <full_name>addListener</full_name>
+        <docblock line="16">
+          <description>添加事件监听器</description>
+          <long-description/>
+          <tag line="16" name="param" description="" type="\" variable="$eventType"/>
+          <tag line="16" name="param" description="" type="\" variable="$listener"/>
+        </docblock>
+        <argument line="21">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="interfaces">
+        <name>removeListener</name>
+        <full_name>removeListener</full_name>
+        <docblock line="23">
+          <description>移除事件监听器</description>
+          <long-description/>
+          <tag line="23" name="param" description="" type="\" variable="$eventType"/>
+          <tag line="23" name="param" description="" type="\" variable="$listener"/>
+        </docblock>
+        <argument line="28">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="28">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="35" package="interfaces">
+        <name>hasListener</name>
+        <full_name>hasListener</full_name>
+        <docblock line="30">
+          <description>是否有某个事件的监听器</description>
+          <long-description/>
+          <tag line="30" name="param" description="" type="\" variable="$eventType"/>
+          <tag line="30" name="param" description="" type="\" variable="$listener"/>
+        </docblock>
+        <argument line="35">
+          <name>$eventType</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="35">
+          <name>$listener</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IEventDispatcher.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IFliePack.php" hash="996fbe4a55bb04e93d3520b97ce9275a" package="Default">
+    <interface namespace="global" line="69" package="interfaces">
+      <name>IFliePack</name>
+      <full_name>\IFliePack</full_name>
+      <docblock line="2">
+        <description>以FilePack类为列，详见FilePackTest中的测试用例
+&lt;h3&gt;src目录下打包的文件夹&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/search","css")
+== ["src/search/a.a.a.base.css", "src/search/a.a.a.tmp.css",……]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/search","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/search.css"
+&lt;/pre&gt;
+&lt;h3&gt;src目录下被忽略的文件夹&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/_libs_/cutelink.js","js")
+== [ "src/_libs_/cutelink.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/_libs_/cutelink.js","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/_libs_/cutelink.js"
+&lt;/pre&gt;
+&lt;h3&gt;imports或者componets目录&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("components","js")
+== [ "components/acomponent/index.js", "components/component/index.js",……]
+trans2dev("imports","css")
+== [ "imports/srepo.ux.etao/component/index.css", "imports/test.ux.etao/component/index.css",……]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("imports","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/imports.css"
+trans2assets("components","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/components.js"
+&lt;/pre&gt;
+&lt;h3&gt;imports或者componets目录被忽略的组件&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("components/_component_","css")
+== [ "components/_component_/index.css"]
+trans2dev("imports/srepo.ux.etao/_component_","js")
+== [ "imports/srepo.ux.etao/_component_/index.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("components/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/_component_/index.css"
+trans2assets("imports/srepo.ux.etao/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/srepo.ux.etao/_component_/index.css"
+&lt;/pre&gt;
+&lt;h3&gt;多个一起&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== [ "src/search/a.base.js",
+"src/search/a.form-validate.js",
+"src/_libs_/cutelink.js",
+"components/acomponent/index.js",
+"components/component/index.js",
+"imports/srepo.ux.etao/component/index.js",
+"imports/test.ux.etao/component/index.js",
+"components/_component_/index.js",
+"imports/srepo.ux.etao/_component_/index.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== "http://assets.etao.net/apps/e/tsrp/??130121/search.js,130121/_libs_/cutelink.js,130121/components/components.js,130121/imports/imports.js,130121/components/_component_/index.js,130121/imports/srepo.ux.etao/_component_/index.js"
+&lt;/pre&gt;
+&lt;br&gt;创建于13-1-21，上午10:02</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="77" package="interfaces">
+        <name>trans2dev</name>
+        <full_name>trans2dev</full_name>
+        <docblock line="71">
+          <description>将输入路径转换为本地路径</description>
+          <long-description/>
+          <tag line="71" name="param" description="" type="\" variable="$path"/>
+          <tag line="71" name="param" description="" type="\" variable="$filetype"/>
+          <tag line="71" name="return" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="77">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="77">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="86" package="interfaces">
+        <name>trans2assets</name>
+        <full_name>trans2assets</full_name>
+        <docblock line="79">
+          <description>将输入的路径转换为assets路径</description>
+          <long-description/>
+          <tag line="79" name="param" description="" type="\" variable="$path"/>
+          <tag line="79" name="param" description="" type="\" variable="$version"/>
+          <tag line="79" name="param" description="" type="\" variable="$filetype"/>
+          <tag line="79" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="86">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="86">
+          <name>$version</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="86">
+          <name>$filetype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IFliePack.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IPlugin.php" hash="d97115592c882124ed3b9fa74ea9db10" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>IPlugin</name>
+      <full_name>\IPlugin</full_name>
+      <docblock line="2">
+        <description>插件接口
+&lt;br&gt;创建于13-1-8，下午3:29</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="14" package="interfaces">
+        <name>name</name>
+        <full_name>name</full_name>
+        <docblock line="10">
+          <description>返回插件的目录名</description>
+          <long-description/>
+          <tag line="10" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="18" package="interfaces">
+        <name>init</name>
+        <full_name>init</full_name>
+        <docblock line="15">
+          <description>插件初始化</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="interfaces">
+        <name>isInit</name>
+        <full_name>isInit</full_name>
+        <docblock line="20">
+          <description>是否已经初始化</description>
+          <long-description/>
+          <tag line="20" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="28" package="interfaces">
+        <name>destroy</name>
+        <full_name>destroy</full_name>
+        <docblock line="25">
+          <description>插件销毁</description>
+          <long-description/>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IPlugin.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IPluginManager.php" hash="5d66b4ee09ba07c7b12a2580cb1f5590" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>IPluginManager</name>
+      <full_name>\IPluginManager</full_name>
+      <docblock line="2">
+        <description>插件管理器接口
+&lt;br&gt;创建于13-1-30，下午8:47</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="13" package="interfaces">
+        <name>initPlugins</name>
+        <full_name>initPlugins</full_name>
+        <docblock line="10">
+          <description>初始化插件</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="18" package="interfaces">
+        <name>addPlugin</name>
+        <full_name>addPlugin</full_name>
+        <docblock line="14">
+          <description>添加一个插件</description>
+          <long-description/>
+          <tag line="14" name="param" description="" type="\IPlugin" variable="$plugin">
+            <type by_reference="false">\IPlugin</type>
+          </tag>
+        </docblock>
+        <argument line="18">
+          <name>$plugin</name>
+          <default/>
+          <type>\IPlugin</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="interfaces">
+        <name>removePlugin</name>
+        <full_name>removePlugin</full_name>
+        <docblock line="20">
+          <description>移除一个插件</description>
+          <long-description/>
+          <tag line="20" name="param" description="" type="\" variable="$name"/>
+        </docblock>
+        <argument line="24">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="31" package="interfaces">
+        <name>hasPlugin</name>
+        <full_name>hasPlugin</full_name>
+        <docblock line="26">
+          <description>判断是否包含某个插件</description>
+          <long-description/>
+          <tag line="26" name="param" description="" type="\" variable="$name"/>
+          <tag line="26" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="31">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IPluginManager.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/IRender.php" hash="d4f4f184b0290206807eae692490ccc9" package="Default">
+    <interface namespace="global" line="7" package="interfaces">
+      <name>IRender</name>
+      <full_name>\IRender</full_name>
+      <docblock line="2">
+        <description>渲染器接口，约束渲染器行为</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="interfaces">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="9">
+          <description>实现模板与数据的渲染</description>
+          <long-description/>
+          <tag line="9" name="abstract" description=""/>
+          <tag line="9" name="param" description="模板" type="\" variable="$tpl"/>
+          <tag line="9" name="param" description="数据" type="\" variable="$data"/>
+          <tag line="9" name="param" description="索引，也就是componets和imports的方法的第一个参数的值" type="\" variable="$key"/>
+          <tag line="9" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="17">
+          <name>$tpl</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="17">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="17">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/IRender.php</error>
+    </parse_markers>
+  </file>
+  <file path="interfaces/ITpl.php" hash="b1785f1bebc35c83745411fbb4b00b9b" package="Default">
+    <interface namespace="global" line="8" package="interfaces">
+      <name>ITpl</name>
+      <full_name>\ITpl</full_name>
+      <docblock line="2">
+        <description>获取组件模板的接口
+&lt;br&gt;创建于13-1-17，下午9:14</description>
+        <long-description/>
+        <tag line="2" name="author" description="宇山&lt;yushan.yk@taobao.com&gt;"/>
+        <tag line="2" name="package" description="interfaces"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="16" package="interfaces">
+        <name>getTpl</name>
+        <full_name>getTpl</full_name>
+        <docblock line="10">
+          <description>获取组件模板</description>
+          <long-description/>
+          <tag line="10" name="param" description="键名，相当于组件的唯一标识" type="\" variable="$key"/>
+          <tag line="10" name="param" description="组件的绝对路径" type="\" variable="$path"/>
+          <tag line="10" name="return" description="组件模板" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="16">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="16">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file interfaces/ITpl.php</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="base" full_name="base"/>
+  <package name="commands" full_name="commands"/>
+  <package name="common" full_name="common"/>
+  <package name="core" full_name="core"/>
+  <package name="event" full_name="event"/>
+  <package name="interfaces" full_name="interfaces"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

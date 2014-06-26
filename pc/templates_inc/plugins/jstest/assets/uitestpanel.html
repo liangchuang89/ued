@@ -1,0 +1,36 @@
+    <link rel="stylesheet" type="text/css" href="{{jasminepath}}/jasmine.css">
+    <link rel="stylesheet" type="text/css" href="{{jstestAssets}}/custom.css">
+    <script type="text/javascript" src="{{jasminepath}}/jasmine.js" charset="utf-8"></script>
+    <script type="text/javascript" src="{{jasminepath}}/jasmine.async.js" charset="utf-8"></script>
+    <script type="text/javascript" src="{{jstestAssets}}/custom.js" charset="utf-8"></script>
+    <script type="text/javascript" src="{{jasminepath}}/uitest-jasmine-html.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        (function() {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter(document,"J_UITestPanel");
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function(spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            KISSY.config({
+                packages:[{
+                    combine:false,
+                    name:'test',
+                    debug:true,
+                    path: '.'
+                }]
+            });
+            KISSY.use('{{#specs}}{{test}},{{/specs}}',function(S){
+                S.later(function(){
+                    jasmineEnv.execute();
+                },1000);
+            });
+
+        })();
+    </script>

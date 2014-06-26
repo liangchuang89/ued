@@ -149,7 +149,10 @@ $(function() {
 		$('body').addClass('b12-pause');
 	});
 
-
+	$(".J_Back").bind(eventType, function(e){
+		e.preventDefault();
+		window.location.href = $(this).attr("data-href");
+	});
 });
 
 

@@ -1,0 +1,757 @@
+/**
+ * 基本库 Modified from tbsp.css
+ */
+/**
+ * FIX IE6重复背景图下载
+ * @link //ued.taobao.com/blog/2010/05/17/ie6-duplicate-load-bug/
+ */
+/* 以下已经在 global 里定义了 */
+html {
+    zoom: expression(function(ele){ele.style.zoom = "1"; document.execCommand("BackgroundImageCache",false,true);}(this));
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma,arial;
+}
+body{
+  background-color: white;
+}
+html, legend {
+    color: #404040;
+    background-color: #fff;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: none;
+}
+input,textarea {
+    font-size: 12px;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+html {
+    overflow-y: scroll;
+}
+a {
+    color: #0063DC;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #f60;
+    text-decoration: underline;
+}
+.hidden {
+    display: none !important;
+}
+.invisible {
+    visibility: hidden !important;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: " ";
+} 
+.clearboth {
+    clear: both;
+}
+/* Grid {
+    {{ */
+#page {
+    width: 950px;
+    margin: 0 auto;
+}
+.col-main {
+    float: left;
+    width: 100%;
+    min-height: 1px;
+}
+.grid-c2f .main-wrap {
+    margin-right: 190px;
+}
+.grid-c2f .col-sub {
+    width: 190px;
+    margin-left: -190px;
+    float: left;
+}
+.grid-c2f:after, .main-wrap:after, .col-sub:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.grid-c2f, .main-wrap, .col-sub {
+    zoom: 1;
+}
+/* }}} */
+
+/* what's this for? */
+body:first-of-type .main-wrap {
+    /*position: relative;*/
+}
+
+.h, .H {
+    color:#FF2900 !important;
+    position:static;
+}
+
+button {
+    overflow:hidden;
+    cursor:pointer;
+}
+input {
+    vertical-align: middle;
+}
+
+/*-- form input , etc. --*/
+input.txt {
+    height: 12px;
+    padding: 3px 0 2px 2px;
+    background: #fff;
+    border: 1px solid #b5b5b5;
+    font: 100 12px/1 Tahoma, Verdana, Arial, Simsun, sans-serif;
+}
+input:focus, input.focus {
+    border-color: #69c;
+}
+select {
+    border: 1px solid #a6a6a6;
+    background: #f5f5f5;
+}
+option {
+    background: #fff;
+}
+
+.fm-price input.txt {
+    width: 2.2em;
+}
+
+input.focus,
+textarea.focus,
+input:focus,
+textarea:focus {
+    border-color: #6694E3 !important;
+    outline-color: #6694E3;
+}
+
+
+/*全局价格*/
+.price em,
+.price strong {
+    font:bold 16px Arial;
+    color:#ff2900;
+    padding-left:16px;
+    background-position: -5px -81px;
+}
+.price del {
+  font: 200 12px/16px arial;
+  color: gray;
+  padding-left:14px;
+  background-position: -5px -82px;
+}
+.price em del,
+.price strong del {
+  padding-left: 0;
+  background: none;
+}
+
+button {
+    background-color: transparent;
+}
+
+/* 一朵小菊花... */
+.juhua-gif {
+	background: url(http://img02.taobaocdn.com/tps/i2/T1JSdAXd0nXXXXXXXX-32-32.gif) no-repeat 50% 50%;
+}
+
+.icon-new-gif {
+  background: url(http://img03.taobaocdn.com/tps/i3/T1hSXPXcBJXXXXXXXX-21-16.gif) no-repeat;
+  width: 21px;
+  height: 16px;
+}
+.icon-hot-gif{
+  background: url(http://img03.taobaocdn.com/tps/i3/T1lIBYXoxtXXXXXXXX-21-16.gif) no-repeat;
+  width: 21px;
+  height: 16px;
+  position: absolute;
+  left: 60px;
+  top: -8px; 
+  z-index: 100; 
+}
+/* drag and drop origins */
+.ui-dd-oris {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+/*.loading * {*/
+    /*visibility: hidden;*/
+/*}*/
+
+
+/* 图片垂直居中 */
+
+/* TODO: 统一所有图片对齐方案 */
+/*-----common style-----*/
+.photo a, .pic a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    *display: block;
+    *font-family: Arial;
+}
+.photo a img, .pic a img {
+    vertical-align: middle;
+}
+/*-----End common-----*/
+
+/* 默认即80x80 */
+.photo {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.photo a {
+    width: 80px;
+    height: 80px;
+    *font-size: 70px;
+}
+
+/* PHOTO 120 */
+.s120 {
+    width: 120px;
+    height: 120px;
+}
+.s120 a {
+    width: 120px;
+    height: 120px;
+    *font-size: 90px;
+    *line-height: 1;
+}
+
+/* PHOTO 170 */
+.s170 {
+    width: 170px;
+    height: 170px;
+}
+.s170 a {
+    width: 170px;
+    height: 170px;
+    *font-size: 150px;
+    *line-height: 1;
+}
+
+/*.list-type2 .photo,*/
+.list-view .photo {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.combine-style .photo {
+    float:left;
+    margin-left:-97px;
+    display:inline;
+}
+
+/* PHOTO-220 */
+.list-view-enlarge .photo,
+.s220 {
+    width:220px;
+    height:220px;
+    margin:0 auto;
+    padding:5px;
+    border:solid 1px #eee;
+}
+.list-view-enlarge .photo a,
+.s220 {
+    width:220px;
+    height:220px;
+    *font-size: 192px;
+}
+
+/* PHOTO-160X160 实际占据172平方像素 */
+.list-view-enlarge-4pic .photo,
+.s160 {
+    width: 160px;
+    height: 160px;
+    _width: 158px;
+    _height: 158px;
+    border: solid 1px #eee;
+    background-color: #fff;
+}
+.list-view-enlarge-4pic .photo a,
+.s160 a {
+    width: 160px;
+    height: 160px;
+    *font-size: 143px;
+}
+
+.list-view-enlarge-4pic .photo {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/*-------- EXTRAS ------*/
+
+
+/*curmbs*/
+.search-nav .crumbs li,
+/*店铺信息*/
+.seller-ad .inner,
+.seller-item .inner,
+.combine-style .inner,
+/*智能导航*/
+.panel-bg,
+.prop-list dd .entry a,
+/*相关搜索*/
+.related-search-outter,
+/*列表过滤tab*/
+.filter-tabbar li,
+.filter-tabbar li .r,
+.filter-tabbar li .l,
+/*筛选条件*/
+/*#filterForm fieldset .shadow,*/
+/*工具条*/
+.toolbarWrapper,
+.list-view-enlarge .related-item, .list-view-enlarge .related-seller,.list-view-enlarge .related-items,
+.list-view .related-seller,
+.list-view .related-seller .l,
+.list-view .related-seller .r,
+/*空query页*/
+.rank-order-list .tabs li,
+.lady-order-list .hd,
+.mobile-order-list .hd,
+/*排行榜TAB*/
+.rank-tab-nav li a,
+.rank-tab-nav li a span,
+/*产品combo*/
+.hot-product .hd,
+.hot-product .hd span,
+.hot-product .hd .view-more,
+/*单价*/
+.measure-icon,
+.measure-icon .l,
+.measure-icon .r,
+/*筛选区下拉选择背景*/
+.filter .select-item,
+.filter .order .select-item,
+/*大小图切换背景*/
+.toolbar .mode a,
+/*合并同款combo*/
+.combine-style .price-section ul.pctbar i,.combine-style .price-section ul.pctbar b,
+/* 同店购表单 */
+.tdg-form form {
+    background-image: url(//img04.taobaocdn.com/tps/i4/T1MBVHXjdeXXXXXXXX.png);
+    background-repeat: repeat-x; 
+}
+.search-nav{
+  position: relative;
+}
+.search-nav .discount-link{
+  background: url(http://img02.taobaocdn.com/tps/i2/T19_iAXbpyXXXXXXXX-87-100.png) no-repeat;
+  background-position: 0px -30px;
+  height: 30px;
+  width: 87px;
+  position: absolute;
+  top: -5px;
+  right: -2px;
+}
+.search-nav .discount-link:hover{
+  background-position: 0px -70px;
+}
+.show-cate,
+/*宝贝数目*/
+div.show-more a span,
+/*属性导航*/
+.selected-attr dd a .close-icon,
+.hierarchy-cate dt,
+.prop-list dd .more,
+.prop-list .multi-select dd li.imgtxt span,
+.prop-list .multi-select dd li a,
+.prop-list dd .entry span,
+/*排行榜链接*/
+.rankingLink,
+#filterToggle,
+/*相关搜索*/
+.related-search dd,
+/*店铺信息 无结果*/
+.search-noresult p,
+/*旺旺在线，合并卖家*/
+.filter-tabbar li.status a,
+.filter-tabbar li.combine a,
+.filter-tabbar li.status a span,
+.filter-tabbar li.combine a span,
+/*排序*/
+/*- 新排序条 -*/
+.sorting .order-options li a,
+/*- 老排序条 -*/
+.order .order-options li a,
+
+.filter .select-item span,
+
+/*保障图标*/
+.legend2 a span,
+
+.lovebaobei, .hkshop, .vouch, .consignment,
+.creditcard, .COD,
+
+.list-view-enlarge .legend2 .icon-trigger,
+/*价格*/
+.price em, .price strong, .price del,
+/*工具条浮动关闭按钮*/
+.toolbarWrapper .closeFloat a,
+/*分页*/
+.page-start,
+.page-next, 
+.page-prev,
+.page-end,
+/*无结果页*/
+.recommend-box dd,
+/*空query页*/
+.topCat dl dd a span,
+#J_CategoryList h5,
+.allcat-result,
+/*产品combo*/
+.rank-stat,
+/*大图提示*/
+.small2big-popup .arrow,
+.ms-noresult .t-word dd a,
+/*multi-search-form*/
+.ms-form em,
+.seller-item s,
+.combine-style s,
+.combine-style .price-section ul.price-list a,
+#filterForm div.advanced table label.wwicon,
+.toolbar .mode a span,
+.ms-toolbar .wwonline a,
+.ms-toolbar .wwonline a span.wwicon,
+.combine-item .combine-seller,
+.combine-item  .combine-samestyle,
+
+/* 价格区间 */
+.combine-item .price-range,
+.price-range-dp,  i.dp-arr,
+
+/* 新功能提示浮层的关闭按钮 */
+.newfeature-tip a.close,
+
+/* 淘吧、排行榜入口的分隔线 */
+.list-info .pipe,
+.tbaLink-bottom .pipe,
+.tbaLink-go,
+
+/* 同店购 */
+.tdg-form em, 
+.list-info .tdg-show ,
+
+/* 排行榜入口 */
+.rankingLink,
+.rankingLink .up,
+.rankingLink .down,
+.rankingLink .stop,
+/* 垂直女装导航   */
+.w-navigation .v-nvzhuang .more{
+    /* @ICON */
+    background-image: url(http://img03.taobaocdn.com/tps/i3/T1ebamXel5XXXXXXXX-20-2400.png);
+    background-repeat: no-repeat; 
+}
+
+/*.search-form form button,*/
+/*属性导航*/
+/*div.show-more a,
+.mixed-type .arrow,*/
+.show-more a,
+.mixed-type .selected-attr s.arrow,
+.prop-list .multi-select .submit,
+/*卖家信息*/
+.seller-ad .extend-info button,
+.seller-item .extend-info button,
+/*筛选条件部分*/
+/*#filterForm ul.basic,*/
+/*#filterForm div.advanced,*/
+/*排序*/
+.toolbar .order a,
+/*保障*/
+.toolbar .protection .title,
+/*商城图标*/
+.mall-icon,
+.shoe-mall-icon,
+.nameless-good-icon,
+.shopkeeper-hot-sell,
+.hi-tao,
+.family-decoration-icon,
+.icon-chaoshi,
+.globalbuy,
+.digital-icon,
+.seller-ad .mall,
+.discount, .tao1site, .daigou,
+/*更多宝贝*/
+.list-view .related-item,
+/*合并同款*/
+.related-seller .go,
+.list-combine .button a,
+.combine-item a,
+/*合并同款，合并卖家*/
+.list-view-enlarge .related-item a.view,
+.list-view-enlarge a.compare,
+.list-view-enlarge .related-items a.samestyle,
+/*保障图标*/
+.list-view .attribute li.legend2 a:hover,
+/*分页*/
+.page-skip button, 
+/*用户反馈*/
+.advise .close a,
+/*空query页*/
+.rank-order-list .hd,
+.list-panel li i,
+.lady-order-list .hd li.selected,
+a.top50,
+.go-top,
+/*排行榜*/
+.rank-list ol li i,
+/*产品combo*/
+.hot-product .cat-name a,
+.star,.star span,
+.combo-product-detail .primay-info .compare,
+/*p4p*/
+.p4p-more a,.p4p-more a span,
+/*multi-search-form*/
+/*.ms-form button,*/
+/*.ms-form h5,*/
+.multi-search h5,
+.multi-search button,
+
+.filter button.submit,
+
+/*同店购*/
+.tdg-btn, .tdg-form h5, .tdg-form button,
+
+/*店铺信息名片*/
+ul.attribute .shopinfo,
+
+#filterToggle,
+/* 人气排序的icon,暂时放到这里 */
+#rank-sel-sort .toselect .by-renqi-desc a {
+    /* @NORMAL */
+    background-image: url("http://img01.taobaocdn.com/tps/i1/T155rxXhJoXXaTF1rC-260-720.png");
+    background-repeat: no-repeat; 
+}
+
+.search-auto,
+.search-tab,
+.search-nav,
+.list-info,
+/*.attribute-list,
+.cat-panel,
+.cat-panel td div,
+.selected-items .inner,*/
+.selected-attr,
+.selected-attr dl,
+.cate-panel dl,
+.prop-list dl,
+
+.filter-tabbar,
+.list-view-enlarge,
+.topCat,
+#J_CategoryList,
+.rank-order-list .tabs,
+.list-type2 .bd .list-panel,
+.rank-list, .rank-tab-nav,
+.hot-product .bd,
+.multi-search,
+.shop-item .attribute li.shop-info .legend2 {
+    *zoom: 1;
+}
+
+.search-auto:after,
+.search-tab:after,
+.search-nav:after,
+.list-info:after,
+/*.attribute-list:after,
+.cat-panel:after,
+.cat-panel td div:after,
+.selected-items .inner:after,*/
+.selected-attr:after,
+.selected-attr dl:after,
+.cate-panel dl:after,
+.prop-list dl:after,
+.filter-tabbar:after,
+.list-view-enlarge:after,
+.topCat:after,
+#J_CategoryList:after,
+.rank-order-list .tabs:after,
+.list-type2 .bd .list-panel:after,
+.rank-list:after, .rank-tab-nav:after,
+.hot-product .bd:after,
+/*.list-combo:after,*/
+.multi-search:after,
+.shop-item .attribute li.shop-info .legend2:after {
+    content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/*-------- global layout ------*/
+
+/*-----global-nav-----*/
+#header {
+    *z-index: 99999;
+} /* 加z-index是避免头部的悬浮菜单被下面的层覆盖 */
+
+/*-----Header-----*/
+#logo {
+    width: 161px;
+    padding: 35px 0 5px;
+}
+#logo a {
+    width: 140px;
+    height: 35px;
+    display: block;
+    overflow: hidden;
+}
+#logo img {
+    display: block;
+}
+
+/*faq,old,back2index,news*/
+#logo .sub-logo {
+    display: none;
+}
+#index #logo {
+    padding: 65px 0 0;
+    width: auto;
+}
+#index #logo a {
+    margin: 0 auto;
+    display: block;
+    width: 225px;
+    height: auto;
+}
+
+/*以下为内容页*/
+#content {
+    margin-top: 15px;
+}
+
+.noscript-tip {
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+/* fuck header, so we don't have a 'loading' background*/
+#site-nav .services .menu-bd {
+    background: none;
+}
+
+/* 基本上每个页面都会出的内容: */
+/*-----相关搜索-----*/
+.related-search-outter {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    height: 34px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    background-position: 0 -50px;
+}
+.related-search {
+    line-height: 34px; 
+    padding: 0 0 0 13px;   
+}
+.related-search-outter .related-byshop{
+  width: 85%; 
+  *height: 34px; 
+  *overflow: hidden; 
+  *margin-right: 0px;
+}
+.related-search-outter .related-shop{
+  padding-left: 10px;
+  line-height: 34px;
+  *float: right;
+  *margin-top: -34px;
+  *margin-right: 10px;
+}
+.related-search dt {
+    float: left;
+    color: #333333;
+    font-family: '宋体';
+    margin: 0 -2px 0 0;
+    font-size: 13px;
+}
+.related-search dd {
+    float: left;
+    font-size: 12px;
+    padding: 0 13px 0 12px;
+    background-position: right -277px;
+    background-repeat: no-repeat;
+}
+.related-search dd a {
+    white-space: nowrap;
+}
+/*-----End 相关搜索-----*/
+
+
+/*-----老 面包屑-----*/
+.search-nav .crumbs {
+    float: left;
+    padding: 1px 0 6px 6px;
+    line-height: 18px;
+}
+.search-nav .crumbs li {
+    float: left;
+    padding-right: 10px;
+    margin-right: 5px;
+    background-position: right -605px;
+    background-repeat: no-repeat;
+}
+.search-nav .crumbs li.last a{
+    color: #000;
+}
+.search-nav .crumbs li.result-count-cont{
+    color: #888;
+    background: none;
+}
+/*添加搜索定制**********************************************************************This is a Add @author yushan.yk@taobao.com*******/
+.search-nav .search-custom{
+    float: right;
+    border-left: 1px solid #E5E5E5;
+    padding-left: 4px;
+}
+.search-nav .search-custom a{
+    color: #555;
+    padding-left: 20px;
+    margin-left: 5px;
+    background-position: 0 -520px;
+}
+.search-nav .search-custom a:hover{
+    text-decoration: none;
+    color: #f50;
+    background-position: 0 -500px;
+}
+.search-nav .search-custom .customed-search{
+    background-position: 0 -500px;
+}
+/*添加搜索定制**********************************************************************This Add over*******/
+/*-----End 面包屑-----*/
+

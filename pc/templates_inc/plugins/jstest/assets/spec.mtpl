@@ -1,0 +1,33 @@
+/**
+ * 由templates_inc的jstest插件生成
+ */
+KISSY.add(function (S, {{className}}, undefined) {
+
+    describe('{{modName}}模块的测试用例',function(){
+        var object;
+
+        /**
+         * 每个测试前的处理操作
+         */
+        beforeEach(function(){
+            object = new {{className}}();
+        });
+
+        /**
+         * 每个测试后的处理操作
+         */
+        afterEach(function() {
+            object = null;
+        });
+
+        {{#methods}}
+        it('测试{{methodName}}方法',function(){
+
+        });
+
+        {{/methods}}
+
+    });
+},{
+    requires: ['{{modName}}']
+});

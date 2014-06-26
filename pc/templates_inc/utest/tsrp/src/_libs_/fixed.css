@@ -1,0 +1,1102 @@
+/*below is from w.widescreen.css*/
+.w-grid-c2f .etao-sidebar-puzzle .img-wrap {
+    width: 210px;
+    height: 210px;
+}
+.w-grid-c2f .w-col-sub-narrow{
+    width: 190px;
+}
+.w-col-sub-narrow div.hesper-sidebar {
+    width: 180px;
+}
+.w-grid-c2f .w-col-sub-narrow div.hesper-sidebar ul.p4p-list .pic,
+.w-grid-c2f .w-col-sub-narrow div.hesper-sidebar ul.p4p-list .pic a,
+.w-grid-c2f .w-col-sub-narrow .etao-sidebar-item .item-pic,
+.w-grid-c2f .w-col-sub-narrow ul.p4p-list li .pic,
+.w-grid-c2f .w-col-sub-narrow ul.p4p-list li .pic a {
+    width: 160px;
+    height: 160px;
+}
+.w-grid-c2f .w-col-sub-narrow div.hesper-sidebar,
+.w-grid-c2f .w-col-sub-narrow div.hesper-sidebar div.p4p-title,
+.w-grid-c2f .w-col-sub-narrow div.hesper-sidebar ul.p4p-list{
+    width: 178px;
+}
+.w-grid-c2f .w-col-sub-narrow .p4p-panel div.hesper-sidebar ul.p4p-mix li .pic,
+.w-grid-c2f .w-col-sub-narrow .p4p-panel div.hesper-sidebar ul.p4p-mix li .pic a {
+    height: 240px;
+}
+.w-col-sub-narrow .p4p-panel div.hesper-sidebar ul.p4p-mix .wrap,
+.w-col-sub-narrow div.hesper-sidebar ul.p4p-list li .title,
+.w-col-sub-narrow .act-info,
+.w-col-sub-narrow .etao-sidebar-nondefault .item-name,
+.w-col-sub-narrow .etao-sidebar-recommend .price,
+.w-col-sub-narrow .etao-sidebar-nondefault .price,
+.w-col-sub-narrow .p4p-shop .subtitle,
+.w-col-sub-narrow .w-bottom-p4p ul.p4p-list li .title{
+    width: 162px;
+    margin-left: 0;
+}
+.w-col-sub-narrow div.hesper-sidebar ul.p4p-list li{
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.w-col-sub-narrow .p4p-panel div.hesper-sidebar ul.p4p-mix li{
+    height: 301px;
+}
+.w-col-sub-narrow .p4p-panel div.hesper-sidebar ul.p4p-mix .pic img{
+    width: 160px;
+}
+
+
+.w-bottom-p4p-narrow{
+    width: 1120px;
+}
+.w-bottom-p4p-narrow ul.p4p-list li{
+    margin-right: 17px;
+    margin-left: 17px;
+}
+.w-col-sub-notfirst2 .p4p-panel div.hesper-sidebar ul.p4p-mix li{
+    height: 242px;
+}
+/*up is from w.widescreen.css*/
+
+
+/* z-4pic.css */
+
+/* 四图模式样式 */
+.list-view-enlarge-4pic {
+    *zoom: 1;
+}
+.list-view-enlarge-4pic .related-item, .list-view-enlarge-4pic .related-seller,.list-view-enlarge-4pic .related-items,
+    /*合并同款，合并卖家*/
+.list-view-enlarge-4pic .related-item a.view,
+.list-view-enlarge-4pic a.compare,
+.list-view-enlarge-4pic .related-items a.samestyle,
+    /*工具条*/
+.list-view-enlarge-4pic .related-item, .list-view-enlarge-4pic .related-seller,.list-view-enlarge-4pic .related-items {
+    /* @REPEATX */
+    background-image: url(http://img04.taobaocdn.com/tps/i4/T1xRWjXitCXXXXXXXX-260-720.png);
+    background-repeat: repeat-x;
+}
+.list-view-enlarge-4pic .legend2 .icon-trigger{
+    background-image: url("http://img03.taobaocdn.com/tps/i3/T1ebamXel5XXXXXXXX-20-2400.png");
+}
+.list-view-enlarge-4pic:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*爱心宝贝，全球购，香港商家，担保交易，寄售交易图标*/
+/*货到付款，自动发货*/
+.list-view-enlarge-4pic .legend2 a.autoCharge {
+    background-position: -226px -304px;
+    height: 19px;
+    width: 19px;
+}
+/*消保图标*/
+.list-view-enlarge-4pic .legend2 a.xb-as-fact {
+    width: 17px;
+}
+.list-view-enlarge-4pic .legend2 a.xb-as-fact span {
+    background-position: -4px -489px;
+}
+.list-view-enlarge-4pic .legend2 a.xb-sevenday-return {
+    width: 17px;
+}
+.list-view-enlarge-4pic .legend2 a.xb-sevenday-return span {
+    background-position: -4px -509px;
+}
+.list-view-enlarge-4pic .legend2 a.creditcard {
+    width: 20px;
+}
+/* 农业频道 */
+.list-view-enlarge-4pic .legend2 a.farming {
+    margin: 3px 0 0 0;
+    width: 20px;
+    text-indent: -9999px;
+    background-position: -70px -630px;
+}
+.list-view .farming-icon{
+    display: inline-block;
+    text-indent: -999em;
+    width: 63px;
+    height: 15px;
+    margin: 5px 0;
+    background-position: 0 -630px;
+}
+/*.list-view-enlarge-4pic .legend2 a.creditcard span {
+background-position: -3px -589px;
+}*/
+.list-view-enlarge-4pic .legend2 a.xb-quality_item {
+    width: 17px;
+}
+.list-view-enlarge-4pic .legend2 a.xb-quality_item span {
+    background-position: -4px -471px;
+}
+/*大图*/
+.list-view-enlarge-4pic li.list-item {
+    position: relative;
+    float: left;
+    width: 170px;
+    height: 311px;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    _overflow-x: hidden;
+}
+.list-view-enlarge-4pic.with-shipment li.list-item {
+    height: 311px;
+}
+
+.list-view-enlarge-4pic h3.summary {
+    width: 170px;
+    height: 36px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    top: 200px;
+    text-overflow: ellipsis;
+    color: #0063dc;
+}
+.list-view-enlarge-4pic h3 a {
+    word-break: break-all;
+}
+.list-view-enlarge-4pic h3 a:visited {
+    color: #551A8B !important;
+}
+.list-view-enlarge-4pic ul.attribute, .list-view-enlarge-4pic .legend2 {
+    position: relative;
+    top: 53px;
+}/*top: (36+7)+13*/
+.list-view-enlarge-4pic ul.attribute {
+    width: 170px;
+    height: 69px;
+    overflow: hidden;
+}
+.list-view-enlarge-4pic.with-shipment ul.attribute {
+    height: 69px;
+}
+.list-view-enlarge-4pic.with-shipment .shipment {
+    text-align: right;
+    top:23px;
+    width:170px;
+}
+
+.list-view-enlarge-4pic.with-shipment .shipment .fee {
+    float: left;
+    width: 62px;
+}
+.list-view-enlarge-4pic.with-shipment .shipment .loc {
+    float: right;
+}
+.gray {
+    color: gray;
+}
+.list-view-enlarge-4pic ul.attribute li {
+    position: absolute;
+    line-height: 20px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.list-view-enlarge-4pic ul.attribute .price {
+    top: 0;
+    left: 0;
+    width: 170px;
+}
+.list-view-enlarge-4pic ul.attribute .price em,
+.list-view-enlarge-4pic ul.attribute .price strong{
+    float: left;
+}
+.list-view-enlarge-4pic ul.attribute .price span {
+    float: right;
+}
+.list-view-enlarge-4pic ul.attribute .ship-loc {
+    top: 23px;
+    left: 0;
+}
+.list-view-enlarge-4pic ul.attribute .ship-loc em{
+    float: left;
+    color: gray;
+}
+.list-view-enlarge-4pic ul.attribute .ship-loc span {
+    float:right;
+}
+.list-view-enlarge-4pic ul.attribute .seller {
+    top: 46px;
+    left: 0;
+}
+.list-view-enlarge-4pic ul.attribute .seller a {
+    color: #555;
+    text-decoration: underline;
+    *zoom: 1;
+}
+.list-view-enlarge-4pic ul.attribute .seller .ww-small {
+    margin-left: 3px;
+}
+.list-view-enlarge-4pic ul.attribute .place {
+    top: 23px;
+    right: 0;
+}
+
+.list-view-enlarge-4pic .legend2 {
+    float: left;
+    top: 58px;
+    /*height: 20px;*/
+    width: 170px;
+    z-index: 10;
+    overflow: hidden;
+}
+.list-view-enlarge-4pic .legend2 span,
+.list-view-enlarge-4pic .legend2 a {
+    vertical-align: middle;
+    float: left;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.list-view-enlarge-4pic .legend2 span.xb {
+    margin-right: 0;
+}
+.list-view-enlarge-4pic .legend2 a span {
+    text-indent: -9999em;
+    margin: 0;
+}
+.list-view-enlarge-4pic .legend2 .xb a {
+    width: 23px;
+    margin: 0;
+}
+.list-view-enlarge-4pic .discount {
+    _text-indent: -9999px;
+    margin-top: 2px;
+}
+.list-view-enlarge-4pic .creditcard,.list-view-enlarge-4pic .COD {
+    width: 18px;
+    padding: 0;
+    margin-top: 3px;
+    height: 16px;
+    text-indent: -9999px;
+}
+.list-view-enlarge-4pic .autoDeliver {
+    background-position: -222px -259px;
+    height: 18px;
+    width: 20px;
+}
+.list-view-enlarge-4pic .tao1site {
+    margin-top: 3px;
+}
+.list-view-enlarge-4pic .daigou {
+    margin-top: 3px;
+}
+.list-view-enlarge-4pic .legend2 .icon-trigger {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    width: 13px;
+    height: 15px;
+    text-indent: -999em;
+    overflow: hidden;
+    background-position: -8px -1707px;
+    margin: 2px 0 0;
+    float: none;
+    top: 0px;
+}
+
+/*更多图标*/
+.list-view-enlarge-4pic .icon-wrapper {
+    z-index: 999;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    right: -4px;
+    top: 25px;
+    padding: 2px 0 2px 5px;
+    border: 1px solid #A6A6A6;
+    margin: 0;
+    overflow: visible;
+    background: #fff;
+}
+/*三角*/
+.list-view-enlarge-4pic .icon-wrapper .arrow, .list-view-enlarge-4pic .icon-wrapper .arrow s {
+    position: absolute;
+    top: -7px;
+    right: 3px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-left: 7px dashed transparent;
+    border-right: 7px dashed transparent;
+    border-bottom: 7px solid #808080;
+    border-top: 0;
+    *border-bottom-color: #a6a6a6;
+    background:none;
+}
+.list-view-enlarge-4pic .icon-wrapper .arrow s {
+    left:-7px;
+    top:1px;
+    _top:0;
+    border-bottom:7px solid #fff;
+}
+
+/*大图：合并同款，合并卖家*/
+.list-view-enlarge-4pic .related-items{
+    background-image:none;
+    background-color:transparent;
+    float:left;
+    width:168px;
+    height:24px;
+    overflow:hidden;
+    line-height:24px;
+    position:absolute;
+    top:166px;
+    left:12px;
+    z-index:11;
+    text-align:center;
+}
+.list-view-enlarge-4pic .related-item a.info, .list-view-enlarge-4pic .related-seller a.info{
+    color:#fff;
+    line-height:1;
+    margin-top:6px;
+    white-space:nowrap;
+}
+.list-view-enlarge-4pic .related-item a.info:hover,
+.list-view-enlarge-4pic .related-seller a.info:hover {
+    text-decoration: none;
+    color: #fff;
+    border-bottom:1px solid #fff
+}
+.list-view-enlarge-4pic .related-item em,
+.list-view-enlarge-4pic .related-seller em{
+    font-weight:bold;
+    margin:0 5px;
+}
+.list-view-enlarge-4pic .related-item a.info,
+.list-view-enlarge-4pic .related-seller a.info{
+    float:left;
+}
+.list-view-enlarge-4pic .related-item a.view,
+.list-view-enlarge-4pic a.compare,
+.list-view-enlarge-4pic .related-items a.samestyle{
+    height:19px;
+    display:inline;
+    overflow:hidden;
+    float:right;
+    text-indent:-999em;
+    margin-top:3px;
+}
+.list-view-enlarge-4pic .related-item a.view{
+    width:35px;
+    background-position:-52px -412px;
+}
+.list-view-enlarge-4pic .shadow {
+    background-color:#CCC;
+    z-index:10;
+    filter:alpha(opacity=60);
+    opacity:0.6;
+}
+.list-view-enlarge-4pic .related-items .wrapper {
+    display:inline-block;
+    margin:0 auto;
+}
+.list-view-enlarge-4pic .related-items a.samestyle {
+    float:left;
+    width:56px;
+    background-position:-74px -334px;
+    margin:3px 3px 0;
+}
+.list-view-enlarge-4pic .related-items a.compare {
+    float:left;
+    width:56px;
+    background-position:-74px -313px;
+    margin:3px 3px 0;
+}
+.list-view-enlarge-4pic .related-items a.samestyle:hover {
+    background-position:0 -334px;
+}
+.list-view-enlarge-4pic .related-items a.compare:hover {
+    background-position:0 -313px;
+}
+
+/*icon必选换行时候，不对齐*/
+.list-view-enlarge-4pic .legend2 .icon-wrapper a{
+    /*-- 重设高度，防止因为高度不一致导致换行错误 --*/
+    height: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    /*float: right;*/
+}
+
+.list-view-enlarge-4pic .legend2 .icon-wrapper a.creditcard {
+    background-position: -3px -587px;
+}
+
+
+/*.list-view-enlarge-4pic .legend2 .icon-wrapper a.discount,*/
+/*.list-view-enlarge-4pic .legend2 .icon-wrapper a.creditcard,*/
+/*.list-view-enlarge-4pic .legend2 .icon-wrapper a.COD{*/
+/*margin-bottom:2px;*/
+/*}*/
+
+/*宽屏css begin*/
+.list-view-enlarge-4pic .partner-seller-price{
+    color:#808080;
+}
+.list-view-enlarge-4pic .partner-seller-price s{
+    font-weight:bolder;
+    font-style:normal;
+    text-decoration:line-through;
+}
+.list-view-enlarge-4pic .partner-seller-price .saving{
+    margin-left:5px;
+}
+.list-view-enlarge-4pic .partner-seller-price .saving b{
+    font-weight:bolder;
+    font-style:normal;
+    text-decoration:none;
+}
+.list-view-enlarge-4pic .legend2 .partner-seller-name{
+    color:#555;
+    text-decoration:underline;
+    margin-right:5px;
+}
+.list-view-enlarge-4pic .partner-seller-icon{
+    background-position:-146px -649px;
+    width:60px;
+    height:20px;
+    white-space:nowrap;
+    text-indent:-999em;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.list-view-enlarge-4pic ul.no-saving{
+    height:20px;
+}
+/*宽屏css end*/
+
+
+/*新版的宽屏宝贝结果样式 */
+.list-view-enlarge-new .origin-price{
+    float: left;
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 10px;
+    background: none;
+    text-indent: 0;
+    width: auto;
+    display: inline;
+    font-weight: bold;
+    margin-top: 0;
+    overflow: visible;
+
+}
+.list-view-enlarge-new .count{
+    top: 23px;
+    width: 100%;
+}
+.list-view-enlarge-new ul.attribute .price div{
+    float: left;
+}
+.list-view-enlarge-new ul.attribute .price .fee{
+    color: #808080;
+}
+.list-view-enlarge-new .count .buy{
+    float: left;
+}
+.list-view-enlarge-new .count .buy b{
+    font-weight: normal;
+}
+.list-view-enlarge-new .count .comment{
+    float: right;
+}
+.list-view-enlarge-new .loc{
+    top: 46px;
+    right: 0;
+    color: #808080;
+}
+.list-view-enlarge-new ul.attribute .seller .ww-small{
+    position: relative;
+    left: -5px;
+    >top: -2px;
+}
+.w-content .list-view-enlarge-new h3.summary{
+    padding-right: 10px;
+}
+.w-content .list-view-enlarge-new .legend2{
+    width: auto;
+    margin-left: 120px;
+    *margin-left: 24px;
+    float: right;
+    top: 38px;
+    *top: 58px;
+    >top: 56px;
+}
+.w-content .list-view-enlarge-new .dsr,
+.w-content .list-view-enlarge-new .gold-seller-wrap{
+    position: relative;
+    top: 58px;
+    float: left;
+    height: 18px;
+    width: 75px;
+}
+.w-content .list-view-enlarge-new .gold-seller-wrap .shopkeeper-hot-sell{
+    *display: block;
+    *float: left;
+}
+.w-content .list-view-enlarge-new .dsr{
+    background-position: -60px -238px;
+    text-align: right;
+    padding-right: 9px;
+    line-height: 18px;
+    font-family: Aria;
+    color: gray;
+    cursor: default;
+}
+.w-content .list-view-enlarge-new .dsr .dsr-panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    border: 1px solid #CCC;
+    padding: 1px 2px 1px 2px;
+    *padding-right: 3px;
+    display: none;
+    width: 78px;
+}
+.w-content .list-view-enlarge-new .dsr-hover{
+    z-index: 10;
+}
+.w-content .list-view-enlarge-new .dsr-hover .dsr-panel{
+    display: block;
+}
+.w-content .list-view-enlarge-new .dsr li{
+    padding: 2px 0;
+}
+.w-content .list-view-enlarge-new .dsr li.lessthan{
+    color: #20730F;
+}
+.w-content .list-view-enlarge-new .dsr li.morethan{
+    color: #B30F00;
+}
+.w-content .list-view-enlarge-new ul.attribute .seller a{
+    color: #404040;
+    text-decoration: none;
+}
+.w-content .list-view-enlarge-new ul.attribute .shopinfo{
+    background: none;
+    width: auto;
+    height: auto;
+    display: inline;
+    position: relative;
+    top: -4px;
+}
+.w-content .list-view-enlarge-new .legend2{
+    *width: 100px;
+}
+/* z.hate.css */
+.list-item .img-hover{
+    visibility: hidden;
+}
+.list-item .img-hover i.hate{
+    *left:0px;
+}
+.list-item .img-hover:last-child{
+    border-radius: 0 0 0 3px;
+}
+.hate-pop .arr ,.same-pop .arr,
+.hate-pop .arr span,.same-pop .arr span {
+    position:absolute;
+    height:0;
+    width:0;
+    font-size: 0;
+    line-height: 0;
+    border-width:8px;
+}
+/*箭头在右边*/
+.hate-pop .arr,.same-pop .arr {
+    bottom:-17px;
+    left:70px;
+    border-color: #cccccc transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.hate-pop .arr span,.same-pop .arr span {
+    left:-9px;
+    top: -11px;
+    border-color: #ffffff transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.same-pop em
+{
+    color:#ff6600;
+    padding:0 3px;
+}
+.list-view-enlarge-4pic span.img-hover,.list-view-enlarge span.img-hover
+{
+    position:absolute;
+    display:none;
+    top:-1px;
+    right:-1px;
+}
+.list-view-enlarge-4pic span.img-hover a,.list-view-enlarge span.img-hover a{
+    width:50px;
+    height:20px;
+    *height: 18px;
+    font-style:normal;
+    border-left:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    border-radius:0;
+    background:white none;
+    display:block;
+    float:right;
+    text-align:center;
+    color:#808080;
+    cursor:pointer;
+}
+.list-view-enlarge-4pic span.img-hover .samestyle,.list-view-enlarge span.img-hover .samestyle{
+    width: auto;
+    padding: 0 5px;
+    *padding-top: 2px;
+}
+.list-item div span.img-hover .samestyle em{
+    color: #F60;
+}
+.list-view-enlarge-4pic span.img-hover a:hover,.list-view-enlarge span.img-hover a:hover{
+    color:#f60;
+    text-decoration:underline;
+}
+.list-view-enlarge-4pic div.photo span.img-hover .antispam,
+.list-view-enlarge div.photo span.img-hover .antispam,
+.list-view-sameseller-big div.photo span.img-hover .antispam,
+.list-view-sameseller-big3 div.photo span.img-hover .antispam
+{
+    background-color:white;
+    background-image:url("http://img03.taobaocdn.com/tps/i3/T1xreDXXNZXXXXXXXX-27-36.gif");
+    position:static;
+    float:right;
+    text-indent:-9999em;
+    width:20px;
+    height:20px;
+    *height:18px;
+    border: 1px solid #CCC;
+    border-radius:0;
+    /* test by gerdyhk*/
+}
+.list-view-enlarge-4pic div.photo span.img-hover .hate,.list-view-enlarge div.photo span.img-hover .hate{
+    background-position: -3px -17px;
+}
+.list-view-enlarge-4pic div.photo span.img-hover .antispam,
+.list-view-enlarge div.photo span.img-hover .antispam{
+    background-position: -3px 0px;
+}
+.list-item div.hover span.img-hover
+{
+    display:block;
+}
+.list-item div span.img-hover a{
+    font-size:12px;
+    *padding-top:2px;
+}
+.list-item div.hover span.img-hover a.no-samestyle{
+    color: #ababab;
+    cursor: default;
+}
+.list-item div.hover span.img-hover a.no-samestyle:hover{
+    text-decoration:none;
+}
+
+/* z.hotkeys.css */
+/* 键盘快捷键 */
+.kbd-focus {
+    background-color: #fffcf0;
+}
+#kbd-short-help {
+    display: block;
+    width: 640px;
+    top: 20%;
+    left: 26%;
+}
+#kbd-short-help table {
+    background: #fff;
+    border: 1px solid #aaa;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+#kbd-short-help th,
+#kbd-short-help td {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+}
+#kbd-short-help th {
+    background: #fcfcfc;
+    font: 600 13px Lucida Console, Monaco, Helvetica, Tahoma, monospace;
+}
+#kbd-short-help p {
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+}
+#kbd-short-help h3 {
+    text-align: center;
+    padding: 4px;
+    color: #666;
+    background: #f0f0f0;
+}
+
+
+/* z.noresult-fix.css */
+/* 特定分类下无结果 {{{ */
+.cat-noresult{
+    padding:10px 0;
+    border-bottom:1px solid #E5E5E5
+}
+
+.cat-noresult p{
+    border:1px solid #FFD57F;
+    background:#FFF7E5;
+    padding:15px 20px;
+    color:#808080;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.allcat-result{
+    clear: both;
+    padding-left:18px;
+    background-position: -5px -98px;
+    margin:10px 0 -25px 5px;
+}
+
+.allcat-result em, .cat-noresult em{
+    color:#f50;
+    font-weight:bold;
+}
+
+.cat-noresult-new{
+    height: 150px;
+}
+
+.cat-noresult-new.no-result-new {
+    width: 600px;
+}
+
+.allcat-result-new{
+    clear: both;
+    padding-left:18px;
+    line-height: 30px;
+    height: 30px;
+    background: #ffffe5;
+    border: 1px solid #ffcc7f;
+    margin: 0;
+}
+
+.allcat-result-new em, .cat-noresult-new em{
+    color:#f50;
+    font-weight:bold;
+}
+/* }}} */
+
+/* zz.ie.css */
+/*-- keep it gbk 中文占位 --*/
+.btn, .sbtn, .bigbtn, .bbtn {
+    *word-break: keep-all;
+    *white-space: nowrap;
+}
+.btn .i {
+    *overflow: visible;
+    *line-height: 12px;
+    *padding-top: 2px;
+    *padding-bottom: 0;
+    *vertical-align: baseline;
+}
+.btn span.i:active {
+    /*height: 17px;*/
+}
+.btn-disabled .i {
+    *background-image: none;
+}
+.btn span.i {
+    *line-height: 14px;
+    *vertical-align: baseline;
+    *height: auto;
+}
+
+#rankbar {
+    *background-image: url(http://img03.taobaocdn.com/tps/i3/T14Sx4XgFfXXXXXXXX-1-30.gif);
+}
+/*#rankbar-form .old-srp {*/
+/*background-image: url(http://img02.taobaocdn.com/tps/i2/T16Cx4XglfXXXXXXXX-1-28.png);*/
+/*}*/
+#rankbar .sorting-btns a span {
+    *padding-top: 2px;
+    *line-height: 26px;
+    _padding-top: 1px;
+    _line-height: 27px;
+}
+/*-------- 3px border radius support ------*/
+s.l, s.r {
+    *position: absolute;
+    *top: -1px;
+}
+s.l {
+    *left: -1px;
+}
+s.r {
+    *right: -1px;
+}
+.btn s {
+    *background-position: 0 -51px;
+    *position: absolute;
+    *height: 17px;
+    *width: 2px;
+    *top: 0;
+}
+.btn:hover s {
+    *background-position: 0 -68px;
+}
+.btn s.r {
+    *background-position: 0 -85px;
+}
+
+.M-bullet s {
+    *width: 1px;
+}
+.info-attr-box
+{
+    *top:52px;
+>left:280px;
+    _left:295px;
+}
+.list-tongkuan div.icon-area
+{
+>left:110px;
+}
+.list-tongkuan .attribute
+{
+    *width:495px;
+}
+.etao-sidebar-item .item-pic{
+    *display:block;
+    *position:relative;
+}
+.etao-sidebar-item .item-pic a
+{
+    *position:absolute;
+    *top:50%;
+    *left:50%;
+}
+.etao-sidebar-item .item-pic img{
+    *position:relative;
+    *top:-50%;
+    *left:-50%;
+}
+.more-auction-container div a{
+    *display: block;
+    *font-size: 60px;
+    *width: 80px;
+    *height: 80px;
+    *line-height: 80px;
+}
+.more-auction-container div img{
+    vertical-align: middle;
+}
+
+.discount-combo{
+  clear:both;
+  margin-top:10px;
+  width:auto; 
+}
+.discount-combo ul{
+  list-style-type: none;
+  margin-left:1px;
+  font-size: 0px;
+}
+.discount-combo li{
+  font-size:12px;
+  display:inline-block;
+  *display:inline;      /* 只有ie6和ie7识别*/
+  zoom:1;               /* 触发ie6和ie7下的haslayout */
+  text-align: center;
+  width:93px;
+  height:30px;
+  line-height:30px;
+  margin-left:-1px;
+  margin-right:0px;
+  color:#000;
+  vertical-align:middle;
+  border:1px solid #FAC451;
+   position: relative;
+}
+/*.discount-combo li span{
+  color:#808080;
+}
+*/
+.discount-combo li.hover a, .grid-discount ul.attribute .rate, .list-discount .rate-time .drate-icon{
+  
+  background: url("http://img01.taobaocdn.com/tps/i1/T1MoilXnRsXXXXXXXX-50-100.png") no-repeat;
+}
+.discount-combo li.hover{
+  background-position:right bottom;
+  font-weight: 900;
+  color:#FE5200;
+  background-color: #FEFAEA;
+}
+.discount-combo li a{
+  text-decoration: none;
+  display: block;
+  width:100%;
+  height:100%;
+  color:#000;
+ 
+}
+
+.discount-combo li.valid a:hover{
+  background-color: #FEFAEA;
+  text-decoration: none;
+  color:#000;
+}
+.discount-combo li.hover a:hover{
+   color:#FE5200;
+}
+.discount-combo li.invalid{
+  border-top:1px solid #B3B3B3;
+  border-bottom:1px solid #B3B3B3;
+  color: #B3B3B3;
+}
+
+
+
+.grid-discount ul.attribute {
+  height:66px;
+}
+.grid-discount ul.attribute li.shipping{
+  left:0px;
+  right:auto;
+  top:23px;
+}
+.grid-discount ul.attribute .deal{
+  position: absolute;
+  line-height: 20px;
+  left:70px;
+  top:23px;
+}
+.grid-discount ul.attribute .deal label{
+  font-weight: 900;
+}
+.grid-discount ul.attribute .price .pre-price{
+  text-decoration:line-through;
+  color:#666;
+  font-weight:normal;
+  font: 12px/1.5 tahoma,arial,"宋体";
+  background-position: -5px -84px;
+}
+.grid-discount ul.attribute .rate{
+  position:absolute;
+  right:10px;
+  top:0px;
+  background-position: 0px -20px;
+  height:34px;
+  width:40px;
+  text-align:center;
+  line-height:15px;
+  padding-left:2px;
+  padding-top:1px;
+  color:#fff;
+  white-space:normal;
+}
+.grid-discount ul.attribute .rate span{
+  line-height: 30px;
+}
+.grid-discount ul.attribute .leavetime{
+  position:absolute;
+  right:0px;
+  top:34px;
+  height:34px;
+  width:60px;
+  text-align:center;
+  line-height:16px;
+  white-space:normal;
+  color:#808080;
+}
+.grid-discount .rate-type{
+  font-weight: 900;
+  color:#FF6600;
+}
+.grid-discount ul.attribute li.seller{
+  top:46px;
+  overflow: visible;
+}
+.list-discount .attribute li.price{
+  width:160px;
+  text-align:left;
+  display: block;
+}
+.list-discount .attribute li.price *{
+  margin-left:40px;
+  
+  float: left;
+  *float:none;
+
+}
+.list-discount .attribute li.price .creditcard{
+  float: left;
+}
+.list-discount .attribute em.pre-price{
+  display: block;
+   background-position: -5px -81px;
+  text-decoration:line-through;
+  color:#666;
+  font-weight:normal;
+  font-size:12px;
+  line-height:20px;
+  padding-left:16px;
+}
+.list-discount .attribute .shipping{
+  padding-left:4px;
+  text-align: left;
+}
+.list-discount .rate-type{
+  position: absolute;
+  top: 58px;
+  font-weight: 900;
+  color:#FF6600;
+}
+.list-discount .attribute .rate-time{
+  margin-top:15px;
+  width:150px;
+}
+.list-discount .rate-time .drate-icon{
+  width:10px;
+  height:10px;
+  float: left;
+  display: block;
+  margin-top:10px;
+}
+.list-discount .rate-time .drate{
+  line-height: 25px;
+  color:#EB2728;
+  float: left;
+}
+.list-discount .rate-time .dtime{
+  color:#808080;
+  display: block;
+  line-height: 25px;
+  float: left;
+  clear:left;
+}
+.list-discount .attribute li.sale{
+  line-height:20px;
+  margin-top:17px;
+}
+.discount-combo-tmp li{
+  width: 83px;
+}
+.discount-combo-tmp li.hover{
+  width: 83px;
+}

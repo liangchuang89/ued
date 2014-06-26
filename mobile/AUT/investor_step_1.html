@@ -14,7 +14,7 @@
 	<title>投资人认证 - B座12楼</title>
 
 	<link rel="stylesheet" href="../css/b12.ui.css" type="text/css" />
-
+	<link rel="stylesheet" href="../css/login.css" type="text/css" />
 </head>
 
 
@@ -29,7 +29,6 @@
 				<li><a href="#"><span class="b12-icon profile"></span>个人中心</a></li>
 			</ul>
 		</nav>
-
 		<div class="b12-pusher">
 			<div class="b12-pusher-inner">
 
@@ -58,11 +57,26 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
-
+	<div class="login hide J_Login">
+		<div class="bg" id="J_LoginBg"></div>
+		<div class="wrap">
+			<span class="close J_LoginClose">X</span>
+			<div class="line">
+				<h4 class="J_LoginTitle"></h4>
+			</div>
+			<div class="line J_LoginTips"></div>
+			<div class="line">
+				<input type="text" class="b12-input-cute inp J_LoginInp" placeholder="">
+			</div>
+			<div class="line line-sm J_LoginPhoneTips"></div>
+			<div class="line line-btn">
+				<button class="b12-button-full J_LoginBtnTips"></button>
+			</div>
+		</div>
+	</div>
 	<script src="../js/zepto.min.js"></script>
 	<script type="application/javascript" src="../js/fastclick.min.js"></script>
 	<script type="application/javascript">
@@ -71,7 +85,9 @@
 		});
 	</script>
 	<script src="../js/b12.mobile.js"></script>
+	<script src="../js/login.js"></script>
 	<script>
+	window.LOGIN_WIN.init();
 	var wait = 60;
 	$('#b12-get-checksum').click(function(event) {
 		b12Timer(this);

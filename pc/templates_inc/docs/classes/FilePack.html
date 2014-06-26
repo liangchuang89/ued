@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \FilePack</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/base.html"><i class="icon-folder-open"></i> base</a></li>
+<li><a href="../packages/commands.html"><i class="icon-folder-open"></i> commands</a></li>
+<li><a href="../packages/common.html"><i class="icon-folder-open"></i> common</a></li>
+<li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
+<li><a href="../packages/event.html"><i class="icon-folder-open"></i> event</a></li>
+<li><a href="../packages/interfaces.html"><i class="icon-folder-open"></i> interfaces</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">156</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_trans2assets" title="trans2assets :: 将输入的路径转换为assets路径"><span class="description">将输入的路径转换为assets路径</span><pre>trans2assets()</pre></a></li>
+<li class="method public "><a href="#method_trans2dev" title="trans2dev :: 将输入路径转换为本地路径"><span class="description">将输入路径转换为本地路径</span><pre>trans2dev()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_formatComponentsFile" title="formatComponentsFile :: "><span class="description">formatComponentsFile()
+        </span><pre>formatComponentsFile()</pre></a></li>
+<li class="method private "><a href="#method_formatSrcIgnoreFile" title="formatSrcIgnoreFile :: "><span class="description">formatSrcIgnoreFile()
+        </span><pre>formatSrcIgnoreFile()</pre></a></li>
+<li class="method private "><a href="#method_getComponentsFiles" title="getComponentsFiles :: "><span class="description">getComponentsFiles()
+        </span><pre>getComponentsFiles()</pre></a></li>
+<li class="method private "><a href="#method_getFullAssetsPath" title="getFullAssetsPath :: "><span class="description">getFullAssetsPath()
+        </span><pre>getFullAssetsPath()</pre></a></li>
+<li class="method private "><a href="#method_getImportsFiles" title="getImportsFiles :: "><span class="description">getImportsFiles()
+        </span><pre>getImportsFiles()</pre></a></li>
+<li class="method private "><a href="#method_getSrcFiles" title="getSrcFiles :: "><span class="description">getSrcFiles()
+        </span><pre>getSrcFiles()</pre></a></li>
+<li class="method private "><a href="#method_isIgnore" title="isIgnore :: "><span class="description">isIgnore()
+        </span><pre>isIgnore()</pre></a></li>
+<li class="method private "><a href="#method_match" title="match :: "><span class="description">match()
+        </span><pre>match()</pre></a></li>
+<li class="method private "><a href="#method_prepare" title="prepare :: "><span class="description">prepare()
+        </span><pre>prepare()</pre></a></li>
+<li class="method private "><a href="#method_trans2ComponentsAssets" title="trans2ComponentsAssets :: "><span class="description">trans2ComponentsAssets()
+        </span><pre>trans2ComponentsAssets()</pre></a></li>
+<li class="method private "><a href="#method_trans2ComponentsFileAssets" title="trans2ComponentsFileAssets :: "><span class="description">trans2ComponentsFileAssets()
+        </span><pre>trans2ComponentsFileAssets()</pre></a></li>
+<li class="method private "><a href="#method_trans2SrcAssets" title="trans2SrcAssets :: "><span class="description">trans2SrcAssets()
+        </span><pre>trans2SrcAssets()</pre></a></li>
+<li class="method private "><a href="#method_transform" title="transform :: "><span class="description">transform()
+        </span><pre>transform()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_assets" title="$assets :: "><span class="description"></span><pre>$assets</pre></a></li>
+<li class="property private "><a href="#property_repoName" title="$repoName :: "><span class="description"></span><pre>$repoName</pre></a></li>
+<li class="property private "><a href="#property_root" title="$root :: "><span class="description"></span><pre>$root</pre></a></li>
+<li class="property private "><a href="#property_rules" title="$rules :: "><span class="description"></span><pre>$rules</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_ASSETS" title="ASSETS :: "><span class="description">ASSETS</span><pre>ASSETS</pre></a></li>
+<li class="constant  "><a href="#constant_DEV" title="DEV :: "><span class="description">DEV</span><pre>DEV</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\FilePack"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/FilePack.html">FilePack</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">模拟打包的过程</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:yushan.yk@taobao.com">宇山</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/base.html">base</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_trans2assets"></a><div class="element clickable method public method_trans2assets" data-toggle="collapse" data-target=".method_trans2assets .collapse">
+<h2>将输入的路径转换为assets路径</h2>
+<pre>trans2assets($path, $version, $filetype) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inheritdoc</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$version</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_trans2dev"></a><div class="element clickable method public method_trans2dev" data-toggle="collapse" data-target=".method_trans2dev .collapse">
+<h2>将输入路径转换为本地路径</h2>
+<pre>trans2dev($path, $filetype) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inheritdoc</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_formatComponentsFile"></a><div class="element clickable method private method_formatComponentsFile" data-toggle="collapse" data-target=".method_formatComponentsFile .collapse">
+<h2>formatComponentsFile()
+        </h2>
+<pre>formatComponentsFile($path, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_formatSrcIgnoreFile"></a><div class="element clickable method private method_formatSrcIgnoreFile" data-toggle="collapse" data-target=".method_formatSrcIgnoreFile .collapse">
+<h2>formatSrcIgnoreFile()
+        </h2>
+<pre>formatSrcIgnoreFile($path, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_getComponentsFiles"></a><div class="element clickable method private method_getComponentsFiles" data-toggle="collapse" data-target=".method_getComponentsFiles .collapse">
+<h2>getComponentsFiles()
+        </h2>
+<pre>getComponentsFiles($compdir, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$compdir</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_getFullAssetsPath"></a><div class="element clickable method private method_getFullAssetsPath" data-toggle="collapse" data-target=".method_getFullAssetsPath .collapse">
+<h2>getFullAssetsPath()
+        </h2>
+<pre>getFullAssetsPath($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="method_getImportsFiles"></a><div class="element clickable method private method_getImportsFiles" data-toggle="collapse" data-target=".method_getImportsFiles .collapse">
+<h2>getImportsFiles()
+        </h2>
+<pre>getImportsFiles($path, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_getSrcFiles"></a><div class="element clickable method private method_getSrcFiles" data-toggle="collapse" data-target=".method_getSrcFiles .collapse">
+<h2>getSrcFiles()
+        </h2>
+<pre>getSrcFiles($dir, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$dir</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_isIgnore"></a><div class="element clickable method private method_isIgnore" data-toggle="collapse" data-target=".method_isIgnore .collapse">
+<h2>isIgnore()
+        </h2>
+<pre>isIgnore($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="method_match"></a><div class="element clickable method private method_match" data-toggle="collapse" data-target=".method_match .collapse">
+<h2>match()
+        </h2>
+<pre>match($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="method_prepare"></a><div class="element clickable method private method_prepare" data-toggle="collapse" data-target=".method_prepare .collapse">
+<h2>prepare()
+        </h2>
+<pre>prepare($str) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$str</h4></div>
+</div></div>
+</div>
+<a id="method_trans2ComponentsAssets"></a><div class="element clickable method private method_trans2ComponentsAssets" data-toggle="collapse" data-target=".method_trans2ComponentsAssets .collapse">
+<h2>trans2ComponentsAssets()
+        </h2>
+<pre>trans2ComponentsAssets($path, $version, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$version</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_trans2ComponentsFileAssets"></a><div class="element clickable method private method_trans2ComponentsFileAssets" data-toggle="collapse" data-target=".method_trans2ComponentsFileAssets .collapse">
+<h2>trans2ComponentsFileAssets()
+        </h2>
+<pre>trans2ComponentsFileAssets($path, $version, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$version</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_trans2SrcAssets"></a><div class="element clickable method private method_trans2SrcAssets" data-toggle="collapse" data-target=".method_trans2SrcAssets .collapse">
+<h2>trans2SrcAssets()
+        </h2>
+<pre>trans2SrcAssets($path, $version, $filetype) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$version</h4></div>
+<div class="subelement argument"><h4>$filetype</h4></div>
+</div></div>
+</div>
+<a id="method_transform"></a><div class="element clickable method private method_transform" data-toggle="collapse" data-target=".method_transform .collapse">
+<h2>transform()
+        </h2>
+<pre>transform($func, $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$func</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_assets"> </a><div class="element clickable property private property_assets" data-toggle="collapse" data-target=".property_assets .collapse">
+<h2></h2>
+<pre>$assets </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_repoName"> </a><div class="element clickable property private property_repoName" data-toggle="collapse" data-target=".property_repoName .collapse">
+<h2></h2>
+<pre>$repoName </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_root"> </a><div class="element clickable property private property_root" data-toggle="collapse" data-target=".property_root .collapse">
+<h2></h2>
+<pre>$root </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rules"> </a><div class="element clickable property private property_rules" data-toggle="collapse" data-target=".property_rules .collapse">
+<h2></h2>
+<pre>$rules </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_ASSETS"> </a><div class="element clickable constant  constant_ASSETS" data-toggle="collapse" data-target=".constant_ASSETS .collapse">
+<h2>ASSETS</h2>
+<pre>ASSETS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_DEV"> </a><div class="element clickable constant  constant_DEV" data-toggle="collapse" data-target=".constant_DEV .collapse">
+<h2>DEV</h2>
+<pre>DEV </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-05-17T15:21:11+08:00.<br></footer></div>
+</div>
+</body>
+</html>

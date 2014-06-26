@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*
+ * 声明：
+ * 通用颜色、通用样式函数、通用icon等
+ */
+/* Color */
+/*
+ * Block系列
+ * 用于topbar、按钮、搜索框、标签、icon
+ */
+/*
+ * Text系列
+ */
+/*
+ * Bgc系列
+ * 用于topbar、按钮、标签、icon
+ */
+/*
+ * Border系列
+ */
+/*
+ * function
+ */
+.btns {
+  display: inline-block;
+  width: 30%;
+  height: 32px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #377bee;
+  background-color: #ffffff;
+  color: #377bee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btns:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn-promotion {
+  border: 1px solid #ff4444;
+  background-color: #ffffff;
+  color: #ff4444;
+}
+.btn-promotion:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn-strong {
+  border: 1px solid #377bee;
+  background-color: #377bee;
+  color: #ffffff;
+}
+.btn-strong:active {
+  background-color: #2c62be;
+}
+.btn-disabled {
+  cursor: default;
+  border: 1px solid #f1f1f1;
+  background-color: #ffffff;
+  color: #cccccc;
+}
+.btn-disabled:active {
+  background-color: #ffffff;
+}
+.btn-disabled-strong {
+  cursor: default;
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  color: #ffffff;
+}
+.btn-disabled-strong:active {
+  background-color: #cccccc;
+}
+.btn-through {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 38px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #377bee;
+  background-color: #377bee;
+  color: #ffffff;
+}
+.btn-through:active {
+  background-color: #2c62be;
+}
+.btn-through-promotion {
+  border: 1px solid #ff4444;
+  background-color: #ff4444;
+  color: #ffffff;
+}
+.btn-through-promotion:active {
+  background-color: #ff4444;
+}
+.btn-through-disabled {
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  color: #ffffff;
+}
+.btn-through-disabled:active {
+  background-color: #cccccc;
+}

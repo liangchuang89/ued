@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \ICommonFunc</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/base.html"><i class="icon-folder-open"></i> base</a></li>
+<li><a href="../packages/commands.html"><i class="icon-folder-open"></i> commands</a></li>
+<li><a href="../packages/common.html"><i class="icon-folder-open"></i> common</a></li>
+<li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
+<li><a href="../packages/event.html"><i class="icon-folder-open"></i> event</a></li>
+<li><a href="../packages/interfaces.html"><i class="icon-folder-open"></i> interfaces</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">156</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_add" title="add :: 添加PHP模块&lt;br/&gt;
+替换原来的include方法,根据$file找当前templates目录下的具体文件。"><span class="description">添加PHP模块&lt;br/&gt;
+替换原来的include方法,根据$file找当前templates目录下的具体文件。</span><pre>add()</pre></a></li>
+<li class="method public "><a href="#method_bootpage" title="bootpage :: 启动页面必须要执行的方法"><span class="description">启动页面必须要执行的方法</span><pre>bootpage()</pre></a></li>
+<li class="method public "><a href="#method_components" title="components :: 添加组件"><span class="description">添加组件</span><pre>components()</pre></a></li>
+<li class="method public "><a href="#method_css" title="css :: 加载css文件"><span class="description">加载css文件</span><pre>css()</pre></a></li>
+<li class="method public "><a href="#method_eassets" title="eassets :: 添加etao通用的assets"><span class="description">添加etao通用的assets</span><pre>eassets()</pre></a></li>
+<li class="method public "><a href="#method_efooter" title="efooter :: 添加etao通用页尾"><span class="description">添加etao通用页尾</span><pre>efooter()</pre></a></li>
+<li class="method public "><a href="#method_eheader" title="eheader :: 添加etao通用的页头"><span class="description">添加etao通用的页头</span><pre>eheader()</pre></a></li>
+<li class="method public "><a href="#method_imports" title="imports :: 功能与components的方法一样，只是imports搜索的imports目录下的组件"><span class="description">功能与components的方法一样，只是imports搜索的imports目录下的组件</span><pre>imports()</pre></a></li>
+<li class="method public "><a href="#method_js" title="js :: 添加js模块"><span class="description">添加js模块</span><pre>js()</pre></a></li>
+<li class="method public "><a href="#method_kissy_config" title="kissy_config :: 生成KISSY的config"><span class="description">生成KISSY的config</span><pre>kissy_config()</pre></a></li>
+<li class="method public "><a href="#method_tms" title="tms :: tms方法"><span class="description">tms方法</span><pre>tms()</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a id="\ICommonFunc"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ICommonFunc.html">ICommonFunc</a>
+</li>
+</ul>
+<div class="element interface">
+<p class="short_description">通用函数的接口
+<br>创建于13-1-23，下午4:42</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:yushan.yk@taobao.com">宇山</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/interfaces.html">interfaces</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_add"></a><div class="element clickable method public method_add" data-toggle="collapse" data-target=".method_add .collapse">
+<h2>添加PHP模块&lt;br/&gt;
+替换原来的include方法,根据$file找当前templates目录下的具体文件。</h2>
+<pre>add($file) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4><p>文件相对页面目录的路径</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_bootpage"></a><div class="element clickable method public method_bootpage" data-toggle="collapse" data-target=".method_bootpage .collapse">
+<h2>启动页面必须要执行的方法</h2>
+<pre>bootpage($version, $config) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>TODO</th>
+<td>这个方法目前还不在使用</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$version</h4><p>时间戳</p>
+</div>
+<div class="subelement argument">
+<h4>$config</h4><p>action配置参数</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_components"></a><div class="element clickable method public method_components" data-toggle="collapse" data-target=".method_components .collapse">
+<h2>添加组件</h2>
+<pre>components($file) : int | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4><p>组件的相对路径，比如breadcrumbs就是指components/breadcrumbs</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>string</code>若是html、json，则返回GBK字符串,若是组件渲染成功，则返回1；</div>
+</div></div>
+</div>
+<a id="method_css"></a><div class="element clickable method public method_css" data-toggle="collapse" data-target=".method_css .collapse">
+<h2>加载css文件</h2>
+<pre>css($module, string $version) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$module</h4><p>模块名称</p>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>string</code><p>版本号</p>
+</div>
+</div></div>
+</div>
+<a id="method_eassets"></a><div class="element clickable method public method_eassets" data-toggle="collapse" data-target=".method_eassets .collapse">
+<h2>添加etao通用的assets</h2>
+<pre>eassets(string $kissyversion, string $brixversion, string $product) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$kissyversion</h4>
+<code>string</code><p>KISSY的版本号，默认为1.2.0</p>
+</div>
+<div class="subelement argument">
+<h4>$brixversion</h4>
+<code>string</code><p>Brix的版本号，默认为1.0</p>
+</div>
+<div class="subelement argument">
+<h4>$product</h4>
+<code>string</code><p>产品名，默认为index</p>
+</div>
+</div></div>
+</div>
+<a id="method_efooter"></a><div class="element clickable method public method_efooter" data-toggle="collapse" data-target=".method_efooter .collapse">
+<h2>添加etao通用页尾</h2>
+<pre>efooter(string $product) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$product</h4>
+<code>string</code><p>文件名，默认为index</p>
+</div>
+</div></div>
+</div>
+<a id="method_eheader"></a><div class="element clickable method public method_eheader" data-toggle="collapse" data-target=".method_eheader .collapse">
+<h2>添加etao通用的页头</h2>
+<pre>eheader(string $product) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$product</h4>
+<code>string</code><p>文件名，默认为default</p>
+</div>
+</div></div>
+</div>
+<a id="method_imports"></a><div class="element clickable method public method_imports" data-toggle="collapse" data-target=".method_imports .collapse">
+<h2>功能与components的方法一样，只是imports搜索的imports目录下的组件</h2>
+<pre>imports($file) : int | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4><p>组件的相对路径，必须是仓库名+组件名，比如'tsrp.ux.etao/breadcrumbs'</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_js"></a><div class="element clickable method public method_js" data-toggle="collapse" data-target=".method_js .collapse">
+<h2>添加js模块</h2>
+<pre>js($module, string $version) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$module</h4><p>模块名称</p>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>string</code><p>版本号</p>
+</div>
+</div></div>
+</div>
+<a id="method_kissy_config"></a><div class="element clickable method public method_kissy_config" data-toggle="collapse" data-target=".method_kissy_config .collapse">
+<h2>生成KISSY的config</h2>
+<pre>kissy_config(\version $version) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>\version</code><p>版本号</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_tms"></a><div class="element clickable method public method_tms" data-toggle="collapse" data-target=".method_tms .collapse">
+<h2>tms方法</h2>
+<pre>tms($prepareUrl, $publishUrl, $isgbk) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prepareUrl</h4><p>预发地址</p>
+</div>
+<div class="subelement argument">
+<h4>$publishUrl</h4><p>发布地址</p>
+</div>
+<div class="subelement argument">
+<h4>$isgbk</h4><p>是否是GBK编码，默认为true</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-05-17T15:21:11+08:00.<br></footer></div>
+</div>
+</body>
+</html>

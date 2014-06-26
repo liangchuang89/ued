@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » interfaces</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/base.html"><i class="icon-folder-open"></i> base</a></li>
+<li><a href="../packages/commands.html"><i class="icon-folder-open"></i> commands</a></li>
+<li><a href="../packages/common.html"><i class="icon-folder-open"></i> common</a></li>
+<li><a href="../packages/core.html"><i class="icon-folder-open"></i> core</a></li>
+<li><a href="../packages/event.html"><i class="icon-folder-open"></i> event</a></li>
+<li><a href="../packages/interfaces.html"><i class="icon-folder-open"></i> interfaces</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">156</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/interfaces.html" title="interfaces"><i class="icon-folder-open"></i>interfaces</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#ICommand" title="命令模式实现">ICommand</a></li>
+<li><a href="#ICommonFunc" title="通用函数的接口
+&lt;br&gt;创建于13-1-23，下午4:42">ICommonFunc</a></li>
+<li><a href="#IData" title="提供一种数据注入的方式，以baobei-w页面为例：
+系统会在搜索templates下的baobei-w时，搜索相同目录下是否存在data.php，并判断其中是否包含一个实现了IData接口的类，类名必须为&lt;code&gt;页面名+data&lt;/code&gt;,无&lt;code&gt;-&lt;/code&gt;&lt;br/&gt;
+比如:
+&lt;pre&gt;
+&amp;lt;?php
+class baobeiwdata implements IData
+{
+  function getData($key)
+  {
+      switch($key){
+          case 'personal-custom':
+              $data = iconv('GBK','UTF-8','{&quot;customed&quot;:&quot;custom-btn-customed&quot;}');
+              break;
+          default:
+              $data = null;
+      }
+      return $data;
+  }
+}
+?&amp;gt;
+&lt;/pre&gt;
+这样就会将&lt;code&gt;personal-custom&lt;/code&gt;组件的原来的&lt;code&gt;{&quot;customed&quot;:&quot;&quot;}&lt;/code&gt;和&lt;code&gt;{&quot;customed&quot;:&quot;custom-btn-customed&quot;}&lt;/code&gt;混合，类似&lt;code&gt;KISSY.merge()&lt;/code&gt;。">IData</a></li>
+<li><a href="#IEvent" title="事件接口
+&lt;br&gt;创建于13-1-11，下午2:43">IEvent</a></li>
+<li><a href="#IEventDispatcher" title="事件派发器接口
+&lt;br&gt;创建于13-1-8，下午3:41">IEventDispatcher</a></li>
+<li><a href="#IFliePack" title='以FilePack类为列，详见FilePackTest中的测试用例
+&lt;h3&gt;src目录下打包的文件夹&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/search","css")
+== ["src/search/a.a.a.base.css", "src/search/a.a.a.tmp.css",……]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/search","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/search.css"
+&lt;/pre&gt;
+&lt;h3&gt;src目录下被忽略的文件夹&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/_libs_/cutelink.js","js")
+== [ "src/_libs_/cutelink.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/_libs_/cutelink.js","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/_libs_/cutelink.js"
+&lt;/pre&gt;
+&lt;h3&gt;imports或者componets目录&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("components","js")
+== [ "components/acomponent/index.js", "components/component/index.js",……]
+trans2dev("imports","css")
+== [ "imports/srepo.ux.etao/component/index.css", "imports/test.ux.etao/component/index.css",……]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("imports","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/imports.css"
+trans2assets("components","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/components.js"
+&lt;/pre&gt;
+&lt;h3&gt;imports或者componets目录被忽略的组件&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("components/_component_","css")
+== [ "components/_component_/index.css"]
+trans2dev("imports/srepo.ux.etao/_component_","js")
+== [ "imports/srepo.ux.etao/_component_/index.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("components/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/_component_/index.css"
+trans2assets("imports/srepo.ux.etao/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/srepo.ux.etao/_component_/index.css"
+&lt;/pre&gt;
+&lt;h3&gt;多个一起&lt;/h3&gt;
+&lt;pre&gt;
+trans2dev("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== [ "src/search/a.base.js",
+"src/search/a.form-validate.js",
+"src/_libs_/cutelink.js",
+"components/acomponent/index.js",
+"components/component/index.js",
+"imports/srepo.ux.etao/component/index.js",
+"imports/test.ux.etao/component/index.js",
+"components/_component_/index.js",
+"imports/srepo.ux.etao/_component_/index.js"]
+&lt;/pre&gt;
+&lt;pre&gt;
+trans2assets("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== "http://assets.etao.net/apps/e/tsrp/??130121/search.js,130121/_libs_/cutelink.js,130121/components/components.js,130121/imports/imports.js,130121/components/_component_/index.js,130121/imports/srepo.ux.etao/_component_/index.js"
+&lt;/pre&gt;
+&lt;br&gt;创建于13-1-21，上午10:02'>IFliePack</a></li>
+<li><a href="#IPlugin" title="插件接口
+&lt;br&gt;创建于13-1-8，下午3:29">IPlugin</a></li>
+<li><a href="#IPluginManager" title="插件管理器接口
+&lt;br&gt;创建于13-1-30，下午8:47">IPluginManager</a></li>
+<li><a href="#IRender" title="渲染器接口，约束渲染器行为">IRender</a></li>
+<li><a href="#ITpl" title="获取组件模板的接口
+&lt;br&gt;创建于13-1-17，下午9:14">ITpl</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/interfaces.html">interfaces</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="ICommand" class="element ajax clickable interface">
+<h1>ICommand<a href="../classes/ICommand.html">¶</a>
+</h1>
+<p class="short_description">命令模式实现</p>
+<div class="details collapse"></div>
+<a href="../classes/ICommand.html" class="more">« More »</a>
+</div>
+<div id="ICommonFunc" class="element ajax clickable interface">
+<h1>ICommonFunc<a href="../classes/ICommonFunc.html">¶</a>
+</h1>
+<p class="short_description">通用函数的接口
+<br>创建于13-1-23，下午4:42</p>
+<div class="details collapse"></div>
+<a href="../classes/ICommonFunc.html" class="more">« More »</a>
+</div>
+<div id="IData" class="element ajax clickable interface">
+<h1>IData<a href="../classes/IData.html">¶</a>
+</h1>
+<p class="short_description">提供一种数据注入的方式，以baobei-w页面为例：
+系统会在搜索templates下的baobei-w时，搜索相同目录下是否存在data.php，并判断其中是否包含一个实现了IData接口的类，类名必须为<code>页面名+data</code>,无<code>-</code><br/>
+比如:
+<pre>
+&lt;?php
+class baobeiwdata implements IData
+{
+  function getData($key)
+  {
+      switch($key){
+          case 'personal-custom':
+              $data = iconv('GBK','UTF-8','{"customed":"custom-btn-customed"}');
+              break;
+          default:
+              $data = null;
+      }
+      return $data;
+  }
+}
+?&gt;
+</pre>
+这样就会将<code>personal-custom</code>组件的原来的<code>{"customed":""}</code>和<code>{"customed":"custom-btn-customed"}</code>混合，类似<code>KISSY.merge()</code>。</p>
+<div class="details collapse"></div>
+<a href="../classes/IData.html" class="more">« More »</a>
+</div>
+<div id="IEvent" class="element ajax clickable interface">
+<h1>IEvent<a href="../classes/IEvent.html">¶</a>
+</h1>
+<p class="short_description">事件接口
+<br>创建于13-1-11，下午2:43</p>
+<div class="details collapse"></div>
+<a href="../classes/IEvent.html" class="more">« More »</a>
+</div>
+<div id="IEventDispatcher" class="element ajax clickable interface">
+<h1>IEventDispatcher<a href="../classes/IEventDispatcher.html">¶</a>
+</h1>
+<p class="short_description">事件派发器接口
+<br>创建于13-1-8，下午3:41</p>
+<div class="details collapse"></div>
+<a href="../classes/IEventDispatcher.html" class="more">« More »</a>
+</div>
+<div id="IFliePack" class="element ajax clickable interface">
+<h1>IFliePack<a href="../classes/IFliePack.html">¶</a>
+</h1>
+<p class="short_description">以FilePack类为列，详见FilePackTest中的测试用例
+<h3>src目录下打包的文件夹</h3>
+<pre>
+trans2dev("src/search","css")
+== ["src/search/a.a.a.base.css", "src/search/a.a.a.tmp.css",……]
+</pre>
+<pre>
+trans2assets("src/search","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/search.css"
+</pre>
+<h3>src目录下被忽略的文件夹</h3>
+<pre>
+trans2dev("src/_libs_/cutelink.js","js")
+== [ "src/_libs_/cutelink.js"]
+</pre>
+<pre>
+trans2assets("src/_libs_/cutelink.js","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/_libs_/cutelink.js"
+</pre>
+<h3>imports或者componets目录</h3>
+<pre>
+trans2dev("components","js")
+== [ "components/acomponent/index.js", "components/component/index.js",……]
+trans2dev("imports","css")
+== [ "imports/srepo.ux.etao/component/index.css", "imports/test.ux.etao/component/index.css",……]
+</pre>
+<pre>
+trans2assets("imports","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/imports.css"
+trans2assets("components","js")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/components.js"
+</pre>
+<h3>imports或者componets目录被忽略的组件</h3>
+<pre>
+trans2dev("components/_component_","css")
+== [ "components/_component_/index.css"]
+trans2dev("imports/srepo.ux.etao/_component_","js")
+== [ "imports/srepo.ux.etao/_component_/index.js"]
+</pre>
+<pre>
+trans2assets("components/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/components/_component_/index.css"
+trans2assets("imports/srepo.ux.etao/_component_","css")
+== "http://assets.etao.net/apps/e/tsrp/130121/imports/srepo.ux.etao/_component_/index.css"
+</pre>
+<h3>多个一起</h3>
+<pre>
+trans2dev("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== [ "src/search/a.base.js",
+"src/search/a.form-validate.js",
+"src/_libs_/cutelink.js",
+"components/acomponent/index.js",
+"components/component/index.js",
+"imports/srepo.ux.etao/component/index.js",
+"imports/test.ux.etao/component/index.js",
+"components/_component_/index.js",
+"imports/srepo.ux.etao/_component_/index.js"]
+</pre>
+<pre>
+trans2assets("src/search,src/_libs_/cutelink,components,imports,components/_component_,imports/srepo.ux.etao/_component_","js")
+== "http://assets.etao.net/apps/e/tsrp/??130121/search.js,130121/_libs_/cutelink.js,130121/components/components.js,130121/imports/imports.js,130121/components/_component_/index.js,130121/imports/srepo.ux.etao/_component_/index.js"
+</pre>
+<br>创建于13-1-21，上午10:02</p>
+<div class="details collapse"></div>
+<a href="../classes/IFliePack.html" class="more">« More »</a>
+</div>
+<div id="IPlugin" class="element ajax clickable interface">
+<h1>IPlugin<a href="../classes/IPlugin.html">¶</a>
+</h1>
+<p class="short_description">插件接口
+<br>创建于13-1-8，下午3:29</p>
+<div class="details collapse"></div>
+<a href="../classes/IPlugin.html" class="more">« More »</a>
+</div>
+<div id="IPluginManager" class="element ajax clickable interface">
+<h1>IPluginManager<a href="../classes/IPluginManager.html">¶</a>
+</h1>
+<p class="short_description">插件管理器接口
+<br>创建于13-1-30，下午8:47</p>
+<div class="details collapse"></div>
+<a href="../classes/IPluginManager.html" class="more">« More »</a>
+</div>
+<div id="IRender" class="element ajax clickable interface">
+<h1>IRender<a href="../classes/IRender.html">¶</a>
+</h1>
+<p class="short_description">渲染器接口，约束渲染器行为</p>
+<div class="details collapse"></div>
+<a href="../classes/IRender.html" class="more">« More »</a>
+</div>
+<div id="ITpl" class="element ajax clickable interface">
+<h1>ITpl<a href="../classes/ITpl.html">¶</a>
+</h1>
+<p class="short_description">获取组件模板的接口
+<br>创建于13-1-17，下午9:14</p>
+<div class="details collapse"></div>
+<a href="../classes/ITpl.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-05-17T15:21:11+08:00.<br></footer></div>
+</div>
+</body>
+</html>

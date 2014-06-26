@@ -48,35 +48,35 @@
 						<div class="b12-choose-list b12-square-list-4">
 							<ul>
 								<li class="b12-disable">
-									<div class="b12-square-box">
+									<div class="b12-square-box J_SquareBox">
 										<img src="../pictures/pika.jpg" alt="">
 										<div class="b12-choose-mask"></div>
 									</div>
 									<span>pika</span>
 								</li>
 								<li class="b12-chose">
-									<div class="b12-square-box">
+									<div class="b12-square-box J_SquareBox">
 										<img src="../pictures/pika.jpg" alt="">
 										<div class="b12-choose-mask"></div>
 									</div>
 									<span>pika</span>
 								</li>
 								<li>
-									<div class="b12-square-box">
+									<div class="b12-square-box J_SquareBox">
 										<img src="../pictures/pika.jpg" alt="">
 										<div class="b12-choose-mask"></div>
 									</div>
 									<span>pika</span>
 								</li>
 								<li>
-									<div class="b12-square-box">
+									<div class="b12-square-box J_SquareBox">
 										<img src="../pictures/pika.jpg" alt="">
 										<div class="b12-choose-mask"></div>
 									</div>
 									<span>pika</span>
 								</li>
 								<li>
-									<div class="b12-square-box">
+									<div class="b12-square-box J_SquareBox">
 										<img src="../pictures/pika.jpg" alt="">
 										<div class="b12-choose-mask"></div>
 									</div>
@@ -111,10 +111,23 @@
 	</script>
 	<script src="../js/b12.mobile.js"></script>
 	<script>
-	setTimeout(function() {
-		// 上传名片后调用
-		$('#b12-card-uploader').append('<img src="../pictures/7602_VG.gif" alt="Business Card">');
-	}, 2500);
+		$(".J_SquareBox").bind(eventType, function(e){
+			var parent = $(this).parent();
+			if(!parent.hasClass('b12-disable')){
+				if(parent.hasClass('b12-chose')){
+					parent.removeClass('b12-chose');
+				}else{
+					parent.addClass('b12-chose');
+				}
+				parent.siblings().each(function(){
+					$(this).removeClass('b12-chose');
+				});
+			}
+		});
+		setTimeout(function() {
+			// 上传名片后调用
+			$('#b12-card-uploader').append('<img src="../pictures/7602_VG.gif" alt="Business Card">');
+		}, 2500);
 	</script>
 
 </body>

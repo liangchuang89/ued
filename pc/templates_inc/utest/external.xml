@@ -1,0 +1,14 @@
+<phpunit
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false">
+    <testsuites>
+        <!--测试单独的一些模块，比如自动加载、比如是性能比较-->
+        <testsuite name="single">
+            <directory>tests/external</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

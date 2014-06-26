@@ -1,0 +1,510 @@
+@charset "UTF-8";
+/*
+ * 清除浮动
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * 设置grid默认浮动、左边距、盒子模型
+ */
+.cols-1, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6, .cols-7, .cols-8, .cols-9, .cols-10, .cols-11, .cols-12, .cols-13, .cols-14, .cols-15, .cols-16, .cols-17, .cols-18, .cols-19, .cols-20, .cols-21, .cols-22, .cols-23, .cols-24, .cols-25, .cols-26, .cols-27, .cols-28, .cols-29, .cols-30, .cols-31, .cols-32, .cols-33, .cols-34, .cols-35, .cols-36, .cols-37, .cols-38, .cols-39 {
+  float: left;
+}
+.cols-1, .cols-2, .cols-3, .cols-4, .cols-5, .cols-6, .cols-7, .cols-8, .cols-9, .cols-10, .cols-11, .cols-12, .cols-13, .cols-14, .cols-15, .cols-16, .cols-17, .cols-18, .cols-19, .cols-20, .cols-21, .cols-22, .cols-23, .cols-24, .cols-25, .cols-26, .cols-27, .cols-28, .cols-29, .cols-30, .cols-31, .cols-32, .cols-33, .cols-34, .cols-35, .cols-36, .cols-37, .cols-38, .cols-39, .cols-40 {
+  min-height: 1px;
+  margin-left: 1.25%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+ * 设置各尺寸列宽
+ */
+.cols-1 {
+  width: 1.25%;
+}
+.cols-2 {
+  width: 2.5%;
+}
+.cols-3 {
+  width: 3.75%;
+}
+.cols-4 {
+  width: 5%;
+}
+.cols-5 {
+  width: 6.25%;
+}
+.cols-6 {
+  width: 7.5%;
+}
+.cols-7 {
+  width: 8.75%;
+}
+.cols-8 {
+  width: 10%;
+}
+.cols-9 {
+  width: 11.25%;
+}
+.cols-10 {
+  width: 12.5%;
+}
+.cols-11 {
+  width: 13.750000000000002%;
+}
+.cols-12 {
+  width: 15%;
+}
+.cols-13 {
+  width: 16.25%;
+}
+.cols-14 {
+  width: 17.5%;
+}
+.cols-15 {
+  width: 18.75%;
+}
+.cols-16 {
+  width: 20%;
+}
+.cols-17 {
+  width: 21.25%;
+}
+.cols-18 {
+  width: 22.5%;
+}
+.cols-19 {
+  width: 23.75%;
+}
+.cols-20 {
+  width: 25%;
+}
+.cols-21 {
+  width: 26.25%;
+}
+.cols-22 {
+  width: 27.500000000000004%;
+}
+.cols-23 {
+  width: 28.749999999999996%;
+}
+.cols-24 {
+  width: 30%;
+}
+.cols-25 {
+  width: 31.25%;
+}
+.cols-26 {
+  width: 32.5%;
+}
+.cols-27 {
+  width: 33.75%;
+}
+.cols-28 {
+  width: 35%;
+}
+.cols-29 {
+  width: 36.25%;
+}
+.cols-30 {
+  width: 37.5%;
+}
+.cols-31 {
+  width: 38.75%;
+}
+.cols-32 {
+  width: 40%;
+}
+.cols-33 {
+  width: 41.25%;
+}
+.cols-34 {
+  width: 42.5%;
+}
+.cols-35 {
+  width: 43.75%;
+}
+.cols-36 {
+  width: 45%;
+}
+.cols-37 {
+  width: 46.25%;
+}
+.cols-38 {
+  width: 47.5%;
+}
+.cols-39 {
+  width: 48.75%;
+}
+.cols-40 {
+  width: 50%;
+}
+.cols-41 {
+  width: 51.24999999999999%;
+}
+.cols-42 {
+  width: 52.5%;
+}
+.cols-43 {
+  width: 53.75%;
+}
+.cols-44 {
+  width: 55.00000000000001%;
+}
+.cols-45 {
+  width: 56.25%;
+}
+.cols-46 {
+  width: 57.49999999999999%;
+}
+.cols-47 {
+  width: 58.75%;
+}
+.cols-48 {
+  width: 60%;
+}
+.cols-49 {
+  width: 61.25000000000001%;
+}
+.cols-50 {
+  width: 62.5%;
+}
+.cols-51 {
+  width: 63.74999999999999%;
+}
+.cols-52 {
+  width: 65%;
+}
+.cols-53 {
+  width: 66.25%;
+}
+.cols-54 {
+  width: 67.5%;
+}
+.cols-55 {
+  width: 68.75%;
+}
+.cols-56 {
+  width: 70%;
+}
+.cols-57 {
+  width: 71.25%;
+}
+.cols-58 {
+  width: 72.5%;
+}
+.cols-59 {
+  width: 73.75%;
+}
+.cols-60 {
+  width: 75%;
+}
+.cols-61 {
+  width: 76.25%;
+}
+.cols-62 {
+  width: 77.5%;
+}
+.cols-63 {
+  width: 78.75%;
+}
+.cols-64 {
+  width: 80%;
+}
+.cols-65 {
+  width: 81.25%;
+}
+.cols-66 {
+  width: 82.5%;
+}
+.cols-67 {
+  width: 83.75%;
+}
+.cols-68 {
+  width: 85%;
+}
+.cols-69 {
+  width: 86.25%;
+}
+.cols-70 {
+  width: 87.5%;
+}
+.cols-71 {
+  width: 88.75%;
+}
+.cols-72 {
+  width: 90%;
+}
+.cols-73 {
+  width: 91.25%;
+}
+.cols-74 {
+  width: 92.5%;
+}
+.cols-75 {
+  width: 93.75%;
+}
+.cols-76 {
+  width: 95%;
+}
+.cols-77 {
+  width: 96.25%;
+}
+.cols-78 {
+  width: 97.5%;
+}
+.cols-79 {
+  width: 98.75%;
+}
+.cols-80 {
+  width: 100%;
+}
+/*
+ * 设置左边距规格
+ */
+.ml-1 {
+  margin-left: 1.25%;
+}
+.ml-2 {
+  margin-left: 2.5%;
+}
+.ml-3 {
+  margin-left: 3.75%;
+}
+.ml-4 {
+  margin-left: 5%;
+}
+.ml-5 {
+  margin-left: 6.25%;
+}
+.ml-6 {
+  margin-left: 7.5%;
+}
+.ml-7 {
+  margin-left: 8.75%;
+}
+.ml-8 {
+  margin-left: 10%;
+}
+.ml-9 {
+  margin-left: 11.25%;
+}
+.ml-10 {
+  margin-left: 12.5%;
+}
+.ml-11 {
+  margin-left: 13.750000000000002%;
+}
+.ml-12 {
+  margin-left: 15%;
+}
+.ml-13 {
+  margin-left: 16.25%;
+}
+.ml-14 {
+  margin-left: 17.5%;
+}
+.ml-15 {
+  margin-left: 18.75%;
+}
+.ml-16 {
+  margin-left: 20%;
+}
+.ml-17 {
+  margin-left: 21.25%;
+}
+.ml-18 {
+  margin-left: 22.5%;
+}
+.ml-19 {
+  margin-left: 23.75%;
+}
+.ml-20 {
+  margin-left: 25%;
+}
+.ml-21 {
+  margin-left: 26.25%;
+}
+.ml-22 {
+  margin-left: 27.500000000000004%;
+}
+.ml-23 {
+  margin-left: 28.749999999999996%;
+}
+.ml-24 {
+  margin-left: 30%;
+}
+.ml-25 {
+  margin-left: 31.25%;
+}
+.ml-26 {
+  margin-left: 32.5%;
+}
+.ml-27 {
+  margin-left: 33.75%;
+}
+.ml-28 {
+  margin-left: 35%;
+}
+.ml-29 {
+  margin-left: 36.25%;
+}
+.ml-30 {
+  margin-left: 37.5%;
+}
+.ml-31 {
+  margin-left: 38.75%;
+}
+.ml-32 {
+  margin-left: 40%;
+}
+.ml-33 {
+  margin-left: 41.25%;
+}
+.ml-34 {
+  margin-left: 42.5%;
+}
+.ml-35 {
+  margin-left: 43.75%;
+}
+.ml-36 {
+  margin-left: 45%;
+}
+.ml-37 {
+  margin-left: 46.25%;
+}
+.ml-38 {
+  margin-left: 47.5%;
+}
+.ml-39 {
+  margin-left: 48.75%;
+}
+.ml-40 {
+  margin-left: 50%;
+}
+.ml-41 {
+  margin-left: 51.24999999999999%;
+}
+.ml-42 {
+  margin-left: 52.5%;
+}
+.ml-43 {
+  margin-left: 53.75%;
+}
+.ml-44 {
+  margin-left: 55.00000000000001%;
+}
+.ml-45 {
+  margin-left: 56.25%;
+}
+.ml-46 {
+  margin-left: 57.49999999999999%;
+}
+.ml-47 {
+  margin-left: 58.75%;
+}
+.ml-48 {
+  margin-left: 60%;
+}
+.ml-49 {
+  margin-left: 61.25000000000001%;
+}
+.ml-50 {
+  margin-left: 62.5%;
+}
+.ml-51 {
+  margin-left: 63.74999999999999%;
+}
+.ml-52 {
+  margin-left: 65%;
+}
+.ml-53 {
+  margin-left: 66.25%;
+}
+.ml-54 {
+  margin-left: 67.5%;
+}
+.ml-55 {
+  margin-left: 68.75%;
+}
+.ml-56 {
+  margin-left: 70%;
+}
+.ml-57 {
+  margin-left: 71.25%;
+}
+.ml-58 {
+  margin-left: 72.5%;
+}
+.ml-59 {
+  margin-left: 73.75%;
+}
+.ml-60 {
+  margin-left: 75%;
+}
+.ml-61 {
+  margin-left: 76.25%;
+}
+.ml-62 {
+  margin-left: 77.5%;
+}
+.ml-63 {
+  margin-left: 78.75%;
+}
+.ml-64 {
+  margin-left: 80%;
+}
+.ml-65 {
+  margin-left: 81.25%;
+}
+.ml-66 {
+  margin-left: 82.5%;
+}
+.ml-67 {
+  margin-left: 83.75%;
+}
+.ml-68 {
+  margin-left: 85%;
+}
+.ml-69 {
+  margin-left: 86.25%;
+}
+.ml-70 {
+  margin-left: 87.5%;
+}
+.ml-71 {
+  margin-left: 88.75%;
+}
+.ml-72 {
+  margin-left: 90%;
+}
+.ml-73 {
+  margin-left: 91.25%;
+}
+.ml-74 {
+  margin-left: 92.5%;
+}
+.ml-75 {
+  margin-left: 93.75%;
+}
+.ml-76 {
+  margin-left: 95%;
+}
+.ml-77 {
+  margin-left: 96.25%;
+}
+.ml-78 {
+  margin-left: 97.5%;
+}
+.ml-79 {
+  margin-left: 98.75%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>GET参数列表</title>
+</head>
+<style type="text/css">
+    .gkey{
+        color: #FF007A;
+        width: 100px;
+        display: inline-block;
+    }
+    body{
+        background: #222;
+        color: #DDD;
+    }
+    h3{
+        color: #64F536;;
+    }
+    h4{
+        color: #F5ED36;;
+    }
+    .content-item{
+        line-height: 20px;
+    }
+</style>
+<body>
+<h3>当前所在页面为：<span>{{current}}</span></h3>
+{{#item}}
+<h4>{{category}}</h4>
+<ul>
+    {{#list}}
+    <li class="content-item">{{{content}}}</li>
+    {{/list}}
+</ul>
+{{/item}}
+</body>
+</html>

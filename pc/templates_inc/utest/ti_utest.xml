@@ -1,0 +1,26 @@
+<phpunit
+    bootstrap="bootstrap/ti_bootstrap.php"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false">
+    <php>
+        <const name="ROOT" value="tsrp"/>
+        <const name="INC" value="../"/>
+        <const name="INC_NAME" value="templates_inc"/>
+        <const name="REPO_NAME" value="srepo"/>
+        <const name="ASSETS" value="aurl"/>
+    </php>
+    <testsuites>
+        <testsuite name="framework">
+            <directory>tests/core</directory>
+            <directory>tests/event</directory>
+            <directory>tests/base</directory>
+            <directory>tests/commands</directory>
+            <directory>tests/common</directory>
+            <file>tests/external/RegExpTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

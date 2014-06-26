@@ -1,0 +1,21 @@
+<style>
+    .logalertpanel {
+        position: fixed;
+        *position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        z-index: 999999;
+        border: 1px solid #CCC;
+        background: #eee;
+        padding: 10px 10px;
+    }
+</style>
+<div class="logalertpanel">
+    <form action="?log=1" method="post">
+        <p>点击确定，查看当前页面使用的$_GET参数的作用</p>
+        <input type="hidden" name="getjson" value="{{data}}">
+        <input type="submit" value="确定">
+    </form>
+</div>

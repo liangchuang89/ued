@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>查看源码</title>
+    <meta charset="utf-8">
+    <script src="{{templates_inc}}/thirdparty/syntaxhighlighter/scripts/shCore.js"></script>
+    <link rel="stylesheet" href="{{templates_inc}}/thirdparty/syntaxhighlighter/styles/shCore.css">
+    <link href="{{templates_inc}}/thirdparty/syntaxhighlighter/styles/shThemeEmacs.css" rel="stylesheet" type="text/css" />
+    <script src="{{templates_inc}}/thirdparty/syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script src="{{templates_inc}}/thirdparty/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script src="{{templates_inc}}/thirdparty/syntaxhighlighter/scripts/shBrushCss.js"></script>
+</head>
+<body style="background:#555">
+{{#codeblock}}
+<div style="color:white">{{description}}</div>
+<div>
+    <pre class="brush: {{language}}">{{code}}</pre>
+</div>
+{{/codeblock}}
+<script type="text/javascript">
+//    SyntaxHighlighter.defaults['collapse'] = true;
+    SyntaxHighlighter.all();
+</script>
+</body>
+</html>
