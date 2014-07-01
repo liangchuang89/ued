@@ -4137,6 +4137,32 @@ body > .b12-container {
 	background-position: 0 92%;
 }*/
 
+.b12-fixbar {
+	top: 0;
+	-webkit-transform: translateY(-84px);
+	-moz-transform: translateY(-84px);
+	-ms-transform: translateY(-84px);
+	-o-transform: translateY(-84px);
+	transform: translateY(-84px);
+	-webkit-transform: translate3d(0, -84px, 0);
+}
+
+.b12-header {
+	position: relative;
+}
+
+.b12-content {
+	top: 0;
+}
+
+.b12-fixbar ~ .b12-content {
+	padding-top: 48px;
+}
+
+.b12-fixbar.has-menu ~ .b12-content {
+	padding-top: 84px;
+}
+
 @media only screen and (max-width: 20em) {
 	.b12-my.b12-temp .b12-my-summary {
 		height: 208px;
